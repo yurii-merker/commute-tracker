@@ -1,0 +1,11 @@
+.git
+.idea
+.env
+.env.*
+.claude
+bin
+coverage.out
+coverage.html
+*.md
+!README.md
+docs

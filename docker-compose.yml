@@ -1,0 +1,64 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: commute-tracker-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-commute}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-commute}
+      POSTGRES_DB: ${POSTGRES_DB:-commute_tracker}
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-commute} -d ${POSTGRES_DB:-commute_tracker}"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  redis:
+    image: redis:8-alpine
+    container_name: commute-tracker-redis
+    restart: unless-stopped
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  bot:
+    build: .
+    container_name: commute-tracker-bot
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-commute}:${POSTGRES_PASSWORD:-commute}@postgres:5432/${POSTGRES_DB:-commute_tracker}?sslmode=disable
+      REDIS_URL: redis://redis:6379/0
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  pgdata:
+    name: commute-tracker-pgdata
+  redisdata:
+    name: commute-tracker-redisdata

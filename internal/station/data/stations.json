@@ -1,0 +1,10398 @@
+[
+  {
+    "crs": "AAP",
+    "name": "Alexandra Palace"
+  },
+  {
+    "crs": "AAT",
+    "name": "Achanalt"
+  },
+  {
+    "crs": "ABA",
+    "name": "Aberdare"
+  },
+  {
+    "crs": "ABC",
+    "name": "Altnabreac"
+  },
+  {
+    "crs": "ABD",
+    "name": "Aberdeen"
+  },
+  {
+    "crs": "ABE",
+    "name": "Aber"
+  },
+  {
+    "crs": "ABH",
+    "name": "Abererch"
+  },
+  {
+    "crs": "ABW",
+    "name": "Abbey Wood"
+  },
+  {
+    "crs": "ABY",
+    "name": "Ashburys"
+  },
+  {
+    "crs": "ACB",
+    "name": "Acton Bridge"
+  },
+  {
+    "crs": "ACC",
+    "name": "Acton Central"
+  },
+  {
+    "crs": "ACG",
+    "name": "Acocks Green"
+  },
+  {
+    "crs": "ACH",
+    "name": "Achnashellach"
+  },
+  {
+    "crs": "ACK",
+    "name": "Acklington"
+  },
+  {
+    "crs": "ACL",
+    "name": "Acle"
+  },
+  {
+    "crs": "ACN",
+    "name": "Achnasheen"
+  },
+  {
+    "crs": "ACR",
+    "name": "Accrington"
+  },
+  {
+    "crs": "ACT",
+    "name": "Ascot"
+  },
+  {
+    "crs": "ACY",
+    "name": "Abercynon"
+  },
+  {
+    "crs": "ADC",
+    "name": "Adlington (Cheshire)"
+  },
+  {
+    "crs": "ADD",
+    "name": "Adderley Park"
+  },
+  {
+    "crs": "ADK",
+    "name": "Ardwick"
+  },
+  {
+    "crs": "ADL",
+    "name": "Adlington (Lancashire)"
+  },
+  {
+    "crs": "ADM",
+    "name": "Adisham"
+  },
+  {
+    "crs": "ADN",
+    "name": "Ardrossan Town"
+  },
+  {
+    "crs": "ADR",
+    "name": "Airdrie"
+  },
+  {
+    "crs": "ADS",
+    "name": "Ardrossan Harbour"
+  },
+  {
+    "crs": "ADV",
+    "name": "Andover"
+  },
+  {
+    "crs": "ADW",
+    "name": "Addiewell"
+  },
+  {
+    "crs": "AFK",
+    "name": "Ashford International"
+  },
+  {
+    "crs": "AFS",
+    "name": "Ashford Surrey"
+  },
+  {
+    "crs": "AFV",
+    "name": "Ansdell & Fairhaven"
+  },
+  {
+    "crs": "AGL",
+    "name": "Abergele & Pensarn"
+  },
+  {
+    "crs": "AGS",
+    "name": "Argyle Street"
+  },
+  {
+    "crs": "AGT",
+    "name": "Aldrington"
+  },
+  {
+    "crs": "AGV",
+    "name": "Abergavenny"
+  },
+  {
+    "crs": "AHD",
+    "name": "Ashtead"
+  },
+  {
+    "crs": "AHN",
+    "name": "Ashton-Under-Lyne"
+  },
+  {
+    "crs": "AHS",
+    "name": "Ashurst Kent"
+  },
+  {
+    "crs": "AHT",
+    "name": "Aldershot"
+  },
+  {
+    "crs": "AHV",
+    "name": "Ash Vale"
+  },
+  {
+    "crs": "AIG",
+    "name": "Aigburth"
+  },
+  {
+    "crs": "AIN",
+    "name": "Aintree"
+  },
+  {
+    "crs": "AIR",
+    "name": "Airbles"
+  },
+  {
+    "crs": "ALB",
+    "name": "Albrighton"
+  },
+  {
+    "crs": "ALD",
+    "name": "Alderley Edge"
+  },
+  {
+    "crs": "ALF",
+    "name": "Alfreton"
+  },
+  {
+    "crs": "ALK",
+    "name": "Aslockton"
+  },
+  {
+    "crs": "ALM",
+    "name": "Alnmouth"
+  },
+  {
+    "crs": "ALN",
+    "name": "Althorne"
+  },
+  {
+    "crs": "ALO",
+    "name": "Alloa"
+  },
+  {
+    "crs": "ALP",
+    "name": "Althorpe"
+  },
+  {
+    "crs": "ALR",
+    "name": "Alresford"
+  },
+  {
+    "crs": "ALT",
+    "name": "Altrincham"
+  },
+  {
+    "crs": "ALV",
+    "name": "Alvechurch"
+  },
+  {
+    "crs": "ALW",
+    "name": "Allens West"
+  },
+  {
+    "crs": "ALX",
+    "name": "Alexandria"
+  },
+  {
+    "crs": "AMB",
+    "name": "Ambergate"
+  },
+  {
+    "crs": "AMF",
+    "name": "Ammanford"
+  },
+  {
+    "crs": "AML",
+    "name": "Acton Main Line"
+  },
+  {
+    "crs": "AMR",
+    "name": "Amersham"
+  },
+  {
+    "crs": "AMT",
+    "name": "Aldermaston"
+  },
+  {
+    "crs": "AMY",
+    "name": "Amberley"
+  },
+  {
+    "crs": "ANC",
+    "name": "Ancaster"
+  },
+  {
+    "crs": "AND",
+    "name": "Anderston"
+  },
+  {
+    "crs": "ANF",
+    "name": "Ashurst New Forest"
+  },
+  {
+    "crs": "ANG",
+    "name": "Angmering"
+  },
+  {
+    "crs": "ANL",
+    "name": "Anniesland"
+  },
+  {
+    "crs": "ANN",
+    "name": "Annan"
+  },
+  {
+    "crs": "ANS",
+    "name": "Ainsdale"
+  },
+  {
+    "crs": "ANZ",
+    "name": "Anerley"
+  },
+  {
+    "crs": "AON",
+    "name": "Alton"
+  },
+  {
+    "crs": "APB",
+    "name": "Appley Bridge"
+  },
+  {
+    "crs": "APD",
+    "name": "Appledore (Kent)"
+  },
+  {
+    "crs": "APF",
+    "name": "Appleford"
+  },
+  {
+    "crs": "APG",
+    "name": "Aspley Guise"
+  },
+  {
+    "crs": "APP",
+    "name": "Appleby"
+  },
+  {
+    "crs": "APS",
+    "name": "Apsley"
+  },
+  {
+    "crs": "APY",
+    "name": "Apperley Bridge"
+  },
+  {
+    "crs": "ARB",
+    "name": "Arbroath"
+  },
+  {
+    "crs": "ARD",
+    "name": "Ardgay"
+  },
+  {
+    "crs": "ARG",
+    "name": "Arisaig"
+  },
+  {
+    "crs": "ARL",
+    "name": "Arlesey"
+  },
+  {
+    "crs": "ARM",
+    "name": "Armadale"
+  },
+  {
+    "crs": "ARN",
+    "name": "Arnside"
+  },
+  {
+    "crs": "ARR",
+    "name": "Arram"
+  },
+  {
+    "crs": "ART",
+    "name": "Arrochar & Tarbet"
+  },
+  {
+    "crs": "ARU",
+    "name": "Arundel"
+  },
+  {
+    "crs": "ASB",
+    "name": "Ardrossan South Beach"
+  },
+  {
+    "crs": "ASC",
+    "name": "Ashchurch for Tewkesbury"
+  },
+  {
+    "crs": "ASD",
+    "name": "Ashley Down"
+  },
+  {
+    "crs": "ASF",
+    "name": "Ashfield"
+  },
+  {
+    "crs": "ASG",
+    "name": "Alsager"
+  },
+  {
+    "crs": "ASH",
+    "name": "Ash"
+  },
+  {
+    "crs": "ASK",
+    "name": "Askam"
+  },
+  {
+    "crs": "ASL",
+    "name": "Ashington"
+  },
+  {
+    "crs": "ASN",
+    "name": "Addlestone"
+  },
+  {
+    "crs": "ASP",
+    "name": "Aspatria"
+  },
+  {
+    "crs": "ASS",
+    "name": "Alness"
+  },
+  {
+    "crs": "AST",
+    "name": "Aston"
+  },
+  {
+    "crs": "ASY",
+    "name": "Ashley"
+  },
+  {
+    "crs": "ATB",
+    "name": "Attenborough"
+  },
+  {
+    "crs": "ATH",
+    "name": "Atherstone"
+  },
+  {
+    "crs": "ATL",
+    "name": "Attleborough"
+  },
+  {
+    "crs": "ATN",
+    "name": "Atherton"
+  },
+  {
+    "crs": "ATT",
+    "name": "Attadale"
+  },
+  {
+    "crs": "AUD",
+    "name": "Audley End"
+  },
+  {
+    "crs": "AUG",
+    "name": "Aughton Park"
+  },
+  {
+    "crs": "AUI",
+    "name": "Ardlui"
+  },
+  {
+    "crs": "AUK",
+    "name": "Auchinleck"
+  },
+  {
+    "crs": "AUR",
+    "name": "Aberdour"
+  },
+  {
+    "crs": "AUW",
+    "name": "Ascott-Under-Wychwood"
+  },
+  {
+    "crs": "AVF",
+    "name": "Avoncliff"
+  },
+  {
+    "crs": "AVM",
+    "name": "Aviemore"
+  },
+  {
+    "crs": "AVN",
+    "name": "Avonmouth"
+  },
+  {
+    "crs": "AVP",
+    "name": "Aylesbury Vale Parkway"
+  },
+  {
+    "crs": "AVY",
+    "name": "Aberdovey"
+  },
+  {
+    "crs": "AWK",
+    "name": "Adwick"
+  },
+  {
+    "crs": "AWM",
+    "name": "Ashwell & Morden"
+  },
+  {
+    "crs": "AWT",
+    "name": "Armathwaite"
+  },
+  {
+    "crs": "AXM",
+    "name": "Axminster"
+  },
+  {
+    "crs": "AXP",
+    "name": "Alexandra Parade"
+  },
+  {
+    "crs": "AYH",
+    "name": "Aylesham"
+  },
+  {
+    "crs": "AYL",
+    "name": "Aylesford"
+  },
+  {
+    "crs": "AYP",
+    "name": "Albany Park"
+  },
+  {
+    "crs": "AYR",
+    "name": "Ayr"
+  },
+  {
+    "crs": "AYS",
+    "name": "Aylesbury"
+  },
+  {
+    "crs": "AYW",
+    "name": "Aberystwyth"
+  },
+  {
+    "crs": "BAA",
+    "name": "Barnham"
+  },
+  {
+    "crs": "BAB",
+    "name": "Balcombe"
+  },
+  {
+    "crs": "BAC",
+    "name": "Bache"
+  },
+  {
+    "crs": "BAD",
+    "name": "Banstead"
+  },
+  {
+    "crs": "BAG",
+    "name": "Bagshot"
+  },
+  {
+    "crs": "BAH",
+    "name": "Bank Hall"
+  },
+  {
+    "crs": "BAI",
+    "name": "Blairhill"
+  },
+  {
+    "crs": "BAJ",
+    "name": "Baglan"
+  },
+  {
+    "crs": "BAK",
+    "name": "Battersea Park"
+  },
+  {
+    "crs": "BAL",
+    "name": "Balham"
+  },
+  {
+    "crs": "BAM",
+    "name": "Bamford"
+  },
+  {
+    "crs": "BAN",
+    "name": "Banbury"
+  },
+  {
+    "crs": "BAR",
+    "name": "Bare Lane"
+  },
+  {
+    "crs": "BAS",
+    "name": "Bere Alston"
+  },
+  {
+    "crs": "BAT",
+    "name": "Battle"
+  },
+  {
+    "crs": "BAU",
+    "name": "Barton-On-Humber"
+  },
+  {
+    "crs": "BAV",
+    "name": "Barrow Haven"
+  },
+  {
+    "crs": "BAW",
+    "name": "Blackwater"
+  },
+  {
+    "crs": "BAY",
+    "name": "Bayford"
+  },
+  {
+    "crs": "BBG",
+    "name": "Bishopbriggs"
+  },
+  {
+    "crs": "BBK",
+    "name": "Bilbrook"
+  },
+  {
+    "crs": "BBL",
+    "name": "Bat & Ball"
+  },
+  {
+    "crs": "BBN",
+    "name": "Blackburn"
+  },
+  {
+    "crs": "BBS",
+    "name": "Bordesley"
+  },
+  {
+    "crs": "BBW",
+    "name": "Berry Brow"
+  },
+  {
+    "crs": "BCB",
+    "name": "Burscough Bridge"
+  },
+  {
+    "crs": "BCC",
+    "name": "Beccles"
+  },
+  {
+    "crs": "BCE",
+    "name": "Bracknell"
+  },
+  {
+    "crs": "BCF",
+    "name": "Beaconsfield"
+  },
+  {
+    "crs": "BCG",
+    "name": "Birchgrove"
+  },
+  {
+    "crs": "BCH",
+    "name": "Birchington-On-Sea"
+  },
+  {
+    "crs": "BCJ",
+    "name": "Burscough Junction"
+  },
+  {
+    "crs": "BCK",
+    "name": "Buckley"
+  },
+  {
+    "crs": "BCN",
+    "name": "Branchton"
+  },
+  {
+    "crs": "BCS",
+    "name": "Bicester North"
+  },
+  {
+    "crs": "BCU",
+    "name": "Brockenhurst"
+  },
+  {
+    "crs": "BCV",
+    "name": "Bruce Grove"
+  },
+  {
+    "crs": "BCY",
+    "name": "Brockley"
+  },
+  {
+    "crs": "BCZ",
+    "name": "Brent Cross West"
+  },
+  {
+    "crs": "BDA",
+    "name": "Brundall"
+  },
+  {
+    "crs": "BDB",
+    "name": "Broadbottom"
+  },
+  {
+    "crs": "BDG",
+    "name": "Bridgeton"
+  },
+  {
+    "crs": "BDH",
+    "name": "Bedhampton"
+  },
+  {
+    "crs": "BDI",
+    "name": "Bradford Interchange"
+  },
+  {
+    "crs": "BDK",
+    "name": "Baldock"
+  },
+  {
+    "crs": "BDL",
+    "name": "Birkdale"
+  },
+  {
+    "crs": "BDM",
+    "name": "Bedford"
+  },
+  {
+    "crs": "BDN",
+    "name": "Brading"
+  },
+  {
+    "crs": "BDQ",
+    "name": "Bradford Forster Square"
+  },
+  {
+    "crs": "BDS",
+    "name": "Bond Street"
+  },
+  {
+    "crs": "BDT",
+    "name": "Bridlington"
+  },
+  {
+    "crs": "BDW",
+    "name": "Bedwyn"
+  },
+  {
+    "crs": "BDY",
+    "name": "Bredbury"
+  },
+  {
+    "crs": "BEA",
+    "name": "Bridge of Allan"
+  },
+  {
+    "crs": "BEB",
+    "name": "Bebington"
+  },
+  {
+    "crs": "BEC",
+    "name": "Beckenham Hill"
+  },
+  {
+    "crs": "BEE",
+    "name": "Beeston"
+  },
+  {
+    "crs": "BEF",
+    "name": "Benfleet"
+  },
+  {
+    "crs": "BEG",
+    "name": "Beltring"
+  },
+  {
+    "crs": "BEH",
+    "name": "Bedworth"
+  },
+  {
+    "crs": "BEL",
+    "name": "Beauly"
+  },
+  {
+    "crs": "BEM",
+    "name": "Bempton"
+  },
+  {
+    "crs": "BEN",
+    "name": "Bentham"
+  },
+  {
+    "crs": "BEP",
+    "name": "Bermuda Park"
+  },
+  {
+    "crs": "BER",
+    "name": "Bearley"
+  },
+  {
+    "crs": "BES",
+    "name": "Bescar Lane"
+  },
+  {
+    "crs": "BET",
+    "name": "Bethnal Green"
+  },
+  {
+    "crs": "BEU",
+    "name": "Beaulieu Road"
+  },
+  {
+    "crs": "BEV",
+    "name": "Beverley"
+  },
+  {
+    "crs": "BEX",
+    "name": "Bexhill"
+  },
+  {
+    "crs": "BEY",
+    "name": "Ben Rhydding"
+  },
+  {
+    "crs": "BFD",
+    "name": "Brentford"
+  },
+  {
+    "crs": "BFE",
+    "name": "Bere Ferrers"
+  },
+  {
+    "crs": "BFF",
+    "name": "Blaenau Ffestiniog"
+  },
+  {
+    "crs": "BFN",
+    "name": "Byfleet & New Haw"
+  },
+  {
+    "crs": "BFR",
+    "name": "London Blackfriars"
+  },
+  {
+    "crs": "BGA",
+    "name": "Brundall Gardens"
+  },
+  {
+    "crs": "BGD",
+    "name": "Bargoed"
+  },
+  {
+    "crs": "BGE",
+    "name": "Broad Green"
+  },
+  {
+    "crs": "BGG",
+    "name": "Brigg"
+  },
+  {
+    "crs": "BGH",
+    "name": "Brighouse"
+  },
+  {
+    "crs": "BGI",
+    "name": "Bargeddie"
+  },
+  {
+    "crs": "BGL",
+    "name": "Bugle"
+  },
+  {
+    "crs": "BGM",
+    "name": "Bellingham"
+  },
+  {
+    "crs": "BGN",
+    "name": "Bridgend"
+  },
+  {
+    "crs": "BGS",
+    "name": "Bogston"
+  },
+  {
+    "crs": "BGV",
+    "name": "Barking Riverside"
+  },
+  {
+    "crs": "BHC",
+    "name": "Balloch Central"
+  },
+  {
+    "crs": "BHD",
+    "name": "Brithdir"
+  },
+  {
+    "crs": "BHG",
+    "name": "Bathgate"
+  },
+  {
+    "crs": "BHI",
+    "name": "Birmingham International"
+  },
+  {
+    "crs": "BHK",
+    "name": "Bush Hill Park"
+  },
+  {
+    "crs": "BHM",
+    "name": "Birmingham New Street"
+  },
+  {
+    "crs": "BHO",
+    "name": "Blackhorse Road"
+  },
+  {
+    "crs": "BHR",
+    "name": "Builth Road"
+  },
+  {
+    "crs": "BHS",
+    "name": "Brockholes"
+  },
+  {
+    "crs": "BIA",
+    "name": "Bishop Auckland"
+  },
+  {
+    "crs": "BIC",
+    "name": "Billericay"
+  },
+  {
+    "crs": "BID",
+    "name": "Bidston"
+  },
+  {
+    "crs": "BIF",
+    "name": "Barrow-In-Furness"
+  },
+  {
+    "crs": "BIG",
+    "name": "Billingshurst"
+  },
+  {
+    "crs": "BIK",
+    "name": "Birkbeck"
+  },
+  {
+    "crs": "BIL",
+    "name": "Billingham"
+  },
+  {
+    "crs": "BIN",
+    "name": "Bingham"
+  },
+  {
+    "crs": "BIO",
+    "name": "Baillieston"
+  },
+  {
+    "crs": "BIP",
+    "name": "Bishopstone (Sussex)"
+  },
+  {
+    "crs": "BIS",
+    "name": "Bishops Stortford"
+  },
+  {
+    "crs": "BIT",
+    "name": "Bicester Village"
+  },
+  {
+    "crs": "BIW",
+    "name": "Biggleswade"
+  },
+  {
+    "crs": "BIY",
+    "name": "Bingley"
+  },
+  {
+    "crs": "BKA",
+    "name": "Bookham"
+  },
+  {
+    "crs": "BKC",
+    "name": "Birkenhead Central"
+  },
+  {
+    "crs": "BKD",
+    "name": "Blakedown"
+  },
+  {
+    "crs": "BKG",
+    "name": "Barking"
+  },
+  {
+    "crs": "BKH",
+    "name": "Blackheath"
+  },
+  {
+    "crs": "BKJ",
+    "name": "Beckenham Junction"
+  },
+  {
+    "crs": "BKL",
+    "name": "Bickley"
+  },
+  {
+    "crs": "BKM",
+    "name": "Berkhamsted"
+  },
+  {
+    "crs": "BKN",
+    "name": "Birkenhead North"
+  },
+  {
+    "crs": "BKO",
+    "name": "Brookwood"
+  },
+  {
+    "crs": "BKP",
+    "name": "Birkenhead Park"
+  },
+  {
+    "crs": "BKQ",
+    "name": "Birkenhead Hamilton Square"
+  },
+  {
+    "crs": "BKR",
+    "name": "Blackridge"
+  },
+  {
+    "crs": "BKS",
+    "name": "Bekesbourne"
+  },
+  {
+    "crs": "BKT",
+    "name": "Blake Street"
+  },
+  {
+    "crs": "BKW",
+    "name": "Berkswell"
+  },
+  {
+    "crs": "BLA",
+    "name": "Blair Atholl"
+  },
+  {
+    "crs": "BLB",
+    "name": "Battlesbridge"
+  },
+  {
+    "crs": "BLD",
+    "name": "Baildon"
+  },
+  {
+    "crs": "BLE",
+    "name": "Bramley (West Yorkshire)"
+  },
+  {
+    "crs": "BLG",
+    "name": "Bellgrove"
+  },
+  {
+    "crs": "BLH",
+    "name": "Bellshill"
+  },
+  {
+    "crs": "BLK",
+    "name": "Blackrod"
+  },
+  {
+    "crs": "BLL",
+    "name": "Bardon Mill"
+  },
+  {
+    "crs": "BLM",
+    "name": "Belmont"
+  },
+  {
+    "crs": "BLN",
+    "name": "Blundellsands & Crosby"
+  },
+  {
+    "crs": "BLO",
+    "name": "Blaydon"
+  },
+  {
+    "crs": "BLP",
+    "name": "Belper"
+  },
+  {
+    "crs": "BLT",
+    "name": "Blantyre"
+  },
+  {
+    "crs": "BLV",
+    "name": "Belle Vue"
+  },
+  {
+    "crs": "BLW",
+    "name": "Bulwell"
+  },
+  {
+    "crs": "BLX",
+    "name": "Bloxwich"
+  },
+  {
+    "crs": "BLY",
+    "name": "Bletchley"
+  },
+  {
+    "crs": "BMB",
+    "name": "Bamber Bridge"
+  },
+  {
+    "crs": "BMC",
+    "name": "Bromley Cross"
+  },
+  {
+    "crs": "BMD",
+    "name": "Brimsdown"
+  },
+  {
+    "crs": "BME",
+    "name": "Broome"
+  },
+  {
+    "crs": "BMF",
+    "name": "Broomfleet"
+  },
+  {
+    "crs": "BMG",
+    "name": "Barming"
+  },
+  {
+    "crs": "BMH",
+    "name": "Bournemouth"
+  },
+  {
+    "crs": "BML",
+    "name": "Bramhall"
+  },
+  {
+    "crs": "BMN",
+    "name": "Bromley North"
+  },
+  {
+    "crs": "BMO",
+    "name": "Birmingham Moor Street"
+  },
+  {
+    "crs": "BMP",
+    "name": "Brampton (Cumbria)"
+  },
+  {
+    "crs": "BMR",
+    "name": "Bromborough Rake"
+  },
+  {
+    "crs": "BMS",
+    "name": "Bromley South"
+  },
+  {
+    "crs": "BMT",
+    "name": "Bedminster"
+  },
+  {
+    "crs": "BMV",
+    "name": "Bromsgrove"
+  },
+  {
+    "crs": "BMY",
+    "name": "Bramley (Hants)"
+  },
+  {
+    "crs": "BNA",
+    "name": "Burnage"
+  },
+  {
+    "crs": "BNC",
+    "name": "Burnley Central"
+  },
+  {
+    "crs": "BND",
+    "name": "Brandon"
+  },
+  {
+    "crs": "BNE",
+    "name": "Bourne End"
+  },
+  {
+    "crs": "BNF",
+    "name": "Briton Ferry"
+  },
+  {
+    "crs": "BNG",
+    "name": "Bangor (Gwynedd)"
+  },
+  {
+    "crs": "BNH",
+    "name": "Barnehurst"
+  },
+  {
+    "crs": "BNI",
+    "name": "Barnes Bridge"
+  },
+  {
+    "crs": "BNL",
+    "name": "Barnhill"
+  },
+  {
+    "crs": "BNM",
+    "name": "Burnham"
+  },
+  {
+    "crs": "BNP",
+    "name": "Barnstaple"
+  },
+  {
+    "crs": "BNR",
+    "name": "Brockley Whins"
+  },
+  {
+    "crs": "BNS",
+    "name": "Barnes"
+  },
+  {
+    "crs": "BNT",
+    "name": "Brinnington"
+  },
+  {
+    "crs": "BNV",
+    "name": "Banavie"
+  },
+  {
+    "crs": "BNW",
+    "name": "Bootle New Strand"
+  },
+  {
+    "crs": "BNY",
+    "name": "Barnsley"
+  },
+  {
+    "crs": "BOA",
+    "name": "Bradford-On-Avon"
+  },
+  {
+    "crs": "BOC",
+    "name": "Bootle (Cumbria)"
+  },
+  {
+    "crs": "BOD",
+    "name": "Bodmin Parkway"
+  },
+  {
+    "crs": "BOE",
+    "name": "Botley"
+  },
+  {
+    "crs": "BOG",
+    "name": "Bognor Regis"
+  },
+  {
+    "crs": "BOH",
+    "name": "Bosham"
+  },
+  {
+    "crs": "BOM",
+    "name": "Bromborough"
+  },
+  {
+    "crs": "BON",
+    "name": "Bolton"
+  },
+  {
+    "crs": "BOP",
+    "name": "Bowes Park"
+  },
+  {
+    "crs": "BOR",
+    "name": "Bodorgan"
+  },
+  {
+    "crs": "BOT",
+    "name": "Bootle Oriel Road"
+  },
+  {
+    "crs": "BOW",
+    "name": "Bow Street"
+  },
+  {
+    "crs": "BPA",
+    "name": "Beaulieu Park"
+  },
+  {
+    "crs": "BPB",
+    "name": "Blackpool Pleasure Beach"
+  },
+  {
+    "crs": "BPK",
+    "name": "Brookmans Park"
+  },
+  {
+    "crs": "BPN",
+    "name": "Blackpool North"
+  },
+  {
+    "crs": "BPS",
+    "name": "Blackpool South"
+  },
+  {
+    "crs": "BPT",
+    "name": "Bishopton"
+  },
+  {
+    "crs": "BPW",
+    "name": "Bristol Parkway"
+  },
+  {
+    "crs": "BRA",
+    "name": "Brora"
+  },
+  {
+    "crs": "BRC",
+    "name": "Breich"
+  },
+  {
+    "crs": "BRE",
+    "name": "Brentwood"
+  },
+  {
+    "crs": "BRF",
+    "name": "Brierfield"
+  },
+  {
+    "crs": "BRG",
+    "name": "Borough Green & Wrotham"
+  },
+  {
+    "crs": "BRH",
+    "name": "Borth"
+  },
+  {
+    "crs": "BRI",
+    "name": "Bristol Temple Meads"
+  },
+  {
+    "crs": "BRK",
+    "name": "Berwick (Sussex)"
+  },
+  {
+    "crs": "BRL",
+    "name": "Barrhill"
+  },
+  {
+    "crs": "BRM",
+    "name": "Barmouth"
+  },
+  {
+    "crs": "BRN",
+    "name": "Bearsden"
+  },
+  {
+    "crs": "BRO",
+    "name": "Bridge of Orchy"
+  },
+  {
+    "crs": "BRP",
+    "name": "Brampton (Suffolk)"
+  },
+  {
+    "crs": "BRR",
+    "name": "Barrhead"
+  },
+  {
+    "crs": "BRS",
+    "name": "Berrylands"
+  },
+  {
+    "crs": "BRT",
+    "name": "Barlaston"
+  },
+  {
+    "crs": "BRU",
+    "name": "Bruton"
+  },
+  {
+    "crs": "BRV",
+    "name": "Bournville"
+  },
+  {
+    "crs": "BRW",
+    "name": "Brunswick"
+  },
+  {
+    "crs": "BRX",
+    "name": "Brixton"
+  },
+  {
+    "crs": "BRY",
+    "name": "Barry"
+  },
+  {
+    "crs": "BSB",
+    "name": "Bleasby"
+  },
+  {
+    "crs": "BSC",
+    "name": "Bescot Stadium"
+  },
+  {
+    "crs": "BSD",
+    "name": "Bearsted"
+  },
+  {
+    "crs": "BSE",
+    "name": "Bury St Edmunds"
+  },
+  {
+    "crs": "BSH",
+    "name": "Bushey"
+  },
+  {
+    "crs": "BSI",
+    "name": "Balmossie"
+  },
+  {
+    "crs": "BSJ",
+    "name": "Bedford St Johns"
+  },
+  {
+    "crs": "BSK",
+    "name": "Basingstoke"
+  },
+  {
+    "crs": "BSL",
+    "name": "Beasdale"
+  },
+  {
+    "crs": "BSM",
+    "name": "Branksome"
+  },
+  {
+    "crs": "BSN",
+    "name": "Boston"
+  },
+  {
+    "crs": "BSO",
+    "name": "Basildon"
+  },
+  {
+    "crs": "BSP",
+    "name": "Brondesbury Park"
+  },
+  {
+    "crs": "BSR",
+    "name": "Broadstairs"
+  },
+  {
+    "crs": "BSS",
+    "name": "Barassie"
+  },
+  {
+    "crs": "BSU",
+    "name": "Brunstane"
+  },
+  {
+    "crs": "BSV",
+    "name": "Buckshaw Parkway"
+  },
+  {
+    "crs": "BSW",
+    "name": "Birmingham Snow Hill"
+  },
+  {
+    "crs": "BSY",
+    "name": "Brondesbury"
+  },
+  {
+    "crs": "BTB",
+    "name": "Barnetby"
+  },
+  {
+    "crs": "BTD",
+    "name": "Bolton-On-Dearne"
+  },
+  {
+    "crs": "BTE",
+    "name": "Bitterne"
+  },
+  {
+    "crs": "BTF",
+    "name": "Bottesford"
+  },
+  {
+    "crs": "BTG",
+    "name": "Barnt Green"
+  },
+  {
+    "crs": "BTH",
+    "name": "Bath Spa"
+  },
+  {
+    "crs": "BTL",
+    "name": "Batley"
+  },
+  {
+    "crs": "BTN",
+    "name": "Brighton"
+  },
+  {
+    "crs": "BTO",
+    "name": "Betchworth"
+  },
+  {
+    "crs": "BTP",
+    "name": "Braintree Freeport"
+  },
+  {
+    "crs": "BTR",
+    "name": "Braintree"
+  },
+  {
+    "crs": "BTS",
+    "name": "Burntisland"
+  },
+  {
+    "crs": "BTT",
+    "name": "Battersby"
+  },
+  {
+    "crs": "BTY",
+    "name": "Bentley (Hampshire)"
+  },
+  {
+    "crs": "BUB",
+    "name": "Burnley Barracks"
+  },
+  {
+    "crs": "BUC",
+    "name": "Buckenham"
+  },
+  {
+    "crs": "BUD",
+    "name": "Burneside"
+  },
+  {
+    "crs": "BUE",
+    "name": "Bures"
+  },
+  {
+    "crs": "BUG",
+    "name": "Burgess Hill"
+  },
+  {
+    "crs": "BUH",
+    "name": "Brough"
+  },
+  {
+    "crs": "BUI",
+    "name": "Burnside"
+  },
+  {
+    "crs": "BUJ",
+    "name": "Burton Joyce"
+  },
+  {
+    "crs": "BUK",
+    "name": "Bucknell"
+  },
+  {
+    "crs": "BUL",
+    "name": "Butlers Lane"
+  },
+  {
+    "crs": "BUO",
+    "name": "Bursledon"
+  },
+  {
+    "crs": "BUS",
+    "name": "Busby"
+  },
+  {
+    "crs": "BUT",
+    "name": "Burton-On-Trent"
+  },
+  {
+    "crs": "BUU",
+    "name": "Burnham-On-Crouch"
+  },
+  {
+    "crs": "BUW",
+    "name": "Burley-In-Wharfedale"
+  },
+  {
+    "crs": "BUX",
+    "name": "Buxton"
+  },
+  {
+    "crs": "BUY",
+    "name": "Burley Park"
+  },
+  {
+    "crs": "BVD",
+    "name": "Belvedere"
+  },
+  {
+    "crs": "BWB",
+    "name": "Bow Brickhill"
+  },
+  {
+    "crs": "BWD",
+    "name": "Birchwood"
+  },
+  {
+    "crs": "BWG",
+    "name": "Bowling"
+  },
+  {
+    "crs": "BWK",
+    "name": "Berwick-Upon-Tweed"
+  },
+  {
+    "crs": "BWN",
+    "name": "Bloxwich North"
+  },
+  {
+    "crs": "BWO",
+    "name": "Bricket Wood"
+  },
+  {
+    "crs": "BWS",
+    "name": "Barrow Upon Soar"
+  },
+  {
+    "crs": "BWT",
+    "name": "Bridgwater"
+  },
+  {
+    "crs": "BXB",
+    "name": "Broxbourne"
+  },
+  {
+    "crs": "BXD",
+    "name": "Buxted"
+  },
+  {
+    "crs": "BXH",
+    "name": "Bexleyheath"
+  },
+  {
+    "crs": "BXW",
+    "name": "Box Hill & Westhumble"
+  },
+  {
+    "crs": "BXY",
+    "name": "Bexley"
+  },
+  {
+    "crs": "BYA",
+    "name": "Berney Arms"
+  },
+  {
+    "crs": "BYB",
+    "name": "Blythe Bridge"
+  },
+  {
+    "crs": "BYC",
+    "name": "Betws-Y-Coed"
+  },
+  {
+    "crs": "BYD",
+    "name": "Barry Docks"
+  },
+  {
+    "crs": "BYE",
+    "name": "Bynea"
+  },
+  {
+    "crs": "BYF",
+    "name": "Broughty Ferry"
+  },
+  {
+    "crs": "BYI",
+    "name": "Barry Island"
+  },
+  {
+    "crs": "BYK",
+    "name": "Bentley (South Yorkshire)"
+  },
+  {
+    "crs": "BYL",
+    "name": "Barry Links"
+  },
+  {
+    "crs": "BYM",
+    "name": "Burnley Manchester Road"
+  },
+  {
+    "crs": "BYN",
+    "name": "Bryn"
+  },
+  {
+    "crs": "BYS",
+    "name": "Braystones"
+  },
+  {
+    "crs": "CAA",
+    "name": "Coventry Arena"
+  },
+  {
+    "crs": "CAC",
+    "name": "Caldercruix"
+  },
+  {
+    "crs": "CAD",
+    "name": "Cadoxton"
+  },
+  {
+    "crs": "CAG",
+    "name": "Carrbridge"
+  },
+  {
+    "crs": "CAK",
+    "name": "Cark"
+  },
+  {
+    "crs": "CAM",
+    "name": "Camberley"
+  },
+  {
+    "crs": "CAN",
+    "name": "Carnoustie"
+  },
+  {
+    "crs": "CAO",
+    "name": "Cannock"
+  },
+  {
+    "crs": "CAR",
+    "name": "Carlisle"
+  },
+  {
+    "crs": "CAS",
+    "name": "Castleton"
+  },
+  {
+    "crs": "CAT",
+    "name": "Caterham"
+  },
+  {
+    "crs": "CAU",
+    "name": "Causeland"
+  },
+  {
+    "crs": "CAY",
+    "name": "Carntyne"
+  },
+  {
+    "crs": "CBB",
+    "name": "Carbis Bay"
+  },
+  {
+    "crs": "CBC",
+    "name": "Coatbridge Central"
+  },
+  {
+    "crs": "CBD",
+    "name": "Conon Bridge"
+  },
+  {
+    "crs": "CBE",
+    "name": "Canterbury East"
+  },
+  {
+    "crs": "CBG",
+    "name": "Cambridge"
+  },
+  {
+    "crs": "CBH",
+    "name": "Cambridge Heath"
+  },
+  {
+    "crs": "CBK",
+    "name": "Cranbrook (Devon)"
+  },
+  {
+    "crs": "CBL",
+    "name": "Cambuslang"
+  },
+  {
+    "crs": "CBN",
+    "name": "Camborne"
+  },
+  {
+    "crs": "CBP",
+    "name": "Castle Bar Park"
+  },
+  {
+    "crs": "CBR",
+    "name": "Cooksbridge"
+  },
+  {
+    "crs": "CBS",
+    "name": "Coatbridge Sunnyside"
+  },
+  {
+    "crs": "CBW",
+    "name": "Canterbury West"
+  },
+  {
+    "crs": "CBX",
+    "name": "Cameron Bridge"
+  },
+  {
+    "crs": "CBY",
+    "name": "Charlbury"
+  },
+  {
+    "crs": "CCC",
+    "name": "Criccieth"
+  },
+  {
+    "crs": "CCH",
+    "name": "Chichester"
+  },
+  {
+    "crs": "CCT",
+    "name": "Cathcart"
+  },
+  {
+    "crs": "CDB",
+    "name": "Cardiff Bay"
+  },
+  {
+    "crs": "CDD",
+    "name": "Cardenden"
+  },
+  {
+    "crs": "CDF",
+    "name": "Cardiff Central"
+  },
+  {
+    "crs": "CDI",
+    "name": "Crediton"
+  },
+  {
+    "crs": "CDN",
+    "name": "Coulsdon Town"
+  },
+  {
+    "crs": "CDO",
+    "name": "Cardonald"
+  },
+  {
+    "crs": "CDQ",
+    "name": "Cardiff Queen Street"
+  },
+  {
+    "crs": "CDR",
+    "name": "Cardross"
+  },
+  {
+    "crs": "CDS",
+    "name": "Coulsdon South"
+  },
+  {
+    "crs": "CDT",
+    "name": "Caldicot"
+  },
+  {
+    "crs": "CDU",
+    "name": "Cam & Dursley"
+  },
+  {
+    "crs": "CDY",
+    "name": "Cartsdyke"
+  },
+  {
+    "crs": "CEA",
+    "name": "Cleland"
+  },
+  {
+    "crs": "CED",
+    "name": "Cheddington"
+  },
+  {
+    "crs": "CEF",
+    "name": "Chapel-En-Le-Frith"
+  },
+  {
+    "crs": "CEH",
+    "name": "Coleshill Parkway"
+  },
+  {
+    "crs": "CEL",
+    "name": "Chelford"
+  },
+  {
+    "crs": "CES",
+    "name": "Cressing"
+  },
+  {
+    "crs": "CET",
+    "name": "Colchester Town"
+  },
+  {
+    "crs": "CEY",
+    "name": "Cononley"
+  },
+  {
+    "crs": "CFB",
+    "name": "Catford Bridge"
+  },
+  {
+    "crs": "CFD",
+    "name": "Castleford"
+  },
+  {
+    "crs": "CFF",
+    "name": "Croftfoot"
+  },
+  {
+    "crs": "CFH",
+    "name": "Chafford Hundred"
+  },
+  {
+    "crs": "CFL",
+    "name": "Crossflatts"
+  },
+  {
+    "crs": "CFN",
+    "name": "Clifton Down"
+  },
+  {
+    "crs": "CFO",
+    "name": "Chalfont & Latimer"
+  },
+  {
+    "crs": "CFR",
+    "name": "Chandlers Ford"
+  },
+  {
+    "crs": "CFT",
+    "name": "Crofton Park"
+  },
+  {
+    "crs": "CGD",
+    "name": "Craigendoran"
+  },
+  {
+    "crs": "CGM",
+    "name": "Cottingham"
+  },
+  {
+    "crs": "CGN",
+    "name": "Cogan"
+  },
+  {
+    "crs": "CGW",
+    "name": "Caergwrle"
+  },
+  {
+    "crs": "CHC",
+    "name": "Charing Cross (Glasgow)"
+  },
+  {
+    "crs": "CHD",
+    "name": "Chesterfield"
+  },
+  {
+    "crs": "CHE",
+    "name": "Cheam"
+  },
+  {
+    "crs": "CHF",
+    "name": "Church Fenton"
+  },
+  {
+    "crs": "CHG",
+    "name": "Charing"
+  },
+  {
+    "crs": "CHH",
+    "name": "Christs Hospital"
+  },
+  {
+    "crs": "CHI",
+    "name": "Chingford"
+  },
+  {
+    "crs": "CHK",
+    "name": "Chiswick"
+  },
+  {
+    "crs": "CHL",
+    "name": "Chilworth"
+  },
+  {
+    "crs": "CHM",
+    "name": "Chelmsford"
+  },
+  {
+    "crs": "CHN",
+    "name": "Cheshunt"
+  },
+  {
+    "crs": "CHO",
+    "name": "Cholsey"
+  },
+  {
+    "crs": "CHP",
+    "name": "Chipstead"
+  },
+  {
+    "crs": "CHR",
+    "name": "Christchurch"
+  },
+  {
+    "crs": "CHT",
+    "name": "Chathill"
+  },
+  {
+    "crs": "CHU",
+    "name": "Cheadle Hulme"
+  },
+  {
+    "crs": "CHW",
+    "name": "Chalkwell"
+  },
+  {
+    "crs": "CHX",
+    "name": "London Charing Cross"
+  },
+  {
+    "crs": "CHY",
+    "name": "Chertsey"
+  },
+  {
+    "crs": "CIL",
+    "name": "Chilham"
+  },
+  {
+    "crs": "CIM",
+    "name": "Cilmeri"
+  },
+  {
+    "crs": "CIR",
+    "name": "Caledonian Road & Barnsbury"
+  },
+  {
+    "crs": "CIT",
+    "name": "Chislehurst"
+  },
+  {
+    "crs": "CKH",
+    "name": "Corkerhill"
+  },
+  {
+    "crs": "CKL",
+    "name": "Corkickle"
+  },
+  {
+    "crs": "CKN",
+    "name": "Crewkerne"
+  },
+  {
+    "crs": "CKS",
+    "name": "Clarkston"
+  },
+  {
+    "crs": "CKT",
+    "name": "Crookston"
+  },
+  {
+    "crs": "CKY",
+    "name": "Crosskeys"
+  },
+  {
+    "crs": "CLA",
+    "name": "Clandon"
+  },
+  {
+    "crs": "CLC",
+    "name": "Castle Cary"
+  },
+  {
+    "crs": "CLD",
+    "name": "Chelsfield"
+  },
+  {
+    "crs": "CLE",
+    "name": "Cleethorpes"
+  },
+  {
+    "crs": "CLG",
+    "name": "Claygate"
+  },
+  {
+    "crs": "CLH",
+    "name": "Clitheroe"
+  },
+  {
+    "crs": "CLI",
+    "name": "Clifton"
+  },
+  {
+    "crs": "CLJ",
+    "name": "Clapham Junction"
+  },
+  {
+    "crs": "CLK",
+    "name": "Clock House"
+  },
+  {
+    "crs": "CLL",
+    "name": "Collington"
+  },
+  {
+    "crs": "CLM",
+    "name": "Collingham"
+  },
+  {
+    "crs": "CLN",
+    "name": "Chapeltown"
+  },
+  {
+    "crs": "CLP",
+    "name": "Clapham High Street"
+  },
+  {
+    "crs": "CLR",
+    "name": "Clarbeston Road"
+  },
+  {
+    "crs": "CLS",
+    "name": "Chester-Le-Street"
+  },
+  {
+    "crs": "CLT",
+    "name": "Clacton-On-Sea"
+  },
+  {
+    "crs": "CLU",
+    "name": "Carluke"
+  },
+  {
+    "crs": "CLV",
+    "name": "Claverdon"
+  },
+  {
+    "crs": "CLW",
+    "name": "Chorleywood"
+  },
+  {
+    "crs": "CLY",
+    "name": "Chinley"
+  },
+  {
+    "crs": "CMB",
+    "name": "Cambridge North"
+  },
+  {
+    "crs": "CMD",
+    "name": "Camden Road"
+  },
+  {
+    "crs": "CME",
+    "name": "Combe"
+  },
+  {
+    "crs": "CMF",
+    "name": "Cromford"
+  },
+  {
+    "crs": "CMH",
+    "name": "Cwmbach"
+  },
+  {
+    "crs": "CML",
+    "name": "Carmyle"
+  },
+  {
+    "crs": "CMN",
+    "name": "Carmarthen"
+  },
+  {
+    "crs": "CMO",
+    "name": "Camelon"
+  },
+  {
+    "crs": "CMR",
+    "name": "Cromer"
+  },
+  {
+    "crs": "CMY",
+    "name": "Crossmyloof"
+  },
+  {
+    "crs": "CNE",
+    "name": "Colne"
+  },
+  {
+    "crs": "CNF",
+    "name": "Carnforth"
+  },
+  {
+    "crs": "CNG",
+    "name": "Congleton"
+  },
+  {
+    "crs": "CNL",
+    "name": "Canley"
+  },
+  {
+    "crs": "CNM",
+    "name": "Cheltenham Spa"
+  },
+  {
+    "crs": "CNN",
+    "name": "Canonbury"
+  },
+  {
+    "crs": "CNO",
+    "name": "Chetnole"
+  },
+  {
+    "crs": "CNP",
+    "name": "Conway Park"
+  },
+  {
+    "crs": "CNR",
+    "name": "Crianlarich"
+  },
+  {
+    "crs": "CNS",
+    "name": "Conisbrough"
+  },
+  {
+    "crs": "CNW",
+    "name": "Conwy"
+  },
+  {
+    "crs": "CNY",
+    "name": "Cantley"
+  },
+  {
+    "crs": "COA",
+    "name": "Coatdyke"
+  },
+  {
+    "crs": "COB",
+    "name": "Cooden Beach"
+  },
+  {
+    "crs": "COE",
+    "name": "Coombe"
+  },
+  {
+    "crs": "COH",
+    "name": "Crowborough"
+  },
+  {
+    "crs": "COI",
+    "name": "Crosshill"
+  },
+  {
+    "crs": "COL",
+    "name": "Colchester"
+  },
+  {
+    "crs": "COM",
+    "name": "Commondale"
+  },
+  {
+    "crs": "CON",
+    "name": "Connel Ferry"
+  },
+  {
+    "crs": "COO",
+    "name": "Cookham"
+  },
+  {
+    "crs": "COP",
+    "name": "Copplestone"
+  },
+  {
+    "crs": "COR",
+    "name": "Corby"
+  },
+  {
+    "crs": "COS",
+    "name": "Cosford"
+  },
+  {
+    "crs": "COT",
+    "name": "Cottingley"
+  },
+  {
+    "crs": "COV",
+    "name": "Coventry"
+  },
+  {
+    "crs": "COW",
+    "name": "Cowdenbeath"
+  },
+  {
+    "crs": "COY",
+    "name": "Coryton"
+  },
+  {
+    "crs": "CPA",
+    "name": "Corpach"
+  },
+  {
+    "crs": "CPH",
+    "name": "Caerphilly"
+  },
+  {
+    "crs": "CPK",
+    "name": "Carpenders Park"
+  },
+  {
+    "crs": "CPM",
+    "name": "Chippenham"
+  },
+  {
+    "crs": "CPN",
+    "name": "Chapleton"
+  },
+  {
+    "crs": "CPT",
+    "name": "Clapton"
+  },
+  {
+    "crs": "CPU",
+    "name": "Capenhurst"
+  },
+  {
+    "crs": "CPW",
+    "name": "Chepstow"
+  },
+  {
+    "crs": "CPY",
+    "name": "Clapham (North Yorkshire)"
+  },
+  {
+    "crs": "CRA",
+    "name": "Cradley Heath"
+  },
+  {
+    "crs": "CRB",
+    "name": "Corbridge"
+  },
+  {
+    "crs": "CRD",
+    "name": "Chester Road"
+  },
+  {
+    "crs": "CRE",
+    "name": "Crewe"
+  },
+  {
+    "crs": "CRF",
+    "name": "Carfin"
+  },
+  {
+    "crs": "CRG",
+    "name": "Cross Gates"
+  },
+  {
+    "crs": "CRH",
+    "name": "Crouch Hill"
+  },
+  {
+    "crs": "CRI",
+    "name": "Cricklewood"
+  },
+  {
+    "crs": "CRK",
+    "name": "Chirk"
+  },
+  {
+    "crs": "CRL",
+    "name": "Chorley"
+  },
+  {
+    "crs": "CRM",
+    "name": "Cramlington"
+  },
+  {
+    "crs": "CRN",
+    "name": "Crowthorne"
+  },
+  {
+    "crs": "CRO",
+    "name": "Croy"
+  },
+  {
+    "crs": "CRR",
+    "name": "Corrour"
+  },
+  {
+    "crs": "CRS",
+    "name": "Carstairs"
+  },
+  {
+    "crs": "CRT",
+    "name": "Chartham"
+  },
+  {
+    "crs": "CRV",
+    "name": "Craven Arms"
+  },
+  {
+    "crs": "CRW",
+    "name": "Crawley"
+  },
+  {
+    "crs": "CRY",
+    "name": "Crayford"
+  },
+  {
+    "crs": "CSA",
+    "name": "Cosham"
+  },
+  {
+    "crs": "CSB",
+    "name": "Carshalton Beeches"
+  },
+  {
+    "crs": "CSD",
+    "name": "Cobham & Stoke Dabernon"
+  },
+  {
+    "crs": "CSG",
+    "name": "Cressington"
+  },
+  {
+    "crs": "CSH",
+    "name": "Carshalton"
+  },
+  {
+    "crs": "CSK",
+    "name": "Calstock"
+  },
+  {
+    "crs": "CSL",
+    "name": "Codsall"
+  },
+  {
+    "crs": "CSM",
+    "name": "Castleton Moor"
+  },
+  {
+    "crs": "CSN",
+    "name": "Chessington North"
+  },
+  {
+    "crs": "CSO",
+    "name": "Croston"
+  },
+  {
+    "crs": "CSR",
+    "name": "Chassen Road"
+  },
+  {
+    "crs": "CSS",
+    "name": "Chessington South"
+  },
+  {
+    "crs": "CST",
+    "name": "London Cannon Street"
+  },
+  {
+    "crs": "CSW",
+    "name": "Chestfield & Swalecliffe"
+  },
+  {
+    "crs": "CSY",
+    "name": "Coseley"
+  },
+  {
+    "crs": "CTE",
+    "name": "Chatelherault"
+  },
+  {
+    "crs": "CTF",
+    "name": "Catford"
+  },
+  {
+    "crs": "CTH",
+    "name": "Chadwell Heath"
+  },
+  {
+    "crs": "CTK",
+    "name": "City Thameslink"
+  },
+  {
+    "crs": "CTL",
+    "name": "Cattal"
+  },
+  {
+    "crs": "CTM",
+    "name": "Chatham"
+  },
+  {
+    "crs": "CTN",
+    "name": "Charlton"
+  },
+  {
+    "crs": "CTO",
+    "name": "Carlton"
+  },
+  {
+    "crs": "CTR",
+    "name": "Chester"
+  },
+  {
+    "crs": "CTT",
+    "name": "Church Stretton"
+  },
+  {
+    "crs": "CTW",
+    "name": "Church & Oswaldtwistle"
+  },
+  {
+    "crs": "CUA",
+    "name": "Culrain"
+  },
+  {
+    "crs": "CUB",
+    "name": "Cumbernauld"
+  },
+  {
+    "crs": "CUD",
+    "name": "Cuddington"
+  },
+  {
+    "crs": "CUF",
+    "name": "Cuffley"
+  },
+  {
+    "crs": "CUH",
+    "name": "Curriehill"
+  },
+  {
+    "crs": "CUM",
+    "name": "Culham"
+  },
+  {
+    "crs": "CUP",
+    "name": "Cupar"
+  },
+  {
+    "crs": "CUS",
+    "name": "Custom House"
+  },
+  {
+    "crs": "CUW",
+    "name": "Clunderwen"
+  },
+  {
+    "crs": "CUX",
+    "name": "Cuxton"
+  },
+  {
+    "crs": "CWB",
+    "name": "Colwyn Bay"
+  },
+  {
+    "crs": "CWC",
+    "name": "Chappel & Wakes Colne"
+  },
+  {
+    "crs": "CWD",
+    "name": "Creswell"
+  },
+  {
+    "crs": "CWE",
+    "name": "Crowle"
+  },
+  {
+    "crs": "CWH",
+    "name": "Crews Hill"
+  },
+  {
+    "crs": "CWL",
+    "name": "Colwall"
+  },
+  {
+    "crs": "CWM",
+    "name": "Cwmbran"
+  },
+  {
+    "crs": "CWN",
+    "name": "Cowden"
+  },
+  {
+    "crs": "CWS",
+    "name": "Caersws"
+  },
+  {
+    "crs": "CWU",
+    "name": "Crowhurst"
+  },
+  {
+    "crs": "CWX",
+    "name": "Canary Wharf"
+  },
+  {
+    "crs": "CYB",
+    "name": "Cefn-Y-Bedd"
+  },
+  {
+    "crs": "CYK",
+    "name": "Clydebank"
+  },
+  {
+    "crs": "CYN",
+    "name": "Cynghordy"
+  },
+  {
+    "crs": "CYP",
+    "name": "Crystal Palace"
+  },
+  {
+    "crs": "CYS",
+    "name": "Cathays"
+  },
+  {
+    "crs": "CYT",
+    "name": "Cherry Tree"
+  },
+  {
+    "crs": "DAG",
+    "name": "Dalgety Bay"
+  },
+  {
+    "crs": "DAK",
+    "name": "Dalmarnock"
+  },
+  {
+    "crs": "DAL",
+    "name": "Dalmally"
+  },
+  {
+    "crs": "DAM",
+    "name": "Dalmeny"
+  },
+  {
+    "crs": "DAN",
+    "name": "Darnall"
+  },
+  {
+    "crs": "DAR",
+    "name": "Darlington"
+  },
+  {
+    "crs": "DAT",
+    "name": "Datchet"
+  },
+  {
+    "crs": "DBC",
+    "name": "Dumbarton Central"
+  },
+  {
+    "crs": "DBD",
+    "name": "Denby Dale"
+  },
+  {
+    "crs": "DBE",
+    "name": "Dumbarton East"
+  },
+  {
+    "crs": "DBG",
+    "name": "Mottisfont & Dunbridge"
+  },
+  {
+    "crs": "DBL",
+    "name": "Dunblane"
+  },
+  {
+    "crs": "DBR",
+    "name": "Derby Road"
+  },
+  {
+    "crs": "DBY",
+    "name": "Derby"
+  },
+  {
+    "crs": "DCG",
+    "name": "Duncraig"
+  },
+  {
+    "crs": "DCH",
+    "name": "Dorchester South"
+  },
+  {
+    "crs": "DCT",
+    "name": "Danescourt"
+  },
+  {
+    "crs": "DCW",
+    "name": "Dorchester West"
+  },
+  {
+    "crs": "DDG",
+    "name": "Dorridge"
+  },
+  {
+    "crs": "DDK",
+    "name": "Dagenham Dock"
+  },
+  {
+    "crs": "DDP",
+    "name": "Dudley Port"
+  },
+  {
+    "crs": "DEA",
+    "name": "Deal"
+  },
+  {
+    "crs": "DEE",
+    "name": "Dundee"
+  },
+  {
+    "crs": "DEN",
+    "name": "Dean"
+  },
+  {
+    "crs": "DEP",
+    "name": "Deptford"
+  },
+  {
+    "crs": "DEW",
+    "name": "Dewsbury"
+  },
+  {
+    "crs": "DFD",
+    "name": "Dartford"
+  },
+  {
+    "crs": "DFE",
+    "name": "Dunfermline City"
+  },
+  {
+    "crs": "DFI",
+    "name": "Duffield"
+  },
+  {
+    "crs": "DFL",
+    "name": "Dunfermline Queen Margaret"
+  },
+  {
+    "crs": "DFR",
+    "name": "Drumfrochar"
+  },
+  {
+    "crs": "DGC",
+    "name": "Denham Golf Club"
+  },
+  {
+    "crs": "DGL",
+    "name": "Dingle Road"
+  },
+  {
+    "crs": "DGT",
+    "name": "Deansgate"
+  },
+  {
+    "crs": "DGY",
+    "name": "Deganwy"
+  },
+  {
+    "crs": "DHM",
+    "name": "Durham"
+  },
+  {
+    "crs": "DHN",
+    "name": "Deighton"
+  },
+  {
+    "crs": "DID",
+    "name": "Didcot Parkway"
+  },
+  {
+    "crs": "DIG",
+    "name": "Digby & Sowton"
+  },
+  {
+    "crs": "DIN",
+    "name": "Dingwall"
+  },
+  {
+    "crs": "DIS",
+    "name": "Diss"
+  },
+  {
+    "crs": "DKD",
+    "name": "Dunkeld & Birnam"
+  },
+  {
+    "crs": "DKG",
+    "name": "Dorking"
+  },
+  {
+    "crs": "DKT",
+    "name": "Dorking West"
+  },
+  {
+    "crs": "DLG",
+    "name": "Dolgarrog"
+  },
+  {
+    "crs": "DLH",
+    "name": "Doleham"
+  },
+  {
+    "crs": "DLJ",
+    "name": "Dalston Junction"
+  },
+  {
+    "crs": "DLK",
+    "name": "Dalston Kingsland"
+  },
+  {
+    "crs": "DLM",
+    "name": "Delamere"
+  },
+  {
+    "crs": "DLR",
+    "name": "Dalreoch"
+  },
+  {
+    "crs": "DLS",
+    "name": "Dalston (Cumbria)"
+  },
+  {
+    "crs": "DLT",
+    "name": "Dalton"
+  },
+  {
+    "crs": "DLW",
+    "name": "Dalwhinnie"
+  },
+  {
+    "crs": "DLY",
+    "name": "Dalry"
+  },
+  {
+    "crs": "DMC",
+    "name": "Drumchapel"
+  },
+  {
+    "crs": "DMF",
+    "name": "Dumfries"
+  },
+  {
+    "crs": "DMG",
+    "name": "Dinas Rhondda"
+  },
+  {
+    "crs": "DMH",
+    "name": "Dilton Marsh"
+  },
+  {
+    "crs": "DMK",
+    "name": "Denmark Hill"
+  },
+  {
+    "crs": "DMP",
+    "name": "Dumpton Park"
+  },
+  {
+    "crs": "DMR",
+    "name": "Dalmuir"
+  },
+  {
+    "crs": "DMS",
+    "name": "Dormans"
+  },
+  {
+    "crs": "DMY",
+    "name": "Drumry"
+  },
+  {
+    "crs": "DND",
+    "name": "Dinsdale"
+  },
+  {
+    "crs": "DNG",
+    "name": "Dunton Green"
+  },
+  {
+    "crs": "DNL",
+    "name": "Dunlop"
+  },
+  {
+    "crs": "DNM",
+    "name": "Denham"
+  },
+  {
+    "crs": "DNO",
+    "name": "Dunrobin Castle"
+  },
+  {
+    "crs": "DNS",
+    "name": "Dinas Powys"
+  },
+  {
+    "crs": "DNT",
+    "name": "Dent"
+  },
+  {
+    "crs": "DNY",
+    "name": "Danby"
+  },
+  {
+    "crs": "DOC",
+    "name": "Dockyard"
+  },
+  {
+    "crs": "DOD",
+    "name": "Dodworth"
+  },
+  {
+    "crs": "DOL",
+    "name": "Dolau"
+  },
+  {
+    "crs": "DON",
+    "name": "Doncaster"
+  },
+  {
+    "crs": "DOR",
+    "name": "Dore & Totley"
+  },
+  {
+    "crs": "DOT",
+    "name": "Dunston"
+  },
+  {
+    "crs": "DOW",
+    "name": "Downham Market"
+  },
+  {
+    "crs": "DPD",
+    "name": "Dorking Deepdene"
+  },
+  {
+    "crs": "DPT",
+    "name": "Devonport"
+  },
+  {
+    "crs": "DRF",
+    "name": "Driffield"
+  },
+  {
+    "crs": "DRG",
+    "name": "Drayton Green"
+  },
+  {
+    "crs": "DRI",
+    "name": "Drigg"
+  },
+  {
+    "crs": "DRM",
+    "name": "Drem"
+  },
+  {
+    "crs": "DRN",
+    "name": "Duirinish"
+  },
+  {
+    "crs": "DRO",
+    "name": "Dronfield"
+  },
+  {
+    "crs": "DRT",
+    "name": "Darton"
+  },
+  {
+    "crs": "DRU",
+    "name": "Drumgelloch"
+  },
+  {
+    "crs": "DSL",
+    "name": "Disley"
+  },
+  {
+    "crs": "DSM",
+    "name": "Darsham"
+  },
+  {
+    "crs": "DST",
+    "name": "Duke Street"
+  },
+  {
+    "crs": "DSY",
+    "name": "Daisy Hill"
+  },
+  {
+    "crs": "DTG",
+    "name": "Dinting"
+  },
+  {
+    "crs": "DTN",
+    "name": "Denton"
+  },
+  {
+    "crs": "DTW",
+    "name": "Droitwich Spa"
+  },
+  {
+    "crs": "DUD",
+    "name": "Duddeston"
+  },
+  {
+    "crs": "DUL",
+    "name": "Dullingham"
+  },
+  {
+    "crs": "DUM",
+    "name": "Dumbreck"
+  },
+  {
+    "crs": "DUN",
+    "name": "Dunbar"
+  },
+  {
+    "crs": "DUR",
+    "name": "Durrington-On-Sea"
+  },
+  {
+    "crs": "DVC",
+    "name": "Dovercourt"
+  },
+  {
+    "crs": "DVH",
+    "name": "Dove Holes"
+  },
+  {
+    "crs": "DVN",
+    "name": "Davenport"
+  },
+  {
+    "crs": "DVP",
+    "name": "Dover Priory"
+  },
+  {
+    "crs": "DVY",
+    "name": "Dovey Junction"
+  },
+  {
+    "crs": "DWD",
+    "name": "Dolwyddelan"
+  },
+  {
+    "crs": "DWL",
+    "name": "Dawlish"
+  },
+  {
+    "crs": "DWN",
+    "name": "Darwen"
+  },
+  {
+    "crs": "DWW",
+    "name": "Dawlish Warren"
+  },
+  {
+    "crs": "DYC",
+    "name": "Dyce"
+  },
+  {
+    "crs": "DYF",
+    "name": "Dyffryn Ardudwy"
+  },
+  {
+    "crs": "DYP",
+    "name": "Drayton Park"
+  },
+  {
+    "crs": "DZY",
+    "name": "Danzey"
+  },
+  {
+    "crs": "EAD",
+    "name": "Earlsfield"
+  },
+  {
+    "crs": "EAG",
+    "name": "Eaglescliffe"
+  },
+  {
+    "crs": "EAL",
+    "name": "Ealing Broadway"
+  },
+  {
+    "crs": "EAR",
+    "name": "Earley"
+  },
+  {
+    "crs": "EBA",
+    "name": "Euxton Balshaw Lane"
+  },
+  {
+    "crs": "EBB",
+    "name": "Ebbw Vale Town"
+  },
+  {
+    "crs": "EBD",
+    "name": "Ebbsfleet International"
+  },
+  {
+    "crs": "EBK",
+    "name": "Eastbrook"
+  },
+  {
+    "crs": "EBL",
+    "name": "East Boldon"
+  },
+  {
+    "crs": "EBN",
+    "name": "Eastbourne"
+  },
+  {
+    "crs": "EBR",
+    "name": "Edenbridge"
+  },
+  {
+    "crs": "EBT",
+    "name": "Edenbridge Town"
+  },
+  {
+    "crs": "EBV",
+    "name": "Ebbw Vale Parkway"
+  },
+  {
+    "crs": "ECC",
+    "name": "Eccles"
+  },
+  {
+    "crs": "ECL",
+    "name": "Eccleston Park"
+  },
+  {
+    "crs": "ECP",
+    "name": "Energlyn & Churchill Park"
+  },
+  {
+    "crs": "ECR",
+    "name": "East Croydon"
+  },
+  {
+    "crs": "ECS",
+    "name": "Eccles Road"
+  },
+  {
+    "crs": "EDB",
+    "name": "Edinburgh Waverley"
+  },
+  {
+    "crs": "EDG",
+    "name": "Edge Hill"
+  },
+  {
+    "crs": "EDL",
+    "name": "Edale"
+  },
+  {
+    "crs": "EDN",
+    "name": "Eden Park"
+  },
+  {
+    "crs": "EDP",
+    "name": "Edinburgh Park"
+  },
+  {
+    "crs": "EDR",
+    "name": "Edmonton Green"
+  },
+  {
+    "crs": "EDW",
+    "name": "East Dulwich"
+  },
+  {
+    "crs": "EDY",
+    "name": "East Didsbury"
+  },
+  {
+    "crs": "EFF",
+    "name": "Effingham Junction"
+  },
+  {
+    "crs": "EFL",
+    "name": "East Farleigh"
+  },
+  {
+    "crs": "EGF",
+    "name": "East Garforth"
+  },
+  {
+    "crs": "EGG",
+    "name": "Eggesford"
+  },
+  {
+    "crs": "EGH",
+    "name": "Egham"
+  },
+  {
+    "crs": "EGN",
+    "name": "Eastrington"
+  },
+  {
+    "crs": "EGR",
+    "name": "East Grinstead"
+  },
+  {
+    "crs": "EGT",
+    "name": "Egton"
+  },
+  {
+    "crs": "EGY",
+    "name": "Edinburgh Gateway"
+  },
+  {
+    "crs": "EKB",
+    "name": "Eskbank"
+  },
+  {
+    "crs": "EKL",
+    "name": "East Kilbride"
+  },
+  {
+    "crs": "ELD",
+    "name": "Earlswood (Surrey)"
+  },
+  {
+    "crs": "ELE",
+    "name": "Elmers End"
+  },
+  {
+    "crs": "ELG",
+    "name": "Elgin"
+  },
+  {
+    "crs": "ELO",
+    "name": "Elton & Orston"
+  },
+  {
+    "crs": "ELP",
+    "name": "Ellesmere Port"
+  },
+  {
+    "crs": "ELR",
+    "name": "Elsecar"
+  },
+  {
+    "crs": "ELS",
+    "name": "Elstree & Borehamwood"
+  },
+  {
+    "crs": "ELT",
+    "name": "East Linton"
+  },
+  {
+    "crs": "ELW",
+    "name": "Eltham"
+  },
+  {
+    "crs": "ELY",
+    "name": "Ely"
+  },
+  {
+    "crs": "EMD",
+    "name": "East Midlands Parkway"
+  },
+  {
+    "crs": "EML",
+    "name": "East Malling"
+  },
+  {
+    "crs": "EMP",
+    "name": "Emerson Park"
+  },
+  {
+    "crs": "EMS",
+    "name": "Emsworth"
+  },
+  {
+    "crs": "ENC",
+    "name": "Enfield Chase"
+  },
+  {
+    "crs": "ENF",
+    "name": "Enfield Town"
+  },
+  {
+    "crs": "ENL",
+    "name": "Enfield Lock"
+  },
+  {
+    "crs": "ENT",
+    "name": "Entwistle"
+  },
+  {
+    "crs": "EPD",
+    "name": "Epsom Downs"
+  },
+  {
+    "crs": "EPH",
+    "name": "Elephant & Castle"
+  },
+  {
+    "crs": "EPS",
+    "name": "Epsom"
+  },
+  {
+    "crs": "ERA",
+    "name": "Eastham Rake"
+  },
+  {
+    "crs": "ERD",
+    "name": "Erdington"
+  },
+  {
+    "crs": "ERH",
+    "name": "Erith"
+  },
+  {
+    "crs": "ERI",
+    "name": "Eridge"
+  },
+  {
+    "crs": "ERL",
+    "name": "Earlestown"
+  },
+  {
+    "crs": "ESD",
+    "name": "Elmstead Woods"
+  },
+  {
+    "crs": "ESH",
+    "name": "Esher"
+  },
+  {
+    "crs": "ESL",
+    "name": "Eastleigh"
+  },
+  {
+    "crs": "ESM",
+    "name": "Elsenham"
+  },
+  {
+    "crs": "EST",
+    "name": "Easterhouse"
+  },
+  {
+    "crs": "ESW",
+    "name": "Elmswell"
+  },
+  {
+    "crs": "ETC",
+    "name": "Etchingham"
+  },
+  {
+    "crs": "ETL",
+    "name": "East Tilbury"
+  },
+  {
+    "crs": "EUS",
+    "name": "London Euston"
+  },
+  {
+    "crs": "EVE",
+    "name": "Evesham"
+  },
+  {
+    "crs": "EWD",
+    "name": "Earlswood (West Midlands)"
+  },
+  {
+    "crs": "EWE",
+    "name": "Ewell East"
+  },
+  {
+    "crs": "EWR",
+    "name": "East Worthing"
+  },
+  {
+    "crs": "EWW",
+    "name": "Ewell West"
+  },
+  {
+    "crs": "EXC",
+    "name": "Exeter Central"
+  },
+  {
+    "crs": "EXD",
+    "name": "Exeter St Davids"
+  },
+  {
+    "crs": "EXG",
+    "name": "Exhibition Centre"
+  },
+  {
+    "crs": "EXM",
+    "name": "Exmouth"
+  },
+  {
+    "crs": "EXN",
+    "name": "Exton"
+  },
+  {
+    "crs": "EXR",
+    "name": "Essex Road"
+  },
+  {
+    "crs": "EXT",
+    "name": "Exeter St Thomas"
+  },
+  {
+    "crs": "EYN",
+    "name": "Eynsford"
+  },
+  {
+    "crs": "FAL",
+    "name": "Falmouth Docks"
+  },
+  {
+    "crs": "FAV",
+    "name": "Faversham"
+  },
+  {
+    "crs": "FAZ",
+    "name": "Fazakerley"
+  },
+  {
+    "crs": "FBY",
+    "name": "Formby"
+  },
+  {
+    "crs": "FCN",
+    "name": "Falconwood"
+  },
+  {
+    "crs": "FEA",
+    "name": "Featherstone"
+  },
+  {
+    "crs": "FEL",
+    "name": "Feltham"
+  },
+  {
+    "crs": "FEN",
+    "name": "Fenny Stratford"
+  },
+  {
+    "crs": "FER",
+    "name": "Fernhill"
+  },
+  {
+    "crs": "FFA",
+    "name": "Ffairfach"
+  },
+  {
+    "crs": "FFD",
+    "name": "Freshford"
+  },
+  {
+    "crs": "FGH",
+    "name": "Fishguard Harbour"
+  },
+  {
+    "crs": "FGT",
+    "name": "Faygate"
+  },
+  {
+    "crs": "FGW",
+    "name": "Fishguard & Goodwick"
+  },
+  {
+    "crs": "FIL",
+    "name": "Filey"
+  },
+  {
+    "crs": "FIN",
+    "name": "Finstock"
+  },
+  {
+    "crs": "FIT",
+    "name": "Filton Abbey Wood"
+  },
+  {
+    "crs": "FKC",
+    "name": "Folkestone Central"
+  },
+  {
+    "crs": "FKG",
+    "name": "Falkirk Grahamston"
+  },
+  {
+    "crs": "FKK",
+    "name": "Falkirk High"
+  },
+  {
+    "crs": "FKW",
+    "name": "Folkestone West"
+  },
+  {
+    "crs": "FLD",
+    "name": "Fauldhouse"
+  },
+  {
+    "crs": "FLE",
+    "name": "Fleet"
+  },
+  {
+    "crs": "FLF",
+    "name": "Flowery Field"
+  },
+  {
+    "crs": "FLI",
+    "name": "Flixton"
+  },
+  {
+    "crs": "FLM",
+    "name": "Flimby"
+  },
+  {
+    "crs": "FLN",
+    "name": "Flint"
+  },
+  {
+    "crs": "FLT",
+    "name": "Flitwick"
+  },
+  {
+    "crs": "FLW",
+    "name": "Fulwell"
+  },
+  {
+    "crs": "FLX",
+    "name": "Felixstowe"
+  },
+  {
+    "crs": "FML",
+    "name": "Frimley"
+  },
+  {
+    "crs": "FMR",
+    "name": "Falmer"
+  },
+  {
+    "crs": "FMT",
+    "name": "Falmouth Town"
+  },
+  {
+    "crs": "FNB",
+    "name": "Farnborough Main"
+  },
+  {
+    "crs": "FNC",
+    "name": "Farncombe"
+  },
+  {
+    "crs": "FNH",
+    "name": "Farnham"
+  },
+  {
+    "crs": "FNN",
+    "name": "Farnborough North"
+  },
+  {
+    "crs": "FNR",
+    "name": "Farningham Road"
+  },
+  {
+    "crs": "FNT",
+    "name": "Feniton"
+  },
+  {
+    "crs": "FNV",
+    "name": "Furness Vale"
+  },
+  {
+    "crs": "FNW",
+    "name": "Farnworth"
+  },
+  {
+    "crs": "FNY",
+    "name": "Finchley Road & Frognal"
+  },
+  {
+    "crs": "FOC",
+    "name": "Falls of Cruachan"
+  },
+  {
+    "crs": "FOD",
+    "name": "Ford"
+  },
+  {
+    "crs": "FOG",
+    "name": "Forest Gate"
+  },
+  {
+    "crs": "FOH",
+    "name": "Forest Hill"
+  },
+  {
+    "crs": "FOK",
+    "name": "Four Oaks"
+  },
+  {
+    "crs": "FOR",
+    "name": "Forres"
+  },
+  {
+    "crs": "FOX",
+    "name": "Foxfield"
+  },
+  {
+    "crs": "FPK",
+    "name": "Finsbury Park"
+  },
+  {
+    "crs": "FRB",
+    "name": "Fairbourne"
+  },
+  {
+    "crs": "FRD",
+    "name": "Frodsham"
+  },
+  {
+    "crs": "FRE",
+    "name": "Freshfield"
+  },
+  {
+    "crs": "FRF",
+    "name": "Fairfield"
+  },
+  {
+    "crs": "FRI",
+    "name": "Frinton-On-Sea"
+  },
+  {
+    "crs": "FRL",
+    "name": "Fairlie"
+  },
+  {
+    "crs": "FRM",
+    "name": "Fareham"
+  },
+  {
+    "crs": "FRN",
+    "name": "Fearn"
+  },
+  {
+    "crs": "FRO",
+    "name": "Frome"
+  },
+  {
+    "crs": "FRS",
+    "name": "Forsinard"
+  },
+  {
+    "crs": "FRT",
+    "name": "Frant"
+  },
+  {
+    "crs": "FRW",
+    "name": "Fairwater"
+  },
+  {
+    "crs": "FRY",
+    "name": "Ferriby"
+  },
+  {
+    "crs": "FSB",
+    "name": "Fishbourne"
+  },
+  {
+    "crs": "FSG",
+    "name": "Fishersgate"
+  },
+  {
+    "crs": "FSK",
+    "name": "Fiskerton"
+  },
+  {
+    "crs": "FST",
+    "name": "London Fenchurch Street"
+  },
+  {
+    "crs": "FTM",
+    "name": "Fort Matilda"
+  },
+  {
+    "crs": "FTN",
+    "name": "Fratton"
+  },
+  {
+    "crs": "FTW",
+    "name": "Fort William"
+  },
+  {
+    "crs": "FWY",
+    "name": "Five Ways"
+  },
+  {
+    "crs": "FXN",
+    "name": "Foxton"
+  },
+  {
+    "crs": "FYS",
+    "name": "Ferryside"
+  },
+  {
+    "crs": "FZH",
+    "name": "Frizinghall"
+  },
+  {
+    "crs": "FZP",
+    "name": "Furze Platt"
+  },
+  {
+    "crs": "FZW",
+    "name": "Fitzwilliam"
+  },
+  {
+    "crs": "GAL",
+    "name": "Galashiels"
+  },
+  {
+    "crs": "GAR",
+    "name": "Garrowhill"
+  },
+  {
+    "crs": "GBD",
+    "name": "Gilberdyke"
+  },
+  {
+    "crs": "GBG",
+    "name": "Gorebridge"
+  },
+  {
+    "crs": "GBK",
+    "name": "Greenbank"
+  },
+  {
+    "crs": "GBL",
+    "name": "Gainsborough Lea Road"
+  },
+  {
+    "crs": "GBS",
+    "name": "Goring-By-Sea"
+  },
+  {
+    "crs": "GCH",
+    "name": "Garelochhead"
+  },
+  {
+    "crs": "GCR",
+    "name": "Gloucester"
+  },
+  {
+    "crs": "GCT",
+    "name": "Great Coates"
+  },
+  {
+    "crs": "GCW",
+    "name": "Glan Conwy"
+  },
+  {
+    "crs": "GDH",
+    "name": "Gordon Hill"
+  },
+  {
+    "crs": "GDL",
+    "name": "Godley"
+  },
+  {
+    "crs": "GDN",
+    "name": "Godstone"
+  },
+  {
+    "crs": "GDP",
+    "name": "Gidea Park"
+  },
+  {
+    "crs": "GEA",
+    "name": "Gretna Green"
+  },
+  {
+    "crs": "GER",
+    "name": "Gerrards Cross"
+  },
+  {
+    "crs": "GFD",
+    "name": "Greenford"
+  },
+  {
+    "crs": "GFF",
+    "name": "Gilfach Fargoed"
+  },
+  {
+    "crs": "GFN",
+    "name": "Giffnock"
+  },
+  {
+    "crs": "GGJ",
+    "name": "Georgemas Junction"
+  },
+  {
+    "crs": "GGV",
+    "name": "Gargrave"
+  },
+  {
+    "crs": "GIG",
+    "name": "Giggleswick"
+  },
+  {
+    "crs": "GIL",
+    "name": "Gillingham (Dorset)"
+  },
+  {
+    "crs": "GIP",
+    "name": "Gipsy Hill"
+  },
+  {
+    "crs": "GIR",
+    "name": "Girvan"
+  },
+  {
+    "crs": "GKC",
+    "name": "Greenock Central"
+  },
+  {
+    "crs": "GKW",
+    "name": "Greenock West"
+  },
+  {
+    "crs": "GLC",
+    "name": "Glasgow Central"
+  },
+  {
+    "crs": "GLD",
+    "name": "Guildford"
+  },
+  {
+    "crs": "GLE",
+    "name": "Gleneagles"
+  },
+  {
+    "crs": "GLF",
+    "name": "Glenfinnan"
+  },
+  {
+    "crs": "GLG",
+    "name": "Glengarnock"
+  },
+  {
+    "crs": "GLH",
+    "name": "Glasshoughton"
+  },
+  {
+    "crs": "GLM",
+    "name": "Gillingham (Kent)"
+  },
+  {
+    "crs": "GLO",
+    "name": "Glossop"
+  },
+  {
+    "crs": "GLQ",
+    "name": "Glasgow Queen Street"
+  },
+  {
+    "crs": "GLS",
+    "name": "Glaisdale"
+  },
+  {
+    "crs": "GLT",
+    "name": "Glenrothes with Thornton"
+  },
+  {
+    "crs": "GLY",
+    "name": "Glynde"
+  },
+  {
+    "crs": "GLZ",
+    "name": "Glazebrook"
+  },
+  {
+    "crs": "GMB",
+    "name": "Grimsby Town"
+  },
+  {
+    "crs": "GMD",
+    "name": "Grimsby Docks"
+  },
+  {
+    "crs": "GMG",
+    "name": "Garth (Mid Glamorgan)"
+  },
+  {
+    "crs": "GMN",
+    "name": "Great Missenden"
+  },
+  {
+    "crs": "GMT",
+    "name": "Grosmont"
+  },
+  {
+    "crs": "GMV",
+    "name": "Great Malvern"
+  },
+  {
+    "crs": "GMY",
+    "name": "Goodmayes"
+  },
+  {
+    "crs": "GNB",
+    "name": "Gainsborough Central"
+  },
+  {
+    "crs": "GNF",
+    "name": "Greenfield"
+  },
+  {
+    "crs": "GNH",
+    "name": "Greenhithe for Bluewater"
+  },
+  {
+    "crs": "GNL",
+    "name": "Green Lane"
+  },
+  {
+    "crs": "GNR",
+    "name": "Green Road"
+  },
+  {
+    "crs": "GNT",
+    "name": "Gunton"
+  },
+  {
+    "crs": "GNW",
+    "name": "Greenwich"
+  },
+  {
+    "crs": "GOB",
+    "name": "Gobowen"
+  },
+  {
+    "crs": "GOD",
+    "name": "Godalming"
+  },
+  {
+    "crs": "GOE",
+    "name": "Goldthorpe"
+  },
+  {
+    "crs": "GOF",
+    "name": "Golf Street"
+  },
+  {
+    "crs": "GOL",
+    "name": "Golspie"
+  },
+  {
+    "crs": "GOM",
+    "name": "Gomshall"
+  },
+  {
+    "crs": "GOO",
+    "name": "Goole"
+  },
+  {
+    "crs": "GOR",
+    "name": "Goring & Streatley"
+  },
+  {
+    "crs": "GOS",
+    "name": "Grange-Over-Sands"
+  },
+  {
+    "crs": "GOX",
+    "name": "Goxhill"
+  },
+  {
+    "crs": "GPK",
+    "name": "Grange Park"
+  },
+  {
+    "crs": "GPO",
+    "name": "Gospel Oak"
+  },
+  {
+    "crs": "GRA",
+    "name": "Grantham"
+  },
+  {
+    "crs": "GRB",
+    "name": "Great Bentley"
+  },
+  {
+    "crs": "GRC",
+    "name": "Great Chesterford"
+  },
+  {
+    "crs": "GRF",
+    "name": "Garforth"
+  },
+  {
+    "crs": "GRH",
+    "name": "Gartcosh"
+  },
+  {
+    "crs": "GRK",
+    "name": "Gourock"
+  },
+  {
+    "crs": "GRL",
+    "name": "Greenfaulds"
+  },
+  {
+    "crs": "GRN",
+    "name": "Grindleford"
+  },
+  {
+    "crs": "GRP",
+    "name": "Grove Park"
+  },
+  {
+    "crs": "GRS",
+    "name": "Garscadden"
+  },
+  {
+    "crs": "GRT",
+    "name": "Grateley"
+  },
+  {
+    "crs": "GRV",
+    "name": "Gravesend"
+  },
+  {
+    "crs": "GRY",
+    "name": "Grays"
+  },
+  {
+    "crs": "GSC",
+    "name": "Gilshochill"
+  },
+  {
+    "crs": "GSD",
+    "name": "Garsdale"
+  },
+  {
+    "crs": "GSL",
+    "name": "Gunnislake"
+  },
+  {
+    "crs": "GSN",
+    "name": "Garston"
+  },
+  {
+    "crs": "GST",
+    "name": "Gathurst"
+  },
+  {
+    "crs": "GSW",
+    "name": "Garswood"
+  },
+  {
+    "crs": "GSY",
+    "name": "Guiseley"
+  },
+  {
+    "crs": "GTA",
+    "name": "Great Ayton"
+  },
+  {
+    "crs": "GTH",
+    "name": "Garth (Powys)"
+  },
+  {
+    "crs": "GTN",
+    "name": "Grangetown"
+  },
+  {
+    "crs": "GTO",
+    "name": "Gorton"
+  },
+  {
+    "crs": "GTR",
+    "name": "Goostrey"
+  },
+  {
+    "crs": "GTW",
+    "name": "Gatwick Airport"
+  },
+  {
+    "crs": "GTY",
+    "name": "Gatley"
+  },
+  {
+    "crs": "GUI",
+    "name": "Guide Bridge"
+  },
+  {
+    "crs": "GUN",
+    "name": "Gunnersbury"
+  },
+  {
+    "crs": "GVE",
+    "name": "Garve"
+  },
+  {
+    "crs": "GVH",
+    "name": "Gravelly Hill"
+  },
+  {
+    "crs": "GWE",
+    "name": "Gwersyllt"
+  },
+  {
+    "crs": "GWN",
+    "name": "Gowerton"
+  },
+  {
+    "crs": "GYM",
+    "name": "Great Yarmouth"
+  },
+  {
+    "crs": "GYP",
+    "name": "Gypsy Lane"
+  },
+  {
+    "crs": "HAB",
+    "name": "Habrough"
+  },
+  {
+    "crs": "HAC",
+    "name": "Hackney Downs"
+  },
+  {
+    "crs": "HAD",
+    "name": "Haddiscoe"
+  },
+  {
+    "crs": "HAF",
+    "name": "Heathrow Terminal 4 Rail"
+  },
+  {
+    "crs": "HAG",
+    "name": "Hagley"
+  },
+  {
+    "crs": "HAI",
+    "name": "Halling"
+  },
+  {
+    "crs": "HAL",
+    "name": "Hale"
+  },
+  {
+    "crs": "HAM",
+    "name": "Hamworthy"
+  },
+  {
+    "crs": "HAN",
+    "name": "Hanwell"
+  },
+  {
+    "crs": "HAP",
+    "name": "Hatfield Peverel"
+  },
+  {
+    "crs": "HAS",
+    "name": "Halesworth"
+  },
+  {
+    "crs": "HAT",
+    "name": "Hatfield"
+  },
+  {
+    "crs": "HAV",
+    "name": "Havant"
+  },
+  {
+    "crs": "HAY",
+    "name": "Hayes & Harlington"
+  },
+  {
+    "crs": "HAZ",
+    "name": "Hazel Grove"
+  },
+  {
+    "crs": "HBB",
+    "name": "Hubberts Bridge"
+  },
+  {
+    "crs": "HBD",
+    "name": "Hebden Bridge"
+  },
+  {
+    "crs": "HBL",
+    "name": "Headbolt Lane"
+  },
+  {
+    "crs": "HBN",
+    "name": "Hollingbourne"
+  },
+  {
+    "crs": "HBP",
+    "name": "Hornbeam Park"
+  },
+  {
+    "crs": "HBY",
+    "name": "Hartlebury"
+  },
+  {
+    "crs": "HCB",
+    "name": "Hackbridge"
+  },
+  {
+    "crs": "HCH",
+    "name": "Holmes Chapel"
+  },
+  {
+    "crs": "HCN",
+    "name": "Headcorn"
+  },
+  {
+    "crs": "HCT",
+    "name": "Huncoat"
+  },
+  {
+    "crs": "HDB",
+    "name": "Haydon Bridge"
+  },
+  {
+    "crs": "HDE",
+    "name": "Hedge End"
+  },
+  {
+    "crs": "HDF",
+    "name": "Hadfield"
+  },
+  {
+    "crs": "HDG",
+    "name": "Heald Green"
+  },
+  {
+    "crs": "HDH",
+    "name": "Hampstead Heath"
+  },
+  {
+    "crs": "HDL",
+    "name": "Headstone Lane"
+  },
+  {
+    "crs": "HDM",
+    "name": "Haddenham & Thame Parkway"
+  },
+  {
+    "crs": "HDN",
+    "name": "Harlesden"
+  },
+  {
+    "crs": "HDW",
+    "name": "Hadley Wood"
+  },
+  {
+    "crs": "HDY",
+    "name": "Headingley"
+  },
+  {
+    "crs": "HEC",
+    "name": "Heckington"
+  },
+  {
+    "crs": "HED",
+    "name": "Halewood"
+  },
+  {
+    "crs": "HEI",
+    "name": "Heighington"
+  },
+  {
+    "crs": "HEL",
+    "name": "Hensall"
+  },
+  {
+    "crs": "HEN",
+    "name": "Hendon"
+  },
+  {
+    "crs": "HER",
+    "name": "Hersham"
+  },
+  {
+    "crs": "HES",
+    "name": "Hessle"
+  },
+  {
+    "crs": "HEV",
+    "name": "Hever"
+  },
+  {
+    "crs": "HEW",
+    "name": "Heworth"
+  },
+  {
+    "crs": "HEX",
+    "name": "Hexham"
+  },
+  {
+    "crs": "HFD",
+    "name": "Hereford"
+  },
+  {
+    "crs": "HFE",
+    "name": "Hertford East"
+  },
+  {
+    "crs": "HFN",
+    "name": "Hertford North"
+  },
+  {
+    "crs": "HFS",
+    "name": "Hatfield & Stainforth"
+  },
+  {
+    "crs": "HFX",
+    "name": "Halifax"
+  },
+  {
+    "crs": "HGD",
+    "name": "Hungerford"
+  },
+  {
+    "crs": "HGF",
+    "name": "Hag Fold"
+  },
+  {
+    "crs": "HGG",
+    "name": "Haggerston"
+  },
+  {
+    "crs": "HGM",
+    "name": "Higham"
+  },
+  {
+    "crs": "HGN",
+    "name": "Hough Green"
+  },
+  {
+    "crs": "HGR",
+    "name": "Hither Green"
+  },
+  {
+    "crs": "HGS",
+    "name": "Hastings"
+  },
+  {
+    "crs": "HGT",
+    "name": "Harrogate"
+  },
+  {
+    "crs": "HGY",
+    "name": "Harringay"
+  },
+  {
+    "crs": "HHB",
+    "name": "Heysham Port"
+  },
+  {
+    "crs": "HHD",
+    "name": "Holyhead"
+  },
+  {
+    "crs": "HHE",
+    "name": "Haywards Heath"
+  },
+  {
+    "crs": "HHL",
+    "name": "Heath High Level"
+  },
+  {
+    "crs": "HHY",
+    "name": "Highbury & Islington"
+  },
+  {
+    "crs": "HIA",
+    "name": "Hampton-In-Arden"
+  },
+  {
+    "crs": "HIB",
+    "name": "High Brooms"
+  },
+  {
+    "crs": "HID",
+    "name": "Hall i' th' Wood"
+  },
+  {
+    "crs": "HIG",
+    "name": "Highbridge & Burnham"
+  },
+  {
+    "crs": "HIL",
+    "name": "Hillside"
+  },
+  {
+    "crs": "HIN",
+    "name": "Hindley"
+  },
+  {
+    "crs": "HIP",
+    "name": "Highams Park"
+  },
+  {
+    "crs": "HIR",
+    "name": "Horton in Ribblesdale"
+  },
+  {
+    "crs": "HIT",
+    "name": "Hitchin"
+  },
+  {
+    "crs": "HKC",
+    "name": "Hackney Central"
+  },
+  {
+    "crs": "HKH",
+    "name": "Hawkhead"
+  },
+  {
+    "crs": "HKM",
+    "name": "Hykeham"
+  },
+  {
+    "crs": "HKN",
+    "name": "Hucknall"
+  },
+  {
+    "crs": "HKW",
+    "name": "Hackney Wick"
+  },
+  {
+    "crs": "HLB",
+    "name": "Hildenborough"
+  },
+  {
+    "crs": "HLC",
+    "name": "Helensburgh Central"
+  },
+  {
+    "crs": "HLD",
+    "name": "Hellifield"
+  },
+  {
+    "crs": "HLE",
+    "name": "Hillington East"
+  },
+  {
+    "crs": "HLF",
+    "name": "Hillfoot"
+  },
+  {
+    "crs": "HLG",
+    "name": "Hall Green"
+  },
+  {
+    "crs": "HLI",
+    "name": "Healing"
+  },
+  {
+    "crs": "HLL",
+    "name": "Heath Low Level"
+  },
+  {
+    "crs": "HLM",
+    "name": "Holmwood"
+  },
+  {
+    "crs": "HLN",
+    "name": "Harlington"
+  },
+  {
+    "crs": "HLR",
+    "name": "Hall Road"
+  },
+  {
+    "crs": "HLS",
+    "name": "Hilsea"
+  },
+  {
+    "crs": "HLU",
+    "name": "Helensburgh Upper"
+  },
+  {
+    "crs": "HLW",
+    "name": "Hillington West"
+  },
+  {
+    "crs": "HLY",
+    "name": "Holytown"
+  },
+  {
+    "crs": "HMC",
+    "name": "Hampton Court"
+  },
+  {
+    "crs": "HMD",
+    "name": "Hampden Park"
+  },
+  {
+    "crs": "HME",
+    "name": "Hamble"
+  },
+  {
+    "crs": "HML",
+    "name": "Hemel Hempstead"
+  },
+  {
+    "crs": "HMM",
+    "name": "Hammerton"
+  },
+  {
+    "crs": "HMN",
+    "name": "Homerton"
+  },
+  {
+    "crs": "HMP",
+    "name": "Hampton"
+  },
+  {
+    "crs": "HMS",
+    "name": "Helmsdale"
+  },
+  {
+    "crs": "HMT",
+    "name": "Ham Street"
+  },
+  {
+    "crs": "HMW",
+    "name": "Hampton Wick"
+  },
+  {
+    "crs": "HMY",
+    "name": "Hairmyres"
+  },
+  {
+    "crs": "HNA",
+    "name": "Hinton Admiral"
+  },
+  {
+    "crs": "HNB",
+    "name": "Herne Bay"
+  },
+  {
+    "crs": "HNC",
+    "name": "Hamilton Central"
+  },
+  {
+    "crs": "HND",
+    "name": "Hanborough"
+  },
+  {
+    "crs": "HNF",
+    "name": "Hednesford"
+  },
+  {
+    "crs": "HNG",
+    "name": "Hengoed"
+  },
+  {
+    "crs": "HNH",
+    "name": "Herne Hill"
+  },
+  {
+    "crs": "HNK",
+    "name": "Hinckley"
+  },
+  {
+    "crs": "HNL",
+    "name": "Henley-In-Arden"
+  },
+  {
+    "crs": "HNT",
+    "name": "Huntly"
+  },
+  {
+    "crs": "HNW",
+    "name": "Hamilton West"
+  },
+  {
+    "crs": "HNX",
+    "name": "Hunts Cross"
+  },
+  {
+    "crs": "HOC",
+    "name": "Hockley"
+  },
+  {
+    "crs": "HOH",
+    "name": "Harrow-on-the-Hill"
+  },
+  {
+    "crs": "HOK",
+    "name": "Hook"
+  },
+  {
+    "crs": "HOL",
+    "name": "Holton Heath"
+  },
+  {
+    "crs": "HON",
+    "name": "Honiton"
+  },
+  {
+    "crs": "HOO",
+    "name": "Hooton"
+  },
+  {
+    "crs": "HOP",
+    "name": "Hope (Derbyshire)"
+  },
+  {
+    "crs": "HOR",
+    "name": "Horley"
+  },
+  {
+    "crs": "HOT",
+    "name": "Henley-On-Thames"
+  },
+  {
+    "crs": "HOU",
+    "name": "Hounslow"
+  },
+  {
+    "crs": "HOV",
+    "name": "Hove"
+  },
+  {
+    "crs": "HOW",
+    "name": "Howden"
+  },
+  {
+    "crs": "HOX",
+    "name": "Hoxton"
+  },
+  {
+    "crs": "HOY",
+    "name": "Honley"
+  },
+  {
+    "crs": "HOZ",
+    "name": "Howwood"
+  },
+  {
+    "crs": "HPA",
+    "name": "Honor Oak Park"
+  },
+  {
+    "crs": "HPD",
+    "name": "Harpenden"
+  },
+  {
+    "crs": "HPE",
+    "name": "Hope (Flintshire)"
+  },
+  {
+    "crs": "HPL",
+    "name": "Hartlepool"
+  },
+  {
+    "crs": "HPN",
+    "name": "Hapton"
+  },
+  {
+    "crs": "HPQ",
+    "name": "Harwich International"
+  },
+  {
+    "crs": "HPT",
+    "name": "Hopton Heath"
+  },
+  {
+    "crs": "HRD",
+    "name": "Harling Road"
+  },
+  {
+    "crs": "HRE",
+    "name": "Horden"
+  },
+  {
+    "crs": "HRH",
+    "name": "Horsham"
+  },
+  {
+    "crs": "HRL",
+    "name": "Harlech"
+  },
+  {
+    "crs": "HRM",
+    "name": "Harrietsham"
+  },
+  {
+    "crs": "HRN",
+    "name": "Hornsey"
+  },
+  {
+    "crs": "HRO",
+    "name": "Harold Wood"
+  },
+  {
+    "crs": "HRR",
+    "name": "Harrington"
+  },
+  {
+    "crs": "HRS",
+    "name": "Horsforth"
+  },
+  {
+    "crs": "HRW",
+    "name": "Harrow & Wealdstone"
+  },
+  {
+    "crs": "HRY",
+    "name": "Harringay Green Lanes"
+  },
+  {
+    "crs": "HSB",
+    "name": "Helsby"
+  },
+  {
+    "crs": "HSC",
+    "name": "Hoscar"
+  },
+  {
+    "crs": "HSD",
+    "name": "Hamstead"
+  },
+  {
+    "crs": "HSG",
+    "name": "Hathersage"
+  },
+  {
+    "crs": "HSK",
+    "name": "Hassocks"
+  },
+  {
+    "crs": "HSL",
+    "name": "Haslemere"
+  },
+  {
+    "crs": "HST",
+    "name": "High Street"
+  },
+  {
+    "crs": "HSW",
+    "name": "Heswall"
+  },
+  {
+    "crs": "HSY",
+    "name": "Horsley"
+  },
+  {
+    "crs": "HTC",
+    "name": "Heaton Chapel"
+  },
+  {
+    "crs": "HTE",
+    "name": "Hatch End"
+  },
+  {
+    "crs": "HTF",
+    "name": "Hartford"
+  },
+  {
+    "crs": "HTH",
+    "name": "Handforth"
+  },
+  {
+    "crs": "HTN",
+    "name": "Hatton"
+  },
+  {
+    "crs": "HTO",
+    "name": "Hightown"
+  },
+  {
+    "crs": "HTW",
+    "name": "Hartwood"
+  },
+  {
+    "crs": "HTY",
+    "name": "Hattersley"
+  },
+  {
+    "crs": "HUB",
+    "name": "Hunmanby"
+  },
+  {
+    "crs": "HUD",
+    "name": "Huddersfield"
+  },
+  {
+    "crs": "HUL",
+    "name": "Hull"
+  },
+  {
+    "crs": "HUN",
+    "name": "Huntingdon"
+  },
+  {
+    "crs": "HUP",
+    "name": "Humphrey Park"
+  },
+  {
+    "crs": "HUR",
+    "name": "Hurst Green"
+  },
+  {
+    "crs": "HUT",
+    "name": "Hutton Cranswick"
+  },
+  {
+    "crs": "HUY",
+    "name": "Huyton"
+  },
+  {
+    "crs": "HVF",
+    "name": "Haverfordwest"
+  },
+  {
+    "crs": "HVN",
+    "name": "Havenhouse"
+  },
+  {
+    "crs": "HWB",
+    "name": "Hawarden Bridge"
+  },
+  {
+    "crs": "HWC",
+    "name": "Harwich Town"
+  },
+  {
+    "crs": "HWD",
+    "name": "Hawarden"
+  },
+  {
+    "crs": "HWH",
+    "name": "Haltwhistle"
+  },
+  {
+    "crs": "HWI",
+    "name": "Horwich Parkway"
+  },
+  {
+    "crs": "HWM",
+    "name": "Harlow Mill"
+  },
+  {
+    "crs": "HWN",
+    "name": "Harlow Town"
+  },
+  {
+    "crs": "HWV",
+    "name": "Heathrow Terminal 5 Rail"
+  },
+  {
+    "crs": "HWW",
+    "name": "How Wood"
+  },
+  {
+    "crs": "HWY",
+    "name": "High Wycombe"
+  },
+  {
+    "crs": "HXM",
+    "name": "Hoveton & Wroxham"
+  },
+  {
+    "crs": "HXX",
+    "name": "Heathrow Terminals 1-2-3 Rail"
+  },
+  {
+    "crs": "HYB",
+    "name": "Honeybourne"
+  },
+  {
+    "crs": "HYC",
+    "name": "Hyde Central"
+  },
+  {
+    "crs": "HYD",
+    "name": "Heyford"
+  },
+  {
+    "crs": "HYH",
+    "name": "Hythe"
+  },
+  {
+    "crs": "HYK",
+    "name": "Hoylake"
+  },
+  {
+    "crs": "HYL",
+    "name": "Hayle"
+  },
+  {
+    "crs": "HYM",
+    "name": "Haymarket"
+  },
+  {
+    "crs": "HYN",
+    "name": "Hyndland"
+  },
+  {
+    "crs": "HYR",
+    "name": "Haydons Road"
+  },
+  {
+    "crs": "HYS",
+    "name": "Hayes (Kent)"
+  },
+  {
+    "crs": "HYT",
+    "name": "Hyde North"
+  },
+  {
+    "crs": "HYW",
+    "name": "Hinchley Wood"
+  },
+  {
+    "crs": "IFD",
+    "name": "Ilford"
+  },
+  {
+    "crs": "IFI",
+    "name": "Ifield"
+  },
+  {
+    "crs": "IGD",
+    "name": "Invergordon"
+  },
+  {
+    "crs": "ILK",
+    "name": "Ilkley"
+  },
+  {
+    "crs": "ILN",
+    "name": "Ilkeston"
+  },
+  {
+    "crs": "IMW",
+    "name": "Imperial Wharf"
+  },
+  {
+    "crs": "INC",
+    "name": "Ince"
+  },
+  {
+    "crs": "INE",
+    "name": "Ince & Elton"
+  },
+  {
+    "crs": "ING",
+    "name": "Invergowrie"
+  },
+  {
+    "crs": "INH",
+    "name": "Invershin"
+  },
+  {
+    "crs": "INK",
+    "name": "Inverkeithing"
+  },
+  {
+    "crs": "INP",
+    "name": "Inverkip"
+  },
+  {
+    "crs": "INR",
+    "name": "Inverurie"
+  },
+  {
+    "crs": "INS",
+    "name": "Insch"
+  },
+  {
+    "crs": "INT",
+    "name": "Ingatestone"
+  },
+  {
+    "crs": "INV",
+    "name": "Inverness"
+  },
+  {
+    "crs": "IPS",
+    "name": "Ipswich"
+  },
+  {
+    "crs": "IRL",
+    "name": "Irlam"
+  },
+  {
+    "crs": "IRV",
+    "name": "Irvine"
+  },
+  {
+    "crs": "ISL",
+    "name": "Isleworth"
+  },
+  {
+    "crs": "ISP",
+    "name": "Islip"
+  },
+  {
+    "crs": "IVA",
+    "name": "Inverness Airport"
+  },
+  {
+    "crs": "IVR",
+    "name": "Iver"
+  },
+  {
+    "crs": "IVY",
+    "name": "Ivybridge"
+  },
+  {
+    "crs": "JCH",
+    "name": "James Cook University Hospital"
+  },
+  {
+    "crs": "JEQ",
+    "name": "Jewellery Quarter"
+  },
+  {
+    "crs": "JHN",
+    "name": "Johnstone"
+  },
+  {
+    "crs": "JOH",
+    "name": "Johnston"
+  },
+  {
+    "crs": "JOR",
+    "name": "Jordanhill"
+  },
+  {
+    "crs": "KBC",
+    "name": "Kinbrace"
+  },
+  {
+    "crs": "KBF",
+    "name": "Kirkby-In-Furness"
+  },
+  {
+    "crs": "KBK",
+    "name": "Kents Bank"
+  },
+  {
+    "crs": "KBN",
+    "name": "Kilburn High Road"
+  },
+  {
+    "crs": "KBW",
+    "name": "Knebworth"
+  },
+  {
+    "crs": "KBX",
+    "name": "Kirby Cross"
+  },
+  {
+    "crs": "KCK",
+    "name": "Knockholt"
+  },
+  {
+    "crs": "KDB",
+    "name": "Kidbrooke"
+  },
+  {
+    "crs": "KDG",
+    "name": "Kidsgrove"
+  },
+  {
+    "crs": "KDY",
+    "name": "Kirkcaldy"
+  },
+  {
+    "crs": "KEH",
+    "name": "Keith"
+  },
+  {
+    "crs": "KEI",
+    "name": "Keighley"
+  },
+  {
+    "crs": "KEL",
+    "name": "Kelvedon"
+  },
+  {
+    "crs": "KEM",
+    "name": "Kemble"
+  },
+  {
+    "crs": "KEN",
+    "name": "Kendal"
+  },
+  {
+    "crs": "KET",
+    "name": "Kettering"
+  },
+  {
+    "crs": "KEY",
+    "name": "Keyham"
+  },
+  {
+    "crs": "KGE",
+    "name": "Kingsknowe"
+  },
+  {
+    "crs": "KGH",
+    "name": "Kinghorn"
+  },
+  {
+    "crs": "KGL",
+    "name": "Kings Langley"
+  },
+  {
+    "crs": "KGM",
+    "name": "Kingham"
+  },
+  {
+    "crs": "KGN",
+    "name": "Kings Nympton"
+  },
+  {
+    "crs": "KGP",
+    "name": "Kings Park"
+  },
+  {
+    "crs": "KGS",
+    "name": "Kings Sutton"
+  },
+  {
+    "crs": "KGT",
+    "name": "Kilgetty"
+  },
+  {
+    "crs": "KGX",
+    "name": "London Kings Cross"
+  },
+  {
+    "crs": "KID",
+    "name": "Kidderminster"
+  },
+  {
+    "crs": "KIL",
+    "name": "Kildonan"
+  },
+  {
+    "crs": "KIN",
+    "name": "Kingussie"
+  },
+  {
+    "crs": "KIR",
+    "name": "Kirkby"
+  },
+  {
+    "crs": "KIT",
+    "name": "Kintbury"
+  },
+  {
+    "crs": "KIV",
+    "name": "Kiveton Bridge"
+  },
+  {
+    "crs": "KKB",
+    "name": "Kirkby in Ashfield"
+  },
+  {
+    "crs": "KKD",
+    "name": "Kirkdale"
+  },
+  {
+    "crs": "KKH",
+    "name": "Kirkhill"
+  },
+  {
+    "crs": "KKM",
+    "name": "Kirkham & Wesham"
+  },
+  {
+    "crs": "KKN",
+    "name": "Kirknewton"
+  },
+  {
+    "crs": "KKS",
+    "name": "Kirk Sandall"
+  },
+  {
+    "crs": "KLD",
+    "name": "Kildale"
+  },
+  {
+    "crs": "KLF",
+    "name": "Kirkstall Forge"
+  },
+  {
+    "crs": "KLM",
+    "name": "Kilmaurs"
+  },
+  {
+    "crs": "KLN",
+    "name": "Kings Lynn"
+  },
+  {
+    "crs": "KLY",
+    "name": "Kenley"
+  },
+  {
+    "crs": "KMH",
+    "name": "Kempston Hardwick"
+  },
+  {
+    "crs": "KMK",
+    "name": "Kilmarnock"
+  },
+  {
+    "crs": "KML",
+    "name": "Kemsley"
+  },
+  {
+    "crs": "KMP",
+    "name": "Kempton Park"
+  },
+  {
+    "crs": "KMS",
+    "name": "Kemsing"
+  },
+  {
+    "crs": "KNA",
+    "name": "Knaresborough"
+  },
+  {
+    "crs": "KND",
+    "name": "Kingswood"
+  },
+  {
+    "crs": "KNE",
+    "name": "Kennett"
+  },
+  {
+    "crs": "KNF",
+    "name": "Knutsford"
+  },
+  {
+    "crs": "KNG",
+    "name": "Kingston"
+  },
+  {
+    "crs": "KNI",
+    "name": "Knighton"
+  },
+  {
+    "crs": "KNL",
+    "name": "Kensal Green"
+  },
+  {
+    "crs": "KNN",
+    "name": "Kings Norton"
+  },
+  {
+    "crs": "KNO",
+    "name": "Knottingley"
+  },
+  {
+    "crs": "KNR",
+    "name": "Kensal Rise"
+  },
+  {
+    "crs": "KNS",
+    "name": "Kennishead"
+  },
+  {
+    "crs": "KNT",
+    "name": "Kenton"
+  },
+  {
+    "crs": "KNU",
+    "name": "Knucklas"
+  },
+  {
+    "crs": "KNW",
+    "name": "Kenilworth"
+  },
+  {
+    "crs": "KPA",
+    "name": "Kensington Olympia"
+  },
+  {
+    "crs": "KPT",
+    "name": "Kilpatrick"
+  },
+  {
+    "crs": "KRK",
+    "name": "Kirkconnel"
+  },
+  {
+    "crs": "KSL",
+    "name": "Kearsley"
+  },
+  {
+    "crs": "KSN",
+    "name": "Kearsney"
+  },
+  {
+    "crs": "KSW",
+    "name": "Kirkby Stephen"
+  },
+  {
+    "crs": "KTH",
+    "name": "Kent House"
+  },
+  {
+    "crs": "KTL",
+    "name": "Kirton Lindsey"
+  },
+  {
+    "crs": "KTN",
+    "name": "Kentish Town"
+  },
+  {
+    "crs": "KTR",
+    "name": "Kintore"
+  },
+  {
+    "crs": "KTW",
+    "name": "Kentish Town West"
+  },
+  {
+    "crs": "KVD",
+    "name": "Kelvindale"
+  },
+  {
+    "crs": "KVP",
+    "name": "Kiveton Park"
+  },
+  {
+    "crs": "KWB",
+    "name": "Kew Bridge"
+  },
+  {
+    "crs": "KWD",
+    "name": "Kirkwood"
+  },
+  {
+    "crs": "KWG",
+    "name": "Kew Gardens"
+  },
+  {
+    "crs": "KWL",
+    "name": "Kidwelly"
+  },
+  {
+    "crs": "KWN",
+    "name": "Kilwinning"
+  },
+  {
+    "crs": "KYL",
+    "name": "Kyle of Lochalsh"
+  },
+  {
+    "crs": "KYN",
+    "name": "Keynsham"
+  },
+  {
+    "crs": "LAC",
+    "name": "Lancing"
+  },
+  {
+    "crs": "LAD",
+    "name": "Ladywell"
+  },
+  {
+    "crs": "LAG",
+    "name": "Langwith - Whaley Thorns"
+  },
+  {
+    "crs": "LAI",
+    "name": "Laindon"
+  },
+  {
+    "crs": "LAK",
+    "name": "Lakenheath"
+  },
+  {
+    "crs": "LAM",
+    "name": "Lamphey"
+  },
+  {
+    "crs": "LAN",
+    "name": "Lancaster"
+  },
+  {
+    "crs": "LAP",
+    "name": "Lapford"
+  },
+  {
+    "crs": "LAR",
+    "name": "Largs"
+  },
+  {
+    "crs": "LAS",
+    "name": "Llansamlet"
+  },
+  {
+    "crs": "LAU",
+    "name": "Laurencekirk"
+  },
+  {
+    "crs": "LAW",
+    "name": "Landywood"
+  },
+  {
+    "crs": "LAY",
+    "name": "Layton"
+  },
+  {
+    "crs": "LBG",
+    "name": "London Bridge"
+  },
+  {
+    "crs": "LBK",
+    "name": "Long Buckby"
+  },
+  {
+    "crs": "LBO",
+    "name": "Loughborough"
+  },
+  {
+    "crs": "LBR",
+    "name": "Llanbedr"
+  },
+  {
+    "crs": "LBT",
+    "name": "Larbert"
+  },
+  {
+    "crs": "LBZ",
+    "name": "Leighton Buzzard"
+  },
+  {
+    "crs": "LCC",
+    "name": "Lochluichart"
+  },
+  {
+    "crs": "LCG",
+    "name": "Lochgelly"
+  },
+  {
+    "crs": "LCK",
+    "name": "Lockwood"
+  },
+  {
+    "crs": "LCL",
+    "name": "Lochailort"
+  },
+  {
+    "crs": "LCN",
+    "name": "Lincoln Central"
+  },
+  {
+    "crs": "LCS",
+    "name": "Locheilside"
+  },
+  {
+    "crs": "LDN",
+    "name": "Llandanwg"
+  },
+  {
+    "crs": "LDS",
+    "name": "Leeds"
+  },
+  {
+    "crs": "LDY",
+    "name": "Ladybank"
+  },
+  {
+    "crs": "LEA",
+    "name": "Leagrave"
+  },
+  {
+    "crs": "LEB",
+    "name": "Lea Bridge"
+  },
+  {
+    "crs": "LED",
+    "name": "Ledbury"
+  },
+  {
+    "crs": "LEE",
+    "name": "Lee"
+  },
+  {
+    "crs": "LEG",
+    "name": "Lea Green"
+  },
+  {
+    "crs": "LEH",
+    "name": "Lea Hall"
+  },
+  {
+    "crs": "LEI",
+    "name": "Leicester"
+  },
+  {
+    "crs": "LEL",
+    "name": "Lelant"
+  },
+  {
+    "crs": "LEM",
+    "name": "Leyton Midland Road"
+  },
+  {
+    "crs": "LEN",
+    "name": "Lenham"
+  },
+  {
+    "crs": "LEO",
+    "name": "Leominster"
+  },
+  {
+    "crs": "LER",
+    "name": "Leytonstone High Road"
+  },
+  {
+    "crs": "LES",
+    "name": "Leigh-on-Sea"
+  },
+  {
+    "crs": "LET",
+    "name": "Letchworth Garden City"
+  },
+  {
+    "crs": "LEU",
+    "name": "Leuchars"
+  },
+  {
+    "crs": "LEV",
+    "name": "Leven"
+  },
+  {
+    "crs": "LEW",
+    "name": "Lewisham"
+  },
+  {
+    "crs": "LEY",
+    "name": "Leyland"
+  },
+  {
+    "crs": "LFD",
+    "name": "Lingfield"
+  },
+  {
+    "crs": "LGB",
+    "name": "Langbank"
+  },
+  {
+    "crs": "LGD",
+    "name": "Lingwood"
+  },
+  {
+    "crs": "LGE",
+    "name": "Long Eaton"
+  },
+  {
+    "crs": "LGF",
+    "name": "Longfield"
+  },
+  {
+    "crs": "LGG",
+    "name": "Langley Green"
+  },
+  {
+    "crs": "LGJ",
+    "name": "Loughborough Junction"
+  },
+  {
+    "crs": "LGK",
+    "name": "Longbeck"
+  },
+  {
+    "crs": "LGM",
+    "name": "Langley Mill"
+  },
+  {
+    "crs": "LGN",
+    "name": "Longton"
+  },
+  {
+    "crs": "LGO",
+    "name": "Llangynllo"
+  },
+  {
+    "crs": "LGS",
+    "name": "Langside"
+  },
+  {
+    "crs": "LGW",
+    "name": "Langwathby"
+  },
+  {
+    "crs": "LHA",
+    "name": "Loch Awe"
+  },
+  {
+    "crs": "LHD",
+    "name": "Leatherhead"
+  },
+  {
+    "crs": "LHE",
+    "name": "Loch Eil Outward Bound"
+  },
+  {
+    "crs": "LHM",
+    "name": "Lealholm"
+  },
+  {
+    "crs": "LHO",
+    "name": "Langho"
+  },
+  {
+    "crs": "LHS",
+    "name": "Limehouse"
+  },
+  {
+    "crs": "LHW",
+    "name": "Lochwinnoch"
+  },
+  {
+    "crs": "LIC",
+    "name": "Lichfield City"
+  },
+  {
+    "crs": "LID",
+    "name": "Lidlington"
+  },
+  {
+    "crs": "LIH",
+    "name": "Leigh (Kent)"
+  },
+  {
+    "crs": "LIN",
+    "name": "Linlithgow"
+  },
+  {
+    "crs": "LIP",
+    "name": "Liphook"
+  },
+  {
+    "crs": "LIS",
+    "name": "Liss"
+  },
+  {
+    "crs": "LIT",
+    "name": "Littlehampton"
+  },
+  {
+    "crs": "LIV",
+    "name": "Liverpool Lime Street"
+  },
+  {
+    "crs": "LKE",
+    "name": "Lake"
+  },
+  {
+    "crs": "LLA",
+    "name": "Llanaber"
+  },
+  {
+    "crs": "LLC",
+    "name": "Llandecwyn"
+  },
+  {
+    "crs": "LLD",
+    "name": "Llandudno"
+  },
+  {
+    "crs": "LLE",
+    "name": "Llanelli"
+  },
+  {
+    "crs": "LLF",
+    "name": "Llanfairfechan"
+  },
+  {
+    "crs": "LLG",
+    "name": "Llangadog"
+  },
+  {
+    "crs": "LLH",
+    "name": "Llangennech"
+  },
+  {
+    "crs": "LLI",
+    "name": "Llandybie"
+  },
+  {
+    "crs": "LLJ",
+    "name": "Llandudno Junction"
+  },
+  {
+    "crs": "LLL",
+    "name": "Llandeilo"
+  },
+  {
+    "crs": "LLM",
+    "name": "Llangammarch"
+  },
+  {
+    "crs": "LLN",
+    "name": "Llandaf"
+  },
+  {
+    "crs": "LLO",
+    "name": "Llandrindod"
+  },
+  {
+    "crs": "LLR",
+    "name": "Llanharan"
+  },
+  {
+    "crs": "LLS",
+    "name": "Llanishen"
+  },
+  {
+    "crs": "LLT",
+    "name": "Llanbister Road"
+  },
+  {
+    "crs": "LLV",
+    "name": "Llandovery"
+  },
+  {
+    "crs": "LLW",
+    "name": "Llwyngwril"
+  },
+  {
+    "crs": "LLY",
+    "name": "Llwynypia"
+  },
+  {
+    "crs": "LMR",
+    "name": "Low Moor"
+  },
+  {
+    "crs": "LMS",
+    "name": "Leamington Spa"
+  },
+  {
+    "crs": "LNB",
+    "name": "Llanbradach"
+  },
+  {
+    "crs": "LND",
+    "name": "Longniddry"
+  },
+  {
+    "crs": "LNG",
+    "name": "Longcross"
+  },
+  {
+    "crs": "LNK",
+    "name": "Lanark"
+  },
+  {
+    "crs": "LNR",
+    "name": "Llanwrda"
+  },
+  {
+    "crs": "LNW",
+    "name": "Llanwrtyd"
+  },
+  {
+    "crs": "LNY",
+    "name": "Langley"
+  },
+  {
+    "crs": "LNZ",
+    "name": "Lenzie"
+  },
+  {
+    "crs": "LOB",
+    "name": "Longbridge"
+  },
+  {
+    "crs": "LOC",
+    "name": "Lockerbie"
+  },
+  {
+    "crs": "LOF",
+    "name": "London Fields"
+  },
+  {
+    "crs": "LOH",
+    "name": "Lostock Hall"
+  },
+  {
+    "crs": "LOO",
+    "name": "Looe"
+  },
+  {
+    "crs": "LOS",
+    "name": "Lostwithiel"
+  },
+  {
+    "crs": "LOT",
+    "name": "Lostock"
+  },
+  {
+    "crs": "LOW",
+    "name": "Lowdham"
+  },
+  {
+    "crs": "LPG",
+    "name": "Llanfairpwll"
+  },
+  {
+    "crs": "LPR",
+    "name": "Long Preston"
+  },
+  {
+    "crs": "LPT",
+    "name": "Longport"
+  },
+  {
+    "crs": "LPW",
+    "name": "Lapworth"
+  },
+  {
+    "crs": "LPY",
+    "name": "Liverpool South Parkway"
+  },
+  {
+    "crs": "LRB",
+    "name": "London Road (Brighton)"
+  },
+  {
+    "crs": "LRD",
+    "name": "London Road (Guildford)"
+  },
+  {
+    "crs": "LRG",
+    "name": "Lairg"
+  },
+  {
+    "crs": "LRH",
+    "name": "Larkhall"
+  },
+  {
+    "crs": "LSK",
+    "name": "Liskeard"
+  },
+  {
+    "crs": "LSN",
+    "name": "Livingston North"
+  },
+  {
+    "crs": "LST",
+    "name": "London Liverpool Street"
+  },
+  {
+    "crs": "LSW",
+    "name": "Leasowe"
+  },
+  {
+    "crs": "LSY",
+    "name": "Lower Sydenham"
+  },
+  {
+    "crs": "LTG",
+    "name": "Lostock Gralam"
+  },
+  {
+    "crs": "LTH",
+    "name": "Llanhilleth"
+  },
+  {
+    "crs": "LTK",
+    "name": "Little Kimble"
+  },
+  {
+    "crs": "LTL",
+    "name": "Littleborough"
+  },
+  {
+    "crs": "LTM",
+    "name": "Lytham"
+  },
+  {
+    "crs": "LTN",
+    "name": "Luton Airport Parkway"
+  },
+  {
+    "crs": "LTP",
+    "name": "Littleport"
+  },
+  {
+    "crs": "LTS",
+    "name": "Lelant Saltings"
+  },
+  {
+    "crs": "LTT",
+    "name": "Little Sutton"
+  },
+  {
+    "crs": "LTV",
+    "name": "Lichfield Trent Valley"
+  },
+  {
+    "crs": "LUD",
+    "name": "Ludlow"
+  },
+  {
+    "crs": "LUT",
+    "name": "Luton"
+  },
+  {
+    "crs": "LUX",
+    "name": "Luxulyan"
+  },
+  {
+    "crs": "LVC",
+    "name": "Liverpool Central"
+  },
+  {
+    "crs": "LVG",
+    "name": "Livingston South"
+  },
+  {
+    "crs": "LVJ",
+    "name": "James Street"
+  },
+  {
+    "crs": "LVM",
+    "name": "Levenshulme"
+  },
+  {
+    "crs": "LVN",
+    "name": "Littlehaven"
+  },
+  {
+    "crs": "LVT",
+    "name": "Lisvane & Thornhill"
+  },
+  {
+    "crs": "LWH",
+    "name": "Lawrence Hill"
+  },
+  {
+    "crs": "LWM",
+    "name": "Llantwit Major"
+  },
+  {
+    "crs": "LWR",
+    "name": "Llanrwst"
+  },
+  {
+    "crs": "LWS",
+    "name": "Lewes"
+  },
+  {
+    "crs": "LWT",
+    "name": "Lowestoft"
+  },
+  {
+    "crs": "LYC",
+    "name": "Lympstone Commando"
+  },
+  {
+    "crs": "LYD",
+    "name": "Lydney"
+  },
+  {
+    "crs": "LYE",
+    "name": "Lye"
+  },
+  {
+    "crs": "LYM",
+    "name": "Lympstone Village"
+  },
+  {
+    "crs": "LYP",
+    "name": "Lymington Pier"
+  },
+  {
+    "crs": "LYT",
+    "name": "Lymington Town"
+  },
+  {
+    "crs": "LZB",
+    "name": "Lazonby & Kirkoswald"
+  },
+  {
+    "crs": "MAC",
+    "name": "Macclesfield"
+  },
+  {
+    "crs": "MAG",
+    "name": "Maghull"
+  },
+  {
+    "crs": "MAI",
+    "name": "Maidenhead"
+  },
+  {
+    "crs": "MAL",
+    "name": "Malden Manor"
+  },
+  {
+    "crs": "MAN",
+    "name": "Manchester Piccadilly"
+  },
+  {
+    "crs": "MAO",
+    "name": "Martins Heron"
+  },
+  {
+    "crs": "MAR",
+    "name": "Margate"
+  },
+  {
+    "crs": "MAS",
+    "name": "Manors"
+  },
+  {
+    "crs": "MAT",
+    "name": "Matlock"
+  },
+  {
+    "crs": "MAU",
+    "name": "Mauldeth Road"
+  },
+  {
+    "crs": "MAX",
+    "name": "Maxwell Park"
+  },
+  {
+    "crs": "MAY",
+    "name": "Maybole"
+  },
+  {
+    "crs": "MBK",
+    "name": "Millbrook (Hants)"
+  },
+  {
+    "crs": "MBR",
+    "name": "Middlesbrough"
+  },
+  {
+    "crs": "MBT",
+    "name": "Marsh Barton"
+  },
+  {
+    "crs": "MCB",
+    "name": "Moulsecoomb"
+  },
+  {
+    "crs": "MCE",
+    "name": "Metrocentre"
+  },
+  {
+    "crs": "MCH",
+    "name": "March"
+  },
+  {
+    "crs": "MCM",
+    "name": "Morecambe"
+  },
+  {
+    "crs": "MCN",
+    "name": "Machynlleth"
+  },
+  {
+    "crs": "MCO",
+    "name": "Manchester Oxford Road"
+  },
+  {
+    "crs": "MCV",
+    "name": "Manchester Victoria"
+  },
+  {
+    "crs": "MDB",
+    "name": "Maidstone Barracks"
+  },
+  {
+    "crs": "MDE",
+    "name": "Maidstone East"
+  },
+  {
+    "crs": "MDG",
+    "name": "Midgham"
+  },
+  {
+    "crs": "MDL",
+    "name": "Middlewood"
+  },
+  {
+    "crs": "MDN",
+    "name": "Maiden Newton"
+  },
+  {
+    "crs": "MDS",
+    "name": "Morden South"
+  },
+  {
+    "crs": "MDW",
+    "name": "Maidstone West"
+  },
+  {
+    "crs": "MEC",
+    "name": "Meols Cop"
+  },
+  {
+    "crs": "MEL",
+    "name": "Meldreth"
+  },
+  {
+    "crs": "MEN",
+    "name": "Menheniot"
+  },
+  {
+    "crs": "MEO",
+    "name": "Meols"
+  },
+  {
+    "crs": "MEP",
+    "name": "Meopham"
+  },
+  {
+    "crs": "MER",
+    "name": "Merthyr Tydfil"
+  },
+  {
+    "crs": "MES",
+    "name": "Melton"
+  },
+  {
+    "crs": "MEV",
+    "name": "Merthyr Vale"
+  },
+  {
+    "crs": "MEW",
+    "name": "Maesteg (Ewenny Road)"
+  },
+  {
+    "crs": "MEX",
+    "name": "Mexborough"
+  },
+  {
+    "crs": "MEY",
+    "name": "Merryton"
+  },
+  {
+    "crs": "MFA",
+    "name": "Morfa Mawddach"
+  },
+  {
+    "crs": "MFF",
+    "name": "Minffordd"
+  },
+  {
+    "crs": "MFH",
+    "name": "Milford Haven"
+  },
+  {
+    "crs": "MFL",
+    "name": "Mount Florida"
+  },
+  {
+    "crs": "MFT",
+    "name": "Mansfield"
+  },
+  {
+    "crs": "MGM",
+    "name": "Metheringham"
+  },
+  {
+    "crs": "MGN",
+    "name": "Marston Green"
+  },
+  {
+    "crs": "MHM",
+    "name": "Merstham"
+  },
+  {
+    "crs": "MHR",
+    "name": "Market Harborough"
+  },
+  {
+    "crs": "MHS",
+    "name": "Meadowhall"
+  },
+  {
+    "crs": "MIA",
+    "name": "Manchester Airport"
+  },
+  {
+    "crs": "MIC",
+    "name": "Micheldever"
+  },
+  {
+    "crs": "MIH",
+    "name": "Mills Hill"
+  },
+  {
+    "crs": "MIJ",
+    "name": "Mitcham Junction"
+  },
+  {
+    "crs": "MIK",
+    "name": "Micklefield"
+  },
+  {
+    "crs": "MIL",
+    "name": "Mill Hill Broadway"
+  },
+  {
+    "crs": "MIM",
+    "name": "Moreton-In-Marsh"
+  },
+  {
+    "crs": "MIN",
+    "name": "Milliken Park"
+  },
+  {
+    "crs": "MIR",
+    "name": "Mirfield"
+  },
+  {
+    "crs": "MIS",
+    "name": "Mistley"
+  },
+  {
+    "crs": "MKC",
+    "name": "Milton Keynes Central"
+  },
+  {
+    "crs": "MKM",
+    "name": "Melksham"
+  },
+  {
+    "crs": "MKR",
+    "name": "Market Rasen"
+  },
+  {
+    "crs": "MKT",
+    "name": "Marks Tey"
+  },
+  {
+    "crs": "MLB",
+    "name": "Millbrook (Bedfordshire)"
+  },
+  {
+    "crs": "MLD",
+    "name": "Mouldsworth"
+  },
+  {
+    "crs": "MLF",
+    "name": "Milford (Surrey)"
+  },
+  {
+    "crs": "MLG",
+    "name": "Mallaig"
+  },
+  {
+    "crs": "MLH",
+    "name": "Mill Hill (Lancs)"
+  },
+  {
+    "crs": "MLM",
+    "name": "Millom"
+  },
+  {
+    "crs": "MLN",
+    "name": "Milngavie"
+  },
+  {
+    "crs": "MLT",
+    "name": "Malton"
+  },
+  {
+    "crs": "MLW",
+    "name": "Marlow"
+  },
+  {
+    "crs": "MLY",
+    "name": "Morley"
+  },
+  {
+    "crs": "MMO",
+    "name": "Melton Mowbray"
+  },
+  {
+    "crs": "MNC",
+    "name": "Markinch"
+  },
+  {
+    "crs": "MNE",
+    "name": "Manea"
+  },
+  {
+    "crs": "MNG",
+    "name": "Manningtree"
+  },
+  {
+    "crs": "MNN",
+    "name": "Menston"
+  },
+  {
+    "crs": "MNP",
+    "name": "Manor Park"
+  },
+  {
+    "crs": "MNR",
+    "name": "Manor Road"
+  },
+  {
+    "crs": "MNS",
+    "name": "Maghull North"
+  },
+  {
+    "crs": "MOB",
+    "name": "Mobberley"
+  },
+  {
+    "crs": "MOG",
+    "name": "Moorgate"
+  },
+  {
+    "crs": "MON",
+    "name": "Monifieth"
+  },
+  {
+    "crs": "MOO",
+    "name": "Muir of Ord"
+  },
+  {
+    "crs": "MOR",
+    "name": "Mortimer"
+  },
+  {
+    "crs": "MOS",
+    "name": "Moss Side"
+  },
+  {
+    "crs": "MOT",
+    "name": "Motspur Park"
+  },
+  {
+    "crs": "MPK",
+    "name": "Mosspark"
+  },
+  {
+    "crs": "MPL",
+    "name": "Marple"
+  },
+  {
+    "crs": "MPT",
+    "name": "Morpeth"
+  },
+  {
+    "crs": "MRB",
+    "name": "Manorbier"
+  },
+  {
+    "crs": "MRD",
+    "name": "Morchard Road"
+  },
+  {
+    "crs": "MRF",
+    "name": "Moorfields"
+  },
+  {
+    "crs": "MRN",
+    "name": "Marden"
+  },
+  {
+    "crs": "MRP",
+    "name": "Moorthorpe"
+  },
+  {
+    "crs": "MRR",
+    "name": "Morar"
+  },
+  {
+    "crs": "MRS",
+    "name": "Monks Risborough"
+  },
+  {
+    "crs": "MRT",
+    "name": "Moreton (Merseyside)"
+  },
+  {
+    "crs": "MRW",
+    "name": "Meridian Water"
+  },
+  {
+    "crs": "MRY",
+    "name": "Maryport"
+  },
+  {
+    "crs": "MSD",
+    "name": "Moorside"
+  },
+  {
+    "crs": "MSH",
+    "name": "Mossley Hill"
+  },
+  {
+    "crs": "MSK",
+    "name": "Marske"
+  },
+  {
+    "crs": "MSL",
+    "name": "Mossley (Manchester)"
+  },
+  {
+    "crs": "MSN",
+    "name": "Marsden"
+  },
+  {
+    "crs": "MSO",
+    "name": "Moston"
+  },
+  {
+    "crs": "MSR",
+    "name": "Minster"
+  },
+  {
+    "crs": "MSS",
+    "name": "Moses Gate"
+  },
+  {
+    "crs": "MST",
+    "name": "Maesteg"
+  },
+  {
+    "crs": "MSW",
+    "name": "Mansfield Woodhouse"
+  },
+  {
+    "crs": "MTA",
+    "name": "Mountain Ash"
+  },
+  {
+    "crs": "MTB",
+    "name": "Matlock Bath"
+  },
+  {
+    "crs": "MTC",
+    "name": "Mitcham Eastfields"
+  },
+  {
+    "crs": "MTG",
+    "name": "Mottingham"
+  },
+  {
+    "crs": "MTH",
+    "name": "Motherwell"
+  },
+  {
+    "crs": "MTL",
+    "name": "Mortlake"
+  },
+  {
+    "crs": "MTM",
+    "name": "Martin Mill"
+  },
+  {
+    "crs": "MTN",
+    "name": "Moreton (Dorset)"
+  },
+  {
+    "crs": "MTO",
+    "name": "Marton"
+  },
+  {
+    "crs": "MTP",
+    "name": "Montpelier"
+  },
+  {
+    "crs": "MTS",
+    "name": "Montrose"
+  },
+  {
+    "crs": "MTV",
+    "name": "Mount Vernon"
+  },
+  {
+    "crs": "MUB",
+    "name": "Musselburgh"
+  },
+  {
+    "crs": "MUF",
+    "name": "Manchester United Football Club"
+  },
+  {
+    "crs": "MUI",
+    "name": "Muirend"
+  },
+  {
+    "crs": "MVL",
+    "name": "Malvern Link"
+  },
+  {
+    "crs": "MYB",
+    "name": "London Marylebone"
+  },
+  {
+    "crs": "MYH",
+    "name": "Maryhill"
+  },
+  {
+    "crs": "MYL",
+    "name": "Maryland"
+  },
+  {
+    "crs": "MYT",
+    "name": "Mytholmroyd"
+  },
+  {
+    "crs": "MZH",
+    "name": "Maze Hill"
+  },
+  {
+    "crs": "NAN",
+    "name": "Nantwich"
+  },
+  {
+    "crs": "NAR",
+    "name": "Narberth"
+  },
+  {
+    "crs": "NAY",
+    "name": "Newton Aycliffe"
+  },
+  {
+    "crs": "NBA",
+    "name": "New Barnet"
+  },
+  {
+    "crs": "NBC",
+    "name": "New Beckenham"
+  },
+  {
+    "crs": "NBE",
+    "name": "Newbridge"
+  },
+  {
+    "crs": "NBN",
+    "name": "New Brighton"
+  },
+  {
+    "crs": "NBR",
+    "name": "Narborough"
+  },
+  {
+    "crs": "NBT",
+    "name": "Norbiton"
+  },
+  {
+    "crs": "NBW",
+    "name": "North Berwick"
+  },
+  {
+    "crs": "NBY",
+    "name": "Newbury"
+  },
+  {
+    "crs": "NCE",
+    "name": "New Clee"
+  },
+  {
+    "crs": "NCK",
+    "name": "New Cumnock"
+  },
+  {
+    "crs": "NCL",
+    "name": "Newcastle"
+  },
+  {
+    "crs": "NCM",
+    "name": "North Camp"
+  },
+  {
+    "crs": "NCO",
+    "name": "Newcourt"
+  },
+  {
+    "crs": "NCT",
+    "name": "Newark Castle"
+  },
+  {
+    "crs": "NDL",
+    "name": "North Dulwich"
+  },
+  {
+    "crs": "NEG",
+    "name": "Newtongrange"
+  },
+  {
+    "crs": "NEH",
+    "name": "New Eltham"
+  },
+  {
+    "crs": "NEI",
+    "name": "Neilston"
+  },
+  {
+    "crs": "NEL",
+    "name": "Nelson"
+  },
+  {
+    "crs": "NEM",
+    "name": "New Malden"
+  },
+  {
+    "crs": "NES",
+    "name": "Neston"
+  },
+  {
+    "crs": "NET",
+    "name": "Netherfield"
+  },
+  {
+    "crs": "NEW",
+    "name": "Newcraighall"
+  },
+  {
+    "crs": "NFA",
+    "name": "North Fambridge"
+  },
+  {
+    "crs": "NFD",
+    "name": "Northfield"
+  },
+  {
+    "crs": "NFL",
+    "name": "Northfleet - Cooper Arms"
+  },
+  {
+    "crs": "NFN",
+    "name": "Nafferton"
+  },
+  {
+    "crs": "NGT",
+    "name": "Newington"
+  },
+  {
+    "crs": "NHD",
+    "name": "Nunhead"
+  },
+  {
+    "crs": "NHE",
+    "name": "New Hythe"
+  },
+  {
+    "crs": "NHL",
+    "name": "New Holland"
+  },
+  {
+    "crs": "NIT",
+    "name": "Nitshill"
+  },
+  {
+    "crs": "NLN",
+    "name": "New Lane"
+  },
+  {
+    "crs": "NLR",
+    "name": "North Llanrwst"
+  },
+  {
+    "crs": "NLS",
+    "name": "Nailsea & Backwell"
+  },
+  {
+    "crs": "NLT",
+    "name": "Northolt Park"
+  },
+  {
+    "crs": "NLW",
+    "name": "Newton-Le-Willows"
+  },
+  {
+    "crs": "NMC",
+    "name": "New Mills Central"
+  },
+  {
+    "crs": "NMK",
+    "name": "Newmarket"
+  },
+  {
+    "crs": "NMN",
+    "name": "New Mills Newtown"
+  },
+  {
+    "crs": "NMP",
+    "name": "Northampton"
+  },
+  {
+    "crs": "NMT",
+    "name": "Needham Market"
+  },
+  {
+    "crs": "NNG",
+    "name": "Newark Northgate"
+  },
+  {
+    "crs": "NNP",
+    "name": "Ninian Park"
+  },
+  {
+    "crs": "NNT",
+    "name": "Nunthorpe"
+  },
+  {
+    "crs": "NOA",
+    "name": "Newton-On-Ayr"
+  },
+  {
+    "crs": "NOR",
+    "name": "Normanton"
+  },
+  {
+    "crs": "NOT",
+    "name": "Nottingham"
+  },
+  {
+    "crs": "NPD",
+    "name": "New Pudsey"
+  },
+  {
+    "crs": "NQU",
+    "name": "North Queensferry"
+  },
+  {
+    "crs": "NQY",
+    "name": "Newquay"
+  },
+  {
+    "crs": "NRB",
+    "name": "Norbury"
+  },
+  {
+    "crs": "NRC",
+    "name": "Newbury Racecourse"
+  },
+  {
+    "crs": "NRD",
+    "name": "North Road"
+  },
+  {
+    "crs": "NRN",
+    "name": "Nairn"
+  },
+  {
+    "crs": "NRT",
+    "name": "Nethertown"
+  },
+  {
+    "crs": "NRW",
+    "name": "Norwich"
+  },
+  {
+    "crs": "NSB",
+    "name": "Normans Bay"
+  },
+  {
+    "crs": "NSD",
+    "name": "Newstead"
+  },
+  {
+    "crs": "NSG",
+    "name": "New Southgate"
+  },
+  {
+    "crs": "NSH",
+    "name": "North Sheen"
+  },
+  {
+    "crs": "NTA",
+    "name": "Newton Abbot"
+  },
+  {
+    "crs": "NTB",
+    "name": "Norton Bridge"
+  },
+  {
+    "crs": "NTC",
+    "name": "Newton St Cyres"
+  },
+  {
+    "crs": "NTH",
+    "name": "Neath"
+  },
+  {
+    "crs": "NTL",
+    "name": "Netley"
+  },
+  {
+    "crs": "NTN",
+    "name": "Newton"
+  },
+  {
+    "crs": "NTR",
+    "name": "Northallerton"
+  },
+  {
+    "crs": "NUF",
+    "name": "Nutfield"
+  },
+  {
+    "crs": "NUM",
+    "name": "Northumberland Park"
+  },
+  {
+    "crs": "NUN",
+    "name": "Nuneaton"
+  },
+  {
+    "crs": "NUT",
+    "name": "Nutbourne"
+  },
+  {
+    "crs": "NVH",
+    "name": "Newhaven Harbour"
+  },
+  {
+    "crs": "NVN",
+    "name": "Newhaven Town"
+  },
+  {
+    "crs": "NVR",
+    "name": "Navigation Road"
+  },
+  {
+    "crs": "NWA",
+    "name": "North Walsham"
+  },
+  {
+    "crs": "NWB",
+    "name": "North Wembley"
+  },
+  {
+    "crs": "NWD",
+    "name": "Norwood Junction"
+  },
+  {
+    "crs": "NWE",
+    "name": "Newport (Essex)"
+  },
+  {
+    "crs": "NWH",
+    "name": "Newsham"
+  },
+  {
+    "crs": "NWI",
+    "name": "Northwich"
+  },
+  {
+    "crs": "NWM",
+    "name": "New Milton"
+  },
+  {
+    "crs": "NWN",
+    "name": "Newton for Hyde"
+  },
+  {
+    "crs": "NWP",
+    "name": "Newport (South Wales)"
+  },
+  {
+    "crs": "NWR",
+    "name": "Newtonmore"
+  },
+  {
+    "crs": "NWT",
+    "name": "Newtown (Powys)"
+  },
+  {
+    "crs": "NWX",
+    "name": "New Cross"
+  },
+  {
+    "crs": "NXG",
+    "name": "New Cross Gate"
+  },
+  {
+    "crs": "OBN",
+    "name": "Oban"
+  },
+  {
+    "crs": "OCK",
+    "name": "Ockendon"
+  },
+  {
+    "crs": "OHL",
+    "name": "Old Hill"
+  },
+  {
+    "crs": "OKE",
+    "name": "Okehampton"
+  },
+  {
+    "crs": "OKL",
+    "name": "Oakleigh Park"
+  },
+  {
+    "crs": "OKM",
+    "name": "Oakham"
+  },
+  {
+    "crs": "OKN",
+    "name": "Oakengates"
+  },
+  {
+    "crs": "OLD",
+    "name": "Old Street"
+  },
+  {
+    "crs": "OLF",
+    "name": "Oldfield Park"
+  },
+  {
+    "crs": "OLT",
+    "name": "Olton"
+  },
+  {
+    "crs": "OLY",
+    "name": "Ockley"
+  },
+  {
+    "crs": "OMS",
+    "name": "Ormskirk"
+  },
+  {
+    "crs": "OPK",
+    "name": "Orrell Park"
+  },
+  {
+    "crs": "ORE",
+    "name": "Ore"
+  },
+  {
+    "crs": "ORN",
+    "name": "Old Roan"
+  },
+  {
+    "crs": "ORP",
+    "name": "Orpington"
+  },
+  {
+    "crs": "ORR",
+    "name": "Orrell"
+  },
+  {
+    "crs": "OTF",
+    "name": "Otford"
+  },
+  {
+    "crs": "OUN",
+    "name": "Oulton Broad North"
+  },
+  {
+    "crs": "OUS",
+    "name": "Oulton Broad South"
+  },
+  {
+    "crs": "OUT",
+    "name": "Outwood"
+  },
+  {
+    "crs": "OVE",
+    "name": "Overpool"
+  },
+  {
+    "crs": "OVR",
+    "name": "Overton"
+  },
+  {
+    "crs": "OXF",
+    "name": "Oxford"
+  },
+  {
+    "crs": "OXN",
+    "name": "Oxenholme Lake District"
+  },
+  {
+    "crs": "OXP",
+    "name": "Oxford Parkway"
+  },
+  {
+    "crs": "OXS",
+    "name": "Oxshott"
+  },
+  {
+    "crs": "OXT",
+    "name": "Oxted"
+  },
+  {
+    "crs": "PAD",
+    "name": "London Paddington"
+  },
+  {
+    "crs": "PAL",
+    "name": "Palmers Green"
+  },
+  {
+    "crs": "PAN",
+    "name": "Pangbourne"
+  },
+  {
+    "crs": "PAR",
+    "name": "Par"
+  },
+  {
+    "crs": "PAT",
+    "name": "Patricroft"
+  },
+  {
+    "crs": "PBL",
+    "name": "Parbold"
+  },
+  {
+    "crs": "PBO",
+    "name": "Peterborough"
+  },
+  {
+    "crs": "PBR",
+    "name": "Potters Bar"
+  },
+  {
+    "crs": "PBY",
+    "name": "Pembrey & Burry Port"
+  },
+  {
+    "crs": "PCD",
+    "name": "Pencoed"
+  },
+  {
+    "crs": "PCN",
+    "name": "Paisley Canal"
+  },
+  {
+    "crs": "PDG",
+    "name": "Padgate"
+  },
+  {
+    "crs": "PDW",
+    "name": "Paddock Wood"
+  },
+  {
+    "crs": "PEA",
+    "name": "Peartree"
+  },
+  {
+    "crs": "PEB",
+    "name": "Pevensey Bay"
+  },
+  {
+    "crs": "PEG",
+    "name": "Pegswood"
+  },
+  {
+    "crs": "PEM",
+    "name": "Pemberton"
+  },
+  {
+    "crs": "PEN",
+    "name": "Penarth"
+  },
+  {
+    "crs": "PER",
+    "name": "Penrhiwceiber"
+  },
+  {
+    "crs": "PES",
+    "name": "Pensarn"
+  },
+  {
+    "crs": "PET",
+    "name": "Petts Wood"
+  },
+  {
+    "crs": "PEV",
+    "name": "Pevensey & Westham"
+  },
+  {
+    "crs": "PEW",
+    "name": "Pewsey"
+  },
+  {
+    "crs": "PFL",
+    "name": "Purfleet"
+  },
+  {
+    "crs": "PFM",
+    "name": "Pontefract Monkhill"
+  },
+  {
+    "crs": "PFR",
+    "name": "Pontefract Baghill"
+  },
+  {
+    "crs": "PFY",
+    "name": "Poulton-Le-Fylde"
+  },
+  {
+    "crs": "PGM",
+    "name": "Pengam"
+  },
+  {
+    "crs": "PGN",
+    "name": "Paignton"
+  },
+  {
+    "crs": "PHG",
+    "name": "Penhelig"
+  },
+  {
+    "crs": "PHR",
+    "name": "Penshurst"
+  },
+  {
+    "crs": "PIL",
+    "name": "Pilning"
+  },
+  {
+    "crs": "PIN",
+    "name": "Pinhoe"
+  },
+  {
+    "crs": "PIT",
+    "name": "Pitlochry"
+  },
+  {
+    "crs": "PKG",
+    "name": "Penkridge"
+  },
+  {
+    "crs": "PKS",
+    "name": "Parkstone (Dorset)"
+  },
+  {
+    "crs": "PKT",
+    "name": "Park Street"
+  },
+  {
+    "crs": "PLC",
+    "name": "Pluckley"
+  },
+  {
+    "crs": "PLD",
+    "name": "Portslade"
+  },
+  {
+    "crs": "PLE",
+    "name": "Pollokshields East"
+  },
+  {
+    "crs": "PLG",
+    "name": "Polegate"
+  },
+  {
+    "crs": "PLK",
+    "name": "Plockton"
+  },
+  {
+    "crs": "PLM",
+    "name": "Plumley"
+  },
+  {
+    "crs": "PLN",
+    "name": "Portlethen"
+  },
+  {
+    "crs": "PLS",
+    "name": "Pleasington"
+  },
+  {
+    "crs": "PLT",
+    "name": "Pontlottyn"
+  },
+  {
+    "crs": "PLU",
+    "name": "Plumstead"
+  },
+  {
+    "crs": "PLW",
+    "name": "Pollokshields West"
+  },
+  {
+    "crs": "PLY",
+    "name": "Plymouth"
+  },
+  {
+    "crs": "PMA",
+    "name": "Portsmouth Arms"
+  },
+  {
+    "crs": "PMB",
+    "name": "Pembroke"
+  },
+  {
+    "crs": "PMD",
+    "name": "Pembroke Dock"
+  },
+  {
+    "crs": "PMH",
+    "name": "Portsmouth Harbour"
+  },
+  {
+    "crs": "PMP",
+    "name": "Plumpton"
+  },
+  {
+    "crs": "PMR",
+    "name": "Peckham Rye"
+  },
+  {
+    "crs": "PMS",
+    "name": "Portsmouth & Southsea"
+  },
+  {
+    "crs": "PMT",
+    "name": "Polmont"
+  },
+  {
+    "crs": "PMW",
+    "name": "Penmaenmawr"
+  },
+  {
+    "crs": "PNA",
+    "name": "Penally"
+  },
+  {
+    "crs": "PNC",
+    "name": "Penychain"
+  },
+  {
+    "crs": "PNE",
+    "name": "Penge East"
+  },
+  {
+    "crs": "PNF",
+    "name": "Penyffordd"
+  },
+  {
+    "crs": "PNL",
+    "name": "Pannal"
+  },
+  {
+    "crs": "PNM",
+    "name": "Penmere"
+  },
+  {
+    "crs": "PNR",
+    "name": "Penrith"
+  },
+  {
+    "crs": "PNS",
+    "name": "Penistone"
+  },
+  {
+    "crs": "PNW",
+    "name": "Penge West"
+  },
+  {
+    "crs": "PNY",
+    "name": "Pen-Y-Bont"
+  },
+  {
+    "crs": "PNZ",
+    "name": "Penzance"
+  },
+  {
+    "crs": "POK",
+    "name": "Pokesdown"
+  },
+  {
+    "crs": "POL",
+    "name": "Polsloe Bridge"
+  },
+  {
+    "crs": "PON",
+    "name": "Ponders End"
+  },
+  {
+    "crs": "POO",
+    "name": "Poole"
+  },
+  {
+    "crs": "POP",
+    "name": "Poppleton"
+  },
+  {
+    "crs": "POR",
+    "name": "Porth"
+  },
+  {
+    "crs": "POT",
+    "name": "Pontefract Tanshelf"
+  },
+  {
+    "crs": "PPD",
+    "name": "Pontypridd"
+  },
+  {
+    "crs": "PPK",
+    "name": "Possilpark & Parkhouse"
+  },
+  {
+    "crs": "PPL",
+    "name": "Pontypool and New Inn"
+  },
+  {
+    "crs": "PRA",
+    "name": "Prestwick International Airport"
+  },
+  {
+    "crs": "PRB",
+    "name": "Prestbury"
+  },
+  {
+    "crs": "PRE",
+    "name": "Preston"
+  },
+  {
+    "crs": "PRH",
+    "name": "Penrhyndeudraeth"
+  },
+  {
+    "crs": "PRI",
+    "name": "Portway Park & Ride"
+  },
+  {
+    "crs": "PRL",
+    "name": "Prittlewell"
+  },
+  {
+    "crs": "PRN",
+    "name": "Parton"
+  },
+  {
+    "crs": "PRP",
+    "name": "Preston Park"
+  },
+  {
+    "crs": "PRR",
+    "name": "Princes Risborough"
+  },
+  {
+    "crs": "PRS",
+    "name": "Prees"
+  },
+  {
+    "crs": "PRT",
+    "name": "Prestatyn"
+  },
+  {
+    "crs": "PRU",
+    "name": "Prudhoe"
+  },
+  {
+    "crs": "PRW",
+    "name": "Perranwell"
+  },
+  {
+    "crs": "PRY",
+    "name": "Perry Barr"
+  },
+  {
+    "crs": "PSC",
+    "name": "Prescot"
+  },
+  {
+    "crs": "PSE",
+    "name": "Pitsea"
+  },
+  {
+    "crs": "PSH",
+    "name": "Pershore"
+  },
+  {
+    "crs": "PSL",
+    "name": "Port Sunlight"
+  },
+  {
+    "crs": "PSN",
+    "name": "Parson Street"
+  },
+  {
+    "crs": "PST",
+    "name": "Prestonpans"
+  },
+  {
+    "crs": "PSW",
+    "name": "Polesworth"
+  },
+  {
+    "crs": "PTA",
+    "name": "Port Talbot Parkway"
+  },
+  {
+    "crs": "PTB",
+    "name": "Pentre-Bach"
+  },
+  {
+    "crs": "PTC",
+    "name": "Portchester"
+  },
+  {
+    "crs": "PTD",
+    "name": "Pontarddulais"
+  },
+  {
+    "crs": "PTF",
+    "name": "Pantyffynnon"
+  },
+  {
+    "crs": "PTG",
+    "name": "Port Glasgow"
+  },
+  {
+    "crs": "PTH",
+    "name": "Perth"
+  },
+  {
+    "crs": "PTK",
+    "name": "Partick"
+  },
+  {
+    "crs": "PTL",
+    "name": "Priesthill & Darnley"
+  },
+  {
+    "crs": "PTM",
+    "name": "Porthmadog"
+  },
+  {
+    "crs": "PTR",
+    "name": "Petersfield"
+  },
+  {
+    "crs": "PTT",
+    "name": "Patterton"
+  },
+  {
+    "crs": "PTW",
+    "name": "Prestwick Town"
+  },
+  {
+    "crs": "PUL",
+    "name": "Pulborough"
+  },
+  {
+    "crs": "PUO",
+    "name": "Purley Oaks"
+  },
+  {
+    "crs": "PUR",
+    "name": "Purley"
+  },
+  {
+    "crs": "PUT",
+    "name": "Putney"
+  },
+  {
+    "crs": "PWE",
+    "name": "Pollokshaws East"
+  },
+  {
+    "crs": "PWL",
+    "name": "Pwllheli"
+  },
+  {
+    "crs": "PWW",
+    "name": "Pollokshaws West"
+  },
+  {
+    "crs": "PWY",
+    "name": "Patchway"
+  },
+  {
+    "crs": "PYC",
+    "name": "Pontyclun"
+  },
+  {
+    "crs": "PYE",
+    "name": "Pye Corner"
+  },
+  {
+    "crs": "PYG",
+    "name": "Paisley Gilmour Street"
+  },
+  {
+    "crs": "PYJ",
+    "name": "Paisley St James"
+  },
+  {
+    "crs": "PYL",
+    "name": "Pyle"
+  },
+  {
+    "crs": "PYN",
+    "name": "Penryn"
+  },
+  {
+    "crs": "PYP",
+    "name": "Pont-Y-Pant"
+  },
+  {
+    "crs": "PYT",
+    "name": "Poynton"
+  },
+  {
+    "crs": "QBR",
+    "name": "Queenborough"
+  },
+  {
+    "crs": "QPK",
+    "name": "Queens Park (Glasgow)"
+  },
+  {
+    "crs": "QPW",
+    "name": "Queens Park (London)"
+  },
+  {
+    "crs": "QRB",
+    "name": "Queenstown Road (Battersea)"
+  },
+  {
+    "crs": "QRP",
+    "name": "Queens Road Peckham"
+  },
+  {
+    "crs": "QUI",
+    "name": "Quintrell Downs"
+  },
+  {
+    "crs": "QYD",
+    "name": "Quakers Yard"
+  },
+  {
+    "crs": "RAD",
+    "name": "Radley"
+  },
+  {
+    "crs": "RAI",
+    "name": "Rainham (Kent)"
+  },
+  {
+    "crs": "RAM",
+    "name": "Ramsgate"
+  },
+  {
+    "crs": "RAN",
+    "name": "Rannoch"
+  },
+  {
+    "crs": "RAU",
+    "name": "Rauceby"
+  },
+  {
+    "crs": "RAV",
+    "name": "Ravenglass for Eskdale"
+  },
+  {
+    "crs": "RAY",
+    "name": "Raynes Park"
+  },
+  {
+    "crs": "RBR",
+    "name": "Robertsbridge"
+  },
+  {
+    "crs": "RCA",
+    "name": "Risca & Pontymister"
+  },
+  {
+    "crs": "RCC",
+    "name": "Redcar Central"
+  },
+  {
+    "crs": "RCD",
+    "name": "Rochdale"
+  },
+  {
+    "crs": "RCE",
+    "name": "Redcar East"
+  },
+  {
+    "crs": "RDA",
+    "name": "Redland"
+  },
+  {
+    "crs": "RDB",
+    "name": "Redbridge"
+  },
+  {
+    "crs": "RDC",
+    "name": "Redditch"
+  },
+  {
+    "crs": "RDD",
+    "name": "Riddlesdown"
+  },
+  {
+    "crs": "RDF",
+    "name": "Radcliffe (Nottinghamshire)"
+  },
+  {
+    "crs": "RDG",
+    "name": "Reading"
+  },
+  {
+    "crs": "RDH",
+    "name": "Redhill"
+  },
+  {
+    "crs": "RDM",
+    "name": "Riding Mill"
+  },
+  {
+    "crs": "RDN",
+    "name": "Reddish North"
+  },
+  {
+    "crs": "RDR",
+    "name": "Radyr"
+  },
+  {
+    "crs": "RDS",
+    "name": "Reddish South"
+  },
+  {
+    "crs": "RDT",
+    "name": "Radlett"
+  },
+  {
+    "crs": "RDW",
+    "name": "Reading West"
+  },
+  {
+    "crs": "REC",
+    "name": "Rectory Road"
+  },
+  {
+    "crs": "RED",
+    "name": "Redruth"
+  },
+  {
+    "crs": "REE",
+    "name": "Reedham (Norfolk)"
+  },
+  {
+    "crs": "REI",
+    "name": "Reigate"
+  },
+  {
+    "crs": "RET",
+    "name": "Retford"
+  },
+  {
+    "crs": "RFD",
+    "name": "Rochford"
+  },
+  {
+    "crs": "RFY",
+    "name": "Rock Ferry"
+  },
+  {
+    "crs": "RGL",
+    "name": "Rugeley Trent Valley"
+  },
+  {
+    "crs": "RGP",
+    "name": "Reading Green Park"
+  },
+  {
+    "crs": "RGT",
+    "name": "Rugeley Town"
+  },
+  {
+    "crs": "RGW",
+    "name": "Ramsgreave & Wilpshire"
+  },
+  {
+    "crs": "RHD",
+    "name": "Ribblehead"
+  },
+  {
+    "crs": "RHI",
+    "name": "Rhiwbina"
+  },
+  {
+    "crs": "RHL",
+    "name": "Rhyl"
+  },
+  {
+    "crs": "RHM",
+    "name": "Reedham (London)"
+  },
+  {
+    "crs": "RHO",
+    "name": "Rhosneigr"
+  },
+  {
+    "crs": "RHY",
+    "name": "Rhymney"
+  },
+  {
+    "crs": "RIA",
+    "name": "Rhoose Cardiff Airport"
+  },
+  {
+    "crs": "RIC",
+    "name": "Rickmansworth"
+  },
+  {
+    "crs": "RID",
+    "name": "Ridgmont"
+  },
+  {
+    "crs": "RIL",
+    "name": "Rice Lane"
+  },
+  {
+    "crs": "RIS",
+    "name": "Rishton"
+  },
+  {
+    "crs": "RKT",
+    "name": "Ruskington"
+  },
+  {
+    "crs": "RLG",
+    "name": "Rayleigh"
+  },
+  {
+    "crs": "RLN",
+    "name": "Rowlands Castle"
+  },
+  {
+    "crs": "RMB",
+    "name": "Roman Bridge"
+  },
+  {
+    "crs": "RMC",
+    "name": "Rotherham Central"
+  },
+  {
+    "crs": "RMD",
+    "name": "Richmond"
+  },
+  {
+    "crs": "RMF",
+    "name": "Romford"
+  },
+  {
+    "crs": "RML",
+    "name": "Romiley"
+  },
+  {
+    "crs": "RNF",
+    "name": "Rainford"
+  },
+  {
+    "crs": "RNH",
+    "name": "Rainhill"
+  },
+  {
+    "crs": "RNM",
+    "name": "Rainham (Essex)"
+  },
+  {
+    "crs": "RNR",
+    "name": "Roughton Road"
+  },
+  {
+    "crs": "ROB",
+    "name": "Roby"
+  },
+  {
+    "crs": "ROC",
+    "name": "Roche"
+  },
+  {
+    "crs": "ROE",
+    "name": "Rotherhithe"
+  },
+  {
+    "crs": "ROG",
+    "name": "Rogart"
+  },
+  {
+    "crs": "ROL",
+    "name": "Rolleston"
+  },
+  {
+    "crs": "ROM",
+    "name": "Romsey"
+  },
+  {
+    "crs": "ROO",
+    "name": "Roose"
+  },
+  {
+    "crs": "ROR",
+    "name": "Rogerstone"
+  },
+  {
+    "crs": "ROS",
+    "name": "Rosyth"
+  },
+  {
+    "crs": "ROW",
+    "name": "Rowley Regis"
+  },
+  {
+    "crs": "RRB",
+    "name": "Ryder Brow"
+  },
+  {
+    "crs": "RRN",
+    "name": "Robroyston"
+  },
+  {
+    "crs": "RSG",
+    "name": "Rose Grove"
+  },
+  {
+    "crs": "RSH",
+    "name": "Rose Hill Marple"
+  },
+  {
+    "crs": "RSN",
+    "name": "Reston"
+  },
+  {
+    "crs": "RTN",
+    "name": "Renton"
+  },
+  {
+    "crs": "RTR",
+    "name": "Rochester"
+  },
+  {
+    "crs": "RUA",
+    "name": "Ruabon"
+  },
+  {
+    "crs": "RUE",
+    "name": "Runcorn East"
+  },
+  {
+    "crs": "RUF",
+    "name": "Rufford"
+  },
+  {
+    "crs": "RUG",
+    "name": "Rugby"
+  },
+  {
+    "crs": "RUN",
+    "name": "Runcorn"
+  },
+  {
+    "crs": "RUS",
+    "name": "Ruswarp"
+  },
+  {
+    "crs": "RUT",
+    "name": "Rutherglen"
+  },
+  {
+    "crs": "RVB",
+    "name": "Ravensbourne"
+  },
+  {
+    "crs": "RVN",
+    "name": "Ravensthorpe"
+  },
+  {
+    "crs": "RWC",
+    "name": "Rawcliffe"
+  },
+  {
+    "crs": "RYB",
+    "name": "Roy Bridge"
+  },
+  {
+    "crs": "RYD",
+    "name": "Ryde Esplanade"
+  },
+  {
+    "crs": "RYE",
+    "name": "Rye"
+  },
+  {
+    "crs": "RYH",
+    "name": "Rye House"
+  },
+  {
+    "crs": "RYN",
+    "name": "Roydon"
+  },
+  {
+    "crs": "RYP",
+    "name": "Ryde Pier Head"
+  },
+  {
+    "crs": "RYR",
+    "name": "Ryde St Johns Road"
+  },
+  {
+    "crs": "RYS",
+    "name": "Royston"
+  },
+  {
+    "crs": "SAA",
+    "name": "St Albans Abbey"
+  },
+  {
+    "crs": "SAB",
+    "name": "Smallbrook Junction"
+  },
+  {
+    "crs": "SAC",
+    "name": "St Albans"
+  },
+  {
+    "crs": "SAD",
+    "name": "Sandwell & Dudley"
+  },
+  {
+    "crs": "SAE",
+    "name": "Saltaire"
+  },
+  {
+    "crs": "SAF",
+    "name": "Salfords"
+  },
+  {
+    "crs": "SAH",
+    "name": "Salhouse"
+  },
+  {
+    "crs": "SAJ",
+    "name": "St Johns"
+  },
+  {
+    "crs": "SAL",
+    "name": "Salisbury"
+  },
+  {
+    "crs": "SAM",
+    "name": "Saltmarshe"
+  },
+  {
+    "crs": "SAN",
+    "name": "Sandown"
+  },
+  {
+    "crs": "SAR",
+    "name": "St Andrews Road"
+  },
+  {
+    "crs": "SAS",
+    "name": "St Annes-On-The-Sea"
+  },
+  {
+    "crs": "SAT",
+    "name": "South Acton"
+  },
+  {
+    "crs": "SAU",
+    "name": "St Austell"
+  },
+  {
+    "crs": "SAV",
+    "name": "Stratford-upon-Avon"
+  },
+  {
+    "crs": "SAW",
+    "name": "Sawbridgeworth"
+  },
+  {
+    "crs": "SAX",
+    "name": "Saxmundham"
+  },
+  {
+    "crs": "SAY",
+    "name": "Swanley"
+  },
+  {
+    "crs": "SBE",
+    "name": "Starbeck"
+  },
+  {
+    "crs": "SBF",
+    "name": "St Budeaux Ferry Road"
+  },
+  {
+    "crs": "SBJ",
+    "name": "Stourbridge Junction"
+  },
+  {
+    "crs": "SBK",
+    "name": "South Bank"
+  },
+  {
+    "crs": "SBM",
+    "name": "South Bermondsey"
+  },
+  {
+    "crs": "SBP",
+    "name": "Stonebridge Park"
+  },
+  {
+    "crs": "SBR",
+    "name": "Spean Bridge"
+  },
+  {
+    "crs": "SBS",
+    "name": "St Bees"
+  },
+  {
+    "crs": "SBT",
+    "name": "Stourbridge Town"
+  },
+  {
+    "crs": "SBU",
+    "name": "Southbury"
+  },
+  {
+    "crs": "SBV",
+    "name": "St Budeaux Victoria Road"
+  },
+  {
+    "crs": "SBY",
+    "name": "Selby"
+  },
+  {
+    "crs": "SCA",
+    "name": "Scarborough"
+  },
+  {
+    "crs": "SCF",
+    "name": "Stechford"
+  },
+  {
+    "crs": "SCG",
+    "name": "Stone Crossing"
+  },
+  {
+    "crs": "SCH",
+    "name": "Scotstounhill"
+  },
+  {
+    "crs": "SCR",
+    "name": "St Columb Road"
+  },
+  {
+    "crs": "SCS",
+    "name": "Starcross"
+  },
+  {
+    "crs": "SCT",
+    "name": "Scotscalder"
+  },
+  {
+    "crs": "SCU",
+    "name": "Scunthorpe"
+  },
+  {
+    "crs": "SCY",
+    "name": "South Croydon"
+  },
+  {
+    "crs": "SDA",
+    "name": "Snodland"
+  },
+  {
+    "crs": "SDB",
+    "name": "Sandbach"
+  },
+  {
+    "crs": "SDC",
+    "name": "Shoreditch High Street"
+  },
+  {
+    "crs": "SDE",
+    "name": "Shadwell"
+  },
+  {
+    "crs": "SDF",
+    "name": "Saundersfoot"
+  },
+  {
+    "crs": "SDG",
+    "name": "Sandling"
+  },
+  {
+    "crs": "SDH",
+    "name": "Sudbury Hill Harrow"
+  },
+  {
+    "crs": "SDL",
+    "name": "Sandhills"
+  },
+  {
+    "crs": "SDM",
+    "name": "Shieldmuir"
+  },
+  {
+    "crs": "SDN",
+    "name": "St Denys"
+  },
+  {
+    "crs": "SDP",
+    "name": "Sandplace"
+  },
+  {
+    "crs": "SDR",
+    "name": "Saunderton"
+  },
+  {
+    "crs": "SDW",
+    "name": "Sandwich"
+  },
+  {
+    "crs": "SDY",
+    "name": "Sandy"
+  },
+  {
+    "crs": "SEA",
+    "name": "Seaham"
+  },
+  {
+    "crs": "SEB",
+    "name": "Seaburn"
+  },
+  {
+    "crs": "SEC",
+    "name": "Seaton Carew"
+  },
+  {
+    "crs": "SED",
+    "name": "Shelford"
+  },
+  {
+    "crs": "SEE",
+    "name": "Southease"
+  },
+  {
+    "crs": "SEF",
+    "name": "Seaford"
+  },
+  {
+    "crs": "SEG",
+    "name": "Selling"
+  },
+  {
+    "crs": "SEH",
+    "name": "Shoreham (Kent)"
+  },
+  {
+    "crs": "SEJ",
+    "name": "Seaton Delaval"
+  },
+  {
+    "crs": "SEL",
+    "name": "Sellafield"
+  },
+  {
+    "crs": "SEM",
+    "name": "Seamer"
+  },
+  {
+    "crs": "SEN",
+    "name": "Shenstone"
+  },
+  {
+    "crs": "SER",
+    "name": "St Erth"
+  },
+  {
+    "crs": "SES",
+    "name": "South Elmsall"
+  },
+  {
+    "crs": "SET",
+    "name": "Settle"
+  },
+  {
+    "crs": "SEV",
+    "name": "Sevenoaks"
+  },
+  {
+    "crs": "SFA",
+    "name": "Stratford International"
+  },
+  {
+    "crs": "SFD",
+    "name": "Salford Central"
+  },
+  {
+    "crs": "SFI",
+    "name": "Shawfair"
+  },
+  {
+    "crs": "SFL",
+    "name": "Seaforth & Litherland"
+  },
+  {
+    "crs": "SFN",
+    "name": "Shifnal"
+  },
+  {
+    "crs": "SFO",
+    "name": "Stanford-Le-Hope"
+  },
+  {
+    "crs": "SFR",
+    "name": "Shalford"
+  },
+  {
+    "crs": "SGB",
+    "name": "Smethwick Galton Bridge"
+  },
+  {
+    "crs": "SGL",
+    "name": "South Gyle"
+  },
+  {
+    "crs": "SGM",
+    "name": "St Germans"
+  },
+  {
+    "crs": "SGN",
+    "name": "South Greenford"
+  },
+  {
+    "crs": "SGR",
+    "name": "Slade Green"
+  },
+  {
+    "crs": "SHB",
+    "name": "Shirebrook"
+  },
+  {
+    "crs": "SHC",
+    "name": "Streethouse"
+  },
+  {
+    "crs": "SHD",
+    "name": "Shildon"
+  },
+  {
+    "crs": "SHE",
+    "name": "Sherborne"
+  },
+  {
+    "crs": "SHF",
+    "name": "Sheffield"
+  },
+  {
+    "crs": "SHH",
+    "name": "Shirehampton"
+  },
+  {
+    "crs": "SHI",
+    "name": "Shiplake"
+  },
+  {
+    "crs": "SHJ",
+    "name": "St Helens Junction"
+  },
+  {
+    "crs": "SHL",
+    "name": "Shawlands"
+  },
+  {
+    "crs": "SHM",
+    "name": "Sheringham"
+  },
+  {
+    "crs": "SHN",
+    "name": "Shanklin"
+  },
+  {
+    "crs": "SHO",
+    "name": "Sholing"
+  },
+  {
+    "crs": "SHP",
+    "name": "Shepperton"
+  },
+  {
+    "crs": "SHR",
+    "name": "Shrewsbury"
+  },
+  {
+    "crs": "SHS",
+    "name": "Shotts"
+  },
+  {
+    "crs": "SHT",
+    "name": "Shotton"
+  },
+  {
+    "crs": "SHU",
+    "name": "Stonehouse"
+  },
+  {
+    "crs": "SHW",
+    "name": "Shawford"
+  },
+  {
+    "crs": "SHY",
+    "name": "Shipley"
+  },
+  {
+    "crs": "SIA",
+    "name": "Southend Airport"
+  },
+  {
+    "crs": "SIC",
+    "name": "Silecroft"
+  },
+  {
+    "crs": "SID",
+    "name": "Sidcup"
+  },
+  {
+    "crs": "SIE",
+    "name": "Sherburn-In-Elmet"
+  },
+  {
+    "crs": "SIH",
+    "name": "St Helier"
+  },
+  {
+    "crs": "SIL",
+    "name": "Sileby"
+  },
+  {
+    "crs": "SIN",
+    "name": "Singer"
+  },
+  {
+    "crs": "SIP",
+    "name": "Shipton"
+  },
+  {
+    "crs": "SIT",
+    "name": "Sittingbourne"
+  },
+  {
+    "crs": "SIV",
+    "name": "St Ives"
+  },
+  {
+    "crs": "SJP",
+    "name": "St James' Park"
+  },
+  {
+    "crs": "SJS",
+    "name": "St James Street"
+  },
+  {
+    "crs": "SKE",
+    "name": "Skewen"
+  },
+  {
+    "crs": "SKG",
+    "name": "Skegness"
+  },
+  {
+    "crs": "SKI",
+    "name": "Skipton"
+  },
+  {
+    "crs": "SKM",
+    "name": "Stoke Mandeville"
+  },
+  {
+    "crs": "SKN",
+    "name": "St Keyne"
+  },
+  {
+    "crs": "SKS",
+    "name": "Stocksfield"
+  },
+  {
+    "crs": "SKW",
+    "name": "Stoke Newington"
+  },
+  {
+    "crs": "SLA",
+    "name": "Slateford"
+  },
+  {
+    "crs": "SLB",
+    "name": "Saltburn"
+  },
+  {
+    "crs": "SLD",
+    "name": "Salford Crescent"
+  },
+  {
+    "crs": "SLH",
+    "name": "Sleights"
+  },
+  {
+    "crs": "SLK",
+    "name": "Silkstone Common"
+  },
+  {
+    "crs": "SLL",
+    "name": "Stallingborough"
+  },
+  {
+    "crs": "SLO",
+    "name": "Slough"
+  },
+  {
+    "crs": "SLQ",
+    "name": "St Leonards Warrior Square"
+  },
+  {
+    "crs": "SLR",
+    "name": "Sleaford"
+  },
+  {
+    "crs": "SLS",
+    "name": "Shettleston"
+  },
+  {
+    "crs": "SLT",
+    "name": "Saltcoats"
+  },
+  {
+    "crs": "SLV",
+    "name": "Silver Street"
+  },
+  {
+    "crs": "SLW",
+    "name": "Salwick"
+  },
+  {
+    "crs": "SLY",
+    "name": "Selly Oak"
+  },
+  {
+    "crs": "SMA",
+    "name": "Small Heath"
+  },
+  {
+    "crs": "SMB",
+    "name": "Smithy Bridge"
+  },
+  {
+    "crs": "SMD",
+    "name": "Stamford"
+  },
+  {
+    "crs": "SMG",
+    "name": "St Margarets (London)"
+  },
+  {
+    "crs": "SMH",
+    "name": "Stamford Hill"
+  },
+  {
+    "crs": "SMK",
+    "name": "Stowmarket"
+  },
+  {
+    "crs": "SML",
+    "name": "Sea Mills"
+  },
+  {
+    "crs": "SMN",
+    "name": "Southminster"
+  },
+  {
+    "crs": "SMO",
+    "name": "South Merton"
+  },
+  {
+    "crs": "SMR",
+    "name": "Smethwick Rolfe Street"
+  },
+  {
+    "crs": "SMT",
+    "name": "St Margarets (Herts)"
+  },
+  {
+    "crs": "SMY",
+    "name": "St Mary Cray"
+  },
+  {
+    "crs": "SNA",
+    "name": "Sandal & Agbrigg"
+  },
+  {
+    "crs": "SND",
+    "name": "Sandhurst"
+  },
+  {
+    "crs": "SNE",
+    "name": "Stone"
+  },
+  {
+    "crs": "SNF",
+    "name": "Shenfield"
+  },
+  {
+    "crs": "SNG",
+    "name": "Sunningdale"
+  },
+  {
+    "crs": "SNH",
+    "name": "St Helens Central"
+  },
+  {
+    "crs": "SNI",
+    "name": "Snaith"
+  },
+  {
+    "crs": "SNK",
+    "name": "Sankey for Penketh"
+  },
+  {
+    "crs": "SNL",
+    "name": "Stoneleigh"
+  },
+  {
+    "crs": "SNN",
+    "name": "Swinton (Manchester)"
+  },
+  {
+    "crs": "SNO",
+    "name": "St Neots"
+  },
+  {
+    "crs": "SNR",
+    "name": "Sanderstead"
+  },
+  {
+    "crs": "SNS",
+    "name": "Staines"
+  },
+  {
+    "crs": "SNT",
+    "name": "Stanlow & Thornton"
+  },
+  {
+    "crs": "SNW",
+    "name": "Swanwick"
+  },
+  {
+    "crs": "SNY",
+    "name": "Sunnymeads"
+  },
+  {
+    "crs": "SOA",
+    "name": "Southampton Airport Parkway"
+  },
+  {
+    "crs": "SOB",
+    "name": "Southbourne"
+  },
+  {
+    "crs": "SOC",
+    "name": "Southend Central"
+  },
+  {
+    "crs": "SOE",
+    "name": "Southend East"
+  },
+  {
+    "crs": "SOF",
+    "name": "South Woodham Ferrers"
+  },
+  {
+    "crs": "SOG",
+    "name": "Stonegate"
+  },
+  {
+    "crs": "SOH",
+    "name": "South Hampstead"
+  },
+  {
+    "crs": "SOI",
+    "name": "Stow"
+  },
+  {
+    "crs": "SOJ",
+    "name": "Soham"
+  },
+  {
+    "crs": "SOK",
+    "name": "South Kenton"
+  },
+  {
+    "crs": "SOL",
+    "name": "Solihull"
+  },
+  {
+    "crs": "SOM",
+    "name": "South Milford"
+  },
+  {
+    "crs": "SON",
+    "name": "Steeton & Silsden"
+  },
+  {
+    "crs": "SOO",
+    "name": "Strood"
+  },
+  {
+    "crs": "SOP",
+    "name": "Southport"
+  },
+  {
+    "crs": "SOR",
+    "name": "Sole Street"
+  },
+  {
+    "crs": "SOT",
+    "name": "Stoke-On-Trent"
+  },
+  {
+    "crs": "SOU",
+    "name": "Southampton Central"
+  },
+  {
+    "crs": "SOV",
+    "name": "Southend Victoria"
+  },
+  {
+    "crs": "SOW",
+    "name": "Sowerby Bridge"
+  },
+  {
+    "crs": "SPA",
+    "name": "Spalding"
+  },
+  {
+    "crs": "SPB",
+    "name": "Shepherds Bush"
+  },
+  {
+    "crs": "SPF",
+    "name": "Springfield"
+  },
+  {
+    "crs": "SPH",
+    "name": "Shepherds Well"
+  },
+  {
+    "crs": "SPI",
+    "name": "Spital"
+  },
+  {
+    "crs": "SPK",
+    "name": "Sutton Parkway"
+  },
+  {
+    "crs": "SPN",
+    "name": "Spooner Row"
+  },
+  {
+    "crs": "SPO",
+    "name": "Spondon"
+  },
+  {
+    "crs": "SPP",
+    "name": "Shippea Hill"
+  },
+  {
+    "crs": "SPR",
+    "name": "Springburn"
+  },
+  {
+    "crs": "SPS",
+    "name": "Stepps"
+  },
+  {
+    "crs": "SPT",
+    "name": "Stockport"
+  },
+  {
+    "crs": "SPU",
+    "name": "Staplehurst"
+  },
+  {
+    "crs": "SPY",
+    "name": "Shepley"
+  },
+  {
+    "crs": "SQE",
+    "name": "Surrey Quays"
+  },
+  {
+    "crs": "SQH",
+    "name": "Sanquhar"
+  },
+  {
+    "crs": "SQU",
+    "name": "Squires Gate"
+  },
+  {
+    "crs": "SRA",
+    "name": "Stratford (London)"
+  },
+  {
+    "crs": "SRC",
+    "name": "Streatham Common"
+  },
+  {
+    "crs": "SRD",
+    "name": "Stapleton Road"
+  },
+  {
+    "crs": "SRG",
+    "name": "Seer Green & Jordans"
+  },
+  {
+    "crs": "SRH",
+    "name": "Streatham Hill"
+  },
+  {
+    "crs": "SRI",
+    "name": "Spring Road"
+  },
+  {
+    "crs": "SRL",
+    "name": "Shirley"
+  },
+  {
+    "crs": "SRN",
+    "name": "Strines"
+  },
+  {
+    "crs": "SRO",
+    "name": "Shireoaks"
+  },
+  {
+    "crs": "SRR",
+    "name": "Sarn"
+  },
+  {
+    "crs": "SRS",
+    "name": "Selhurst"
+  },
+  {
+    "crs": "SRT",
+    "name": "Shortlands"
+  },
+  {
+    "crs": "SRU",
+    "name": "South Ruislip"
+  },
+  {
+    "crs": "SRY",
+    "name": "Shoeburyness"
+  },
+  {
+    "crs": "SSC",
+    "name": "Seascale"
+  },
+  {
+    "crs": "SSD",
+    "name": "Stansted Airport"
+  },
+  {
+    "crs": "SSE",
+    "name": "Shoreham-By-Sea"
+  },
+  {
+    "crs": "SSM",
+    "name": "Stocksmoor"
+  },
+  {
+    "crs": "SSS",
+    "name": "Sheerness-On-Sea"
+  },
+  {
+    "crs": "SST",
+    "name": "Stansted Mountfitchet"
+  },
+  {
+    "crs": "STA",
+    "name": "Stafford"
+  },
+  {
+    "crs": "STC",
+    "name": "Strathcarron"
+  },
+  {
+    "crs": "STD",
+    "name": "Stroud"
+  },
+  {
+    "crs": "STE",
+    "name": "Streatham"
+  },
+  {
+    "crs": "STF",
+    "name": "Stromeferry"
+  },
+  {
+    "crs": "STG",
+    "name": "Stirling"
+  },
+  {
+    "crs": "STH",
+    "name": "Shepreth"
+  },
+  {
+    "crs": "STJ",
+    "name": "Severn Tunnel Junction"
+  },
+  {
+    "crs": "STK",
+    "name": "Stockton"
+  },
+  {
+    "crs": "STL",
+    "name": "Southall"
+  },
+  {
+    "crs": "STM",
+    "name": "St Michaels"
+  },
+  {
+    "crs": "STN",
+    "name": "Stonehaven"
+  },
+  {
+    "crs": "STO",
+    "name": "South Tottenham"
+  },
+  {
+    "crs": "STP",
+    "name": "London St Pancras International"
+  },
+  {
+    "crs": "STQ",
+    "name": "Southampton Town Quay"
+  },
+  {
+    "crs": "STR",
+    "name": "Stranraer"
+  },
+  {
+    "crs": "STS",
+    "name": "Saltash"
+  },
+  {
+    "crs": "STT",
+    "name": "Stewarton"
+  },
+  {
+    "crs": "STU",
+    "name": "Sturry"
+  },
+  {
+    "crs": "STV",
+    "name": "Stevenston"
+  },
+  {
+    "crs": "STW",
+    "name": "Strawberry Hill"
+  },
+  {
+    "crs": "STY",
+    "name": "Stratford-upon-Avon Parkway"
+  },
+  {
+    "crs": "STZ",
+    "name": "St Peters"
+  },
+  {
+    "crs": "SUC",
+    "name": "Sutton Common"
+  },
+  {
+    "crs": "SUD",
+    "name": "Sudbury & Harrow Road"
+  },
+  {
+    "crs": "SUG",
+    "name": "Sugar Loaf"
+  },
+  {
+    "crs": "SUM",
+    "name": "Summerston"
+  },
+  {
+    "crs": "SUN",
+    "name": "Sunderland"
+  },
+  {
+    "crs": "SUO",
+    "name": "Sutton (London)"
+  },
+  {
+    "crs": "SUP",
+    "name": "Sundridge Park"
+  },
+  {
+    "crs": "SUR",
+    "name": "Surbiton"
+  },
+  {
+    "crs": "SUT",
+    "name": "Sutton Coldfield"
+  },
+  {
+    "crs": "SUU",
+    "name": "Sunbury"
+  },
+  {
+    "crs": "SUY",
+    "name": "Sudbury Suffolk"
+  },
+  {
+    "crs": "SVB",
+    "name": "Severn Beach"
+  },
+  {
+    "crs": "SVG",
+    "name": "Stevenage"
+  },
+  {
+    "crs": "SVK",
+    "name": "Seven Kings"
+  },
+  {
+    "crs": "SVL",
+    "name": "Staveley"
+  },
+  {
+    "crs": "SVR",
+    "name": "Silverdale"
+  },
+  {
+    "crs": "SVS",
+    "name": "Seven Sisters"
+  },
+  {
+    "crs": "SWA",
+    "name": "Swansea"
+  },
+  {
+    "crs": "SWD",
+    "name": "Swinderby"
+  },
+  {
+    "crs": "SWE",
+    "name": "Swineshead"
+  },
+  {
+    "crs": "SWG",
+    "name": "Swaythling"
+  },
+  {
+    "crs": "SWI",
+    "name": "Swindon"
+  },
+  {
+    "crs": "SWK",
+    "name": "Southwick"
+  },
+  {
+    "crs": "SWL",
+    "name": "Swale"
+  },
+  {
+    "crs": "SWM",
+    "name": "Swanscombe- George & Dragon"
+  },
+  {
+    "crs": "SWN",
+    "name": "Swinton (South Yorks)"
+  },
+  {
+    "crs": "SWO",
+    "name": "Snowdown"
+  },
+  {
+    "crs": "SWR",
+    "name": "Stewartby"
+  },
+  {
+    "crs": "SWS",
+    "name": "South Wigston"
+  },
+  {
+    "crs": "SWT",
+    "name": "Slaithwaite"
+  },
+  {
+    "crs": "SWY",
+    "name": "Sway"
+  },
+  {
+    "crs": "SXY",
+    "name": "Saxilby"
+  },
+  {
+    "crs": "SYA",
+    "name": "Styal"
+  },
+  {
+    "crs": "SYB",
+    "name": "Stalybridge"
+  },
+  {
+    "crs": "SYD",
+    "name": "Sydenham"
+  },
+  {
+    "crs": "SYH",
+    "name": "Sydenham Hill"
+  },
+  {
+    "crs": "SYL",
+    "name": "Syon Lane"
+  },
+  {
+    "crs": "SYS",
+    "name": "Syston"
+  },
+  {
+    "crs": "SYT",
+    "name": "Somerleyton"
+  },
+  {
+    "crs": "TAB",
+    "name": "Tame Bridge Parkway"
+  },
+  {
+    "crs": "TAC",
+    "name": "Tackley"
+  },
+  {
+    "crs": "TAD",
+    "name": "Tadworth"
+  },
+  {
+    "crs": "TAF",
+    "name": "Taffs Well"
+  },
+  {
+    "crs": "TAI",
+    "name": "Tain"
+  },
+  {
+    "crs": "TAL",
+    "name": "Talsarnau"
+  },
+  {
+    "crs": "TAM",
+    "name": "Tamworth"
+  },
+  {
+    "crs": "TAP",
+    "name": "Taplow"
+  },
+  {
+    "crs": "TAT",
+    "name": "Tattenham Corner"
+  },
+  {
+    "crs": "TAU",
+    "name": "Taunton"
+  },
+  {
+    "crs": "TAY",
+    "name": "Taynuilt"
+  },
+  {
+    "crs": "TBD",
+    "name": "Three Bridges"
+  },
+  {
+    "crs": "TBW",
+    "name": "Tunbridge Wells"
+  },
+  {
+    "crs": "TBY",
+    "name": "Thornaby"
+  },
+  {
+    "crs": "TCR",
+    "name": "Tottenham Court Road"
+  },
+  {
+    "crs": "TDU",
+    "name": "Tondu"
+  },
+  {
+    "crs": "TEA",
+    "name": "Teesside Airport"
+  },
+  {
+    "crs": "TED",
+    "name": "Teddington"
+  },
+  {
+    "crs": "TEN",
+    "name": "Tenby"
+  },
+  {
+    "crs": "TEO",
+    "name": "Theobalds Grove"
+  },
+  {
+    "crs": "TEY",
+    "name": "Teynham"
+  },
+  {
+    "crs": "TFC",
+    "name": "Telford Central"
+  },
+  {
+    "crs": "TGM",
+    "name": "Teignmouth"
+  },
+  {
+    "crs": "TGS",
+    "name": "Ty Glas"
+  },
+  {
+    "crs": "THA",
+    "name": "Thatcham"
+  },
+  {
+    "crs": "THB",
+    "name": "Thornliebank"
+  },
+  {
+    "crs": "THC",
+    "name": "Thurnscoe"
+  },
+  {
+    "crs": "THD",
+    "name": "Thames Ditton"
+  },
+  {
+    "crs": "THE",
+    "name": "Theale"
+  },
+  {
+    "crs": "THH",
+    "name": "Thatto Heath"
+  },
+  {
+    "crs": "THI",
+    "name": "Thirsk"
+  },
+  {
+    "crs": "THL",
+    "name": "Tile Hill"
+  },
+  {
+    "crs": "THO",
+    "name": "Thornford"
+  },
+  {
+    "crs": "THP",
+    "name": "Thanet Parkway"
+  },
+  {
+    "crs": "THS",
+    "name": "Thurso"
+  },
+  {
+    "crs": "THT",
+    "name": "Thorntonhall"
+  },
+  {
+    "crs": "THU",
+    "name": "Thurgarton"
+  },
+  {
+    "crs": "THW",
+    "name": "The Hawthorns"
+  },
+  {
+    "crs": "TIL",
+    "name": "Tilbury Town"
+  },
+  {
+    "crs": "TIP",
+    "name": "Tipton"
+  },
+  {
+    "crs": "TIR",
+    "name": "Tir-Phil"
+  },
+  {
+    "crs": "TIS",
+    "name": "Tisbury"
+  },
+  {
+    "crs": "TLB",
+    "name": "Talybont"
+  },
+  {
+    "crs": "TLC",
+    "name": "Tal-Y-Cafn"
+  },
+  {
+    "crs": "TLH",
+    "name": "Tilehurst"
+  },
+  {
+    "crs": "TLK",
+    "name": "The Lakes"
+  },
+  {
+    "crs": "TLS",
+    "name": "Thorpe-Le-Soken"
+  },
+  {
+    "crs": "TMC",
+    "name": "Templecombe"
+  },
+  {
+    "crs": "TNA",
+    "name": "Thornton Abbey"
+  },
+  {
+    "crs": "TNF",
+    "name": "Tonfanau"
+  },
+  {
+    "crs": "TNN",
+    "name": "Thorne North"
+  },
+  {
+    "crs": "TNP",
+    "name": "Tonypandy"
+  },
+  {
+    "crs": "TNS",
+    "name": "Thorne South"
+  },
+  {
+    "crs": "TOD",
+    "name": "Todmorden"
+  },
+  {
+    "crs": "TOK",
+    "name": "Three Oaks"
+  },
+  {
+    "crs": "TOL",
+    "name": "Tolworth"
+  },
+  {
+    "crs": "TOM",
+    "name": "Tottenham Hale"
+  },
+  {
+    "crs": "TON",
+    "name": "Tonbridge"
+  },
+  {
+    "crs": "TOO",
+    "name": "Tooting"
+  },
+  {
+    "crs": "TOP",
+    "name": "Topsham"
+  },
+  {
+    "crs": "TOT",
+    "name": "Totnes"
+  },
+  {
+    "crs": "TPB",
+    "name": "Thorpe Bay"
+  },
+  {
+    "crs": "TPC",
+    "name": "Thorpe Culvert"
+  },
+  {
+    "crs": "TPN",
+    "name": "Ton Pentre"
+  },
+  {
+    "crs": "TQY",
+    "name": "Torquay"
+  },
+  {
+    "crs": "TRA",
+    "name": "Trafford Park"
+  },
+  {
+    "crs": "TRB",
+    "name": "Treherbert"
+  },
+  {
+    "crs": "TRD",
+    "name": "Troed-Y-Rhiw"
+  },
+  {
+    "crs": "TRE",
+    "name": "Trefforest Estate"
+  },
+  {
+    "crs": "TRF",
+    "name": "Trefforest"
+  },
+  {
+    "crs": "TRH",
+    "name": "Trehafod"
+  },
+  {
+    "crs": "TRI",
+    "name": "Tring"
+  },
+  {
+    "crs": "TRM",
+    "name": "Trimley"
+  },
+  {
+    "crs": "TRN",
+    "name": "Troon"
+  },
+  {
+    "crs": "TRO",
+    "name": "Trowbridge"
+  },
+  {
+    "crs": "TRR",
+    "name": "Torre"
+  },
+  {
+    "crs": "TRS",
+    "name": "Thurston"
+  },
+  {
+    "crs": "TRU",
+    "name": "Truro"
+  },
+  {
+    "crs": "TRY",
+    "name": "Treorchy"
+  },
+  {
+    "crs": "TTF",
+    "name": "Thetford"
+  },
+  {
+    "crs": "TTH",
+    "name": "Thornton Heath"
+  },
+  {
+    "crs": "TTN",
+    "name": "Totton"
+  },
+  {
+    "crs": "TUH",
+    "name": "Tulse Hill"
+  },
+  {
+    "crs": "TUL",
+    "name": "Tulloch"
+  },
+  {
+    "crs": "TUR",
+    "name": "Turkey Street"
+  },
+  {
+    "crs": "TUT",
+    "name": "Tutbury & Hatton"
+  },
+  {
+    "crs": "TVP",
+    "name": "Tiverton Parkway"
+  },
+  {
+    "crs": "TWB",
+    "name": "Tweedbank"
+  },
+  {
+    "crs": "TWI",
+    "name": "Twickenham"
+  },
+  {
+    "crs": "TWN",
+    "name": "Town Green"
+  },
+  {
+    "crs": "TWY",
+    "name": "Twyford"
+  },
+  {
+    "crs": "TYC",
+    "name": "Ty Croes"
+  },
+  {
+    "crs": "TYG",
+    "name": "Tygwyn"
+  },
+  {
+    "crs": "TYL",
+    "name": "Tyndrum Lower"
+  },
+  {
+    "crs": "TYS",
+    "name": "Tyseley"
+  },
+  {
+    "crs": "TYW",
+    "name": "Tywyn"
+  },
+  {
+    "crs": "UCK",
+    "name": "Uckfield"
+  },
+  {
+    "crs": "UDD",
+    "name": "Uddingston"
+  },
+  {
+    "crs": "UHA",
+    "name": "Uphall"
+  },
+  {
+    "crs": "UHL",
+    "name": "Upper Holloway"
+  },
+  {
+    "crs": "ULC",
+    "name": "Ulceby"
+  },
+  {
+    "crs": "ULL",
+    "name": "Ulleskelf"
+  },
+  {
+    "crs": "ULV",
+    "name": "Ulverston"
+  },
+  {
+    "crs": "UMB",
+    "name": "Umberleigh"
+  },
+  {
+    "crs": "UNI",
+    "name": "University (Birmingham)"
+  },
+  {
+    "crs": "UPH",
+    "name": "Upper Halliford"
+  },
+  {
+    "crs": "UPL",
+    "name": "Upholland"
+  },
+  {
+    "crs": "UPM",
+    "name": "Upminster"
+  },
+  {
+    "crs": "UPT",
+    "name": "Upton"
+  },
+  {
+    "crs": "UPW",
+    "name": "Upwey"
+  },
+  {
+    "crs": "URM",
+    "name": "Urmston"
+  },
+  {
+    "crs": "UTT",
+    "name": "Uttoxeter"
+  },
+  {
+    "crs": "UTY",
+    "name": "Upper Tyndrum"
+  },
+  {
+    "crs": "UWL",
+    "name": "Upper Warlingham"
+  },
+  {
+    "crs": "VAL",
+    "name": "Valley"
+  },
+  {
+    "crs": "VIC",
+    "name": "London Victoria"
+  },
+  {
+    "crs": "VIR",
+    "name": "Virginia Water"
+  },
+  {
+    "crs": "VXH",
+    "name": "Vauxhall"
+  },
+  {
+    "crs": "WAC",
+    "name": "Warrington Central"
+  },
+  {
+    "crs": "WAD",
+    "name": "Wadhurst"
+  },
+  {
+    "crs": "WAE",
+    "name": "London Waterloo East"
+  },
+  {
+    "crs": "WAF",
+    "name": "Wallyford"
+  },
+  {
+    "crs": "WAL",
+    "name": "Walton-On-Thames"
+  },
+  {
+    "crs": "WAM",
+    "name": "Walmer"
+  },
+  {
+    "crs": "WAN",
+    "name": "Wanborough"
+  },
+  {
+    "crs": "WAO",
+    "name": "Walton (Merseyside)"
+  },
+  {
+    "crs": "WAR",
+    "name": "Ware"
+  },
+  {
+    "crs": "WAS",
+    "name": "Watton-At-Stone"
+  },
+  {
+    "crs": "WAT",
+    "name": "London Waterloo"
+  },
+  {
+    "crs": "WAV",
+    "name": "Wavertree Technology Park"
+  },
+  {
+    "crs": "WAW",
+    "name": "Warrington West"
+  },
+  {
+    "crs": "WBC",
+    "name": "Waterbeach"
+  },
+  {
+    "crs": "WBD",
+    "name": "Whitley Bridge"
+  },
+  {
+    "crs": "WBL",
+    "name": "Warblington"
+  },
+  {
+    "crs": "WBO",
+    "name": "Wimbledon Chase"
+  },
+  {
+    "crs": "WBP",
+    "name": "West Brompton"
+  },
+  {
+    "crs": "WBQ",
+    "name": "Warrington Bank Quay"
+  },
+  {
+    "crs": "WBR",
+    "name": "Whaley Bridge"
+  },
+  {
+    "crs": "WBY",
+    "name": "West Byfleet"
+  },
+  {
+    "crs": "WCB",
+    "name": "Westcombe Park"
+  },
+  {
+    "crs": "WCF",
+    "name": "Westcliff"
+  },
+  {
+    "crs": "WCH",
+    "name": "Whitchurch (Hampshire)"
+  },
+  {
+    "crs": "WCK",
+    "name": "Wick"
+  },
+  {
+    "crs": "WCL",
+    "name": "West Calder"
+  },
+  {
+    "crs": "WCM",
+    "name": "Wickham Market"
+  },
+  {
+    "crs": "WCP",
+    "name": "Worcester Park"
+  },
+  {
+    "crs": "WCR",
+    "name": "Whitecraigs"
+  },
+  {
+    "crs": "WCX",
+    "name": "Wembley Stadium"
+  },
+  {
+    "crs": "WCY",
+    "name": "West Croydon"
+  },
+  {
+    "crs": "WDB",
+    "name": "Woodbridge"
+  },
+  {
+    "crs": "WDD",
+    "name": "Widdrington"
+  },
+  {
+    "crs": "WDE",
+    "name": "Wood End"
+  },
+  {
+    "crs": "WDH",
+    "name": "Woodhouse"
+  },
+  {
+    "crs": "WDL",
+    "name": "Woodhall"
+  },
+  {
+    "crs": "WDM",
+    "name": "Windermere"
+  },
+  {
+    "crs": "WDN",
+    "name": "Walsden"
+  },
+  {
+    "crs": "WDO",
+    "name": "Waddon"
+  },
+  {
+    "crs": "WDS",
+    "name": "Woodlesford"
+  },
+  {
+    "crs": "WDT",
+    "name": "West Drayton"
+  },
+  {
+    "crs": "WDU",
+    "name": "West Dulwich"
+  },
+  {
+    "crs": "WEA",
+    "name": "West Ealing"
+  },
+  {
+    "crs": "WED",
+    "name": "Wedgwood"
+  },
+  {
+    "crs": "WEE",
+    "name": "Weeley"
+  },
+  {
+    "crs": "WEH",
+    "name": "West Ham"
+  },
+  {
+    "crs": "WEL",
+    "name": "Wellingborough"
+  },
+  {
+    "crs": "WEM",
+    "name": "Wem"
+  },
+  {
+    "crs": "WES",
+    "name": "Westerton"
+  },
+  {
+    "crs": "WET",
+    "name": "Weeton"
+  },
+  {
+    "crs": "WEY",
+    "name": "Weymouth"
+  },
+  {
+    "crs": "WFF",
+    "name": "Whifflet"
+  },
+  {
+    "crs": "WFH",
+    "name": "Watford High Street"
+  },
+  {
+    "crs": "WFI",
+    "name": "Westerfield"
+  },
+  {
+    "crs": "WFJ",
+    "name": "Watford Junction"
+  },
+  {
+    "crs": "WFL",
+    "name": "Wainfleet"
+  },
+  {
+    "crs": "WFN",
+    "name": "Watford North"
+  },
+  {
+    "crs": "WGA",
+    "name": "Westgate-On-Sea"
+  },
+  {
+    "crs": "WGC",
+    "name": "Welwyn Garden City"
+  },
+  {
+    "crs": "WGN",
+    "name": "Wigan North Western"
+  },
+  {
+    "crs": "WGR",
+    "name": "Woodgrange Park"
+  },
+  {
+    "crs": "WGT",
+    "name": "Wigton"
+  },
+  {
+    "crs": "WGV",
+    "name": "Wargrave"
+  },
+  {
+    "crs": "WGW",
+    "name": "Wigan Wallgate"
+  },
+  {
+    "crs": "WHA",
+    "name": "Westenhanger"
+  },
+  {
+    "crs": "WHC",
+    "name": "Walthamstow Central"
+  },
+  {
+    "crs": "WHD",
+    "name": "West Hampstead"
+  },
+  {
+    "crs": "WHE",
+    "name": "Whalley"
+  },
+  {
+    "crs": "WHG",
+    "name": "Westhoughton"
+  },
+  {
+    "crs": "WHI",
+    "name": "Whitstable"
+  },
+  {
+    "crs": "WHL",
+    "name": "White Hart Lane"
+  },
+  {
+    "crs": "WHM",
+    "name": "Whimple"
+  },
+  {
+    "crs": "WHN",
+    "name": "Whiston"
+  },
+  {
+    "crs": "WHP",
+    "name": "West Hampstead Thameslink"
+  },
+  {
+    "crs": "WHR",
+    "name": "West Horndon"
+  },
+  {
+    "crs": "WHS",
+    "name": "Whyteleafe South"
+  },
+  {
+    "crs": "WHT",
+    "name": "Whitchurch (Cardiff)"
+  },
+  {
+    "crs": "WHY",
+    "name": "Whyteleafe"
+  },
+  {
+    "crs": "WIC",
+    "name": "Wickford"
+  },
+  {
+    "crs": "WID",
+    "name": "Widnes"
+  },
+  {
+    "crs": "WIH",
+    "name": "Winchmore Hill"
+  },
+  {
+    "crs": "WIJ",
+    "name": "Willesden Junction"
+  },
+  {
+    "crs": "WIL",
+    "name": "Willington"
+  },
+  {
+    "crs": "WIM",
+    "name": "Wimbledon"
+  },
+  {
+    "crs": "WIN",
+    "name": "Winchester"
+  },
+  {
+    "crs": "WIV",
+    "name": "Wivenhoe"
+  },
+  {
+    "crs": "WKB",
+    "name": "West Kilbride"
+  },
+  {
+    "crs": "WKD",
+    "name": "Walkden"
+  },
+  {
+    "crs": "WKF",
+    "name": "Wakefield Westgate"
+  },
+  {
+    "crs": "WKG",
+    "name": "Workington"
+  },
+  {
+    "crs": "WKI",
+    "name": "West Kirby"
+  },
+  {
+    "crs": "WKK",
+    "name": "Wakefield Kirkgate"
+  },
+  {
+    "crs": "WKM",
+    "name": "Wokingham"
+  },
+  {
+    "crs": "WLC",
+    "name": "Waltham Cross"
+  },
+  {
+    "crs": "WLD",
+    "name": "West St Leonards"
+  },
+  {
+    "crs": "WLE",
+    "name": "Whittlesea"
+  },
+  {
+    "crs": "WLF",
+    "name": "Whittlesford Parkway"
+  },
+  {
+    "crs": "WLG",
+    "name": "Wallasey Grove Road"
+  },
+  {
+    "crs": "WLI",
+    "name": "Welling"
+  },
+  {
+    "crs": "WLM",
+    "name": "Williamwood"
+  },
+  {
+    "crs": "WLN",
+    "name": "Wellington (Shropshire)"
+  },
+  {
+    "crs": "WLO",
+    "name": "Waterloo (Merseyside)"
+  },
+  {
+    "crs": "WLP",
+    "name": "Welshpool"
+  },
+  {
+    "crs": "WLS",
+    "name": "Woolston"
+  },
+  {
+    "crs": "WLT",
+    "name": "Wallington"
+  },
+  {
+    "crs": "WLV",
+    "name": "Wallasey Village"
+  },
+  {
+    "crs": "WLW",
+    "name": "Welwyn North"
+  },
+  {
+    "crs": "WLY",
+    "name": "Woodley"
+  },
+  {
+    "crs": "WMA",
+    "name": "West Malling"
+  },
+  {
+    "crs": "WMB",
+    "name": "Wembley Central"
+  },
+  {
+    "crs": "WMC",
+    "name": "Wilmcote"
+  },
+  {
+    "crs": "WMD",
+    "name": "Wymondham"
+  },
+  {
+    "crs": "WME",
+    "name": "Woodmansterne"
+  },
+  {
+    "crs": "WMG",
+    "name": "Welham Green"
+  },
+  {
+    "crs": "WMI",
+    "name": "Wildmill"
+  },
+  {
+    "crs": "WML",
+    "name": "Wilmslow"
+  },
+  {
+    "crs": "WMN",
+    "name": "Warminster"
+  },
+  {
+    "crs": "WMR",
+    "name": "Widney Manor"
+  },
+  {
+    "crs": "WMS",
+    "name": "Wemyss Bay"
+  },
+  {
+    "crs": "WMW",
+    "name": "Walthamstow Queens Road"
+  },
+  {
+    "crs": "WNC",
+    "name": "Windsor & Eton Central"
+  },
+  {
+    "crs": "WND",
+    "name": "Wendover"
+  },
+  {
+    "crs": "WNE",
+    "name": "Wilnecote"
+  },
+  {
+    "crs": "WNF",
+    "name": "Winchfield"
+  },
+  {
+    "crs": "WNG",
+    "name": "Waun-Gron Park"
+  },
+  {
+    "crs": "WNH",
+    "name": "Warnham"
+  },
+  {
+    "crs": "WNL",
+    "name": "Whinhill"
+  },
+  {
+    "crs": "WNM",
+    "name": "Weston Milton"
+  },
+  {
+    "crs": "WNN",
+    "name": "Wennington"
+  },
+  {
+    "crs": "WNP",
+    "name": "Wanstead Park"
+  },
+  {
+    "crs": "WNR",
+    "name": "Windsor & Eton Riverside"
+  },
+  {
+    "crs": "WNS",
+    "name": "Winnersh"
+  },
+  {
+    "crs": "WNT",
+    "name": "Wandsworth Town"
+  },
+  {
+    "crs": "WNW",
+    "name": "West Norwood"
+  },
+  {
+    "crs": "WNY",
+    "name": "White Notley"
+  },
+  {
+    "crs": "WOB",
+    "name": "Woburn Sands"
+  },
+  {
+    "crs": "WOF",
+    "name": "Worcester Foregate Street"
+  },
+  {
+    "crs": "WOH",
+    "name": "Woldingham"
+  },
+  {
+    "crs": "WOK",
+    "name": "Woking"
+  },
+  {
+    "crs": "WOL",
+    "name": "Wolverton"
+  },
+  {
+    "crs": "WOM",
+    "name": "Wombwell"
+  },
+  {
+    "crs": "WON",
+    "name": "Walton-On-The-Naze"
+  },
+  {
+    "crs": "WOO",
+    "name": "Wool"
+  },
+  {
+    "crs": "WOP",
+    "name": "Worcestershire Parkway"
+  },
+  {
+    "crs": "WOR",
+    "name": "Worle"
+  },
+  {
+    "crs": "WOS",
+    "name": "Worcester Shrub Hill"
+  },
+  {
+    "crs": "WPE",
+    "name": "Wapping"
+  },
+  {
+    "crs": "WPL",
+    "name": "Worplesdon"
+  },
+  {
+    "crs": "WRB",
+    "name": "Wrabness"
+  },
+  {
+    "crs": "WRE",
+    "name": "Wrenbury"
+  },
+  {
+    "crs": "WRH",
+    "name": "Worthing"
+  },
+  {
+    "crs": "WRK",
+    "name": "Worksop"
+  },
+  {
+    "crs": "WRL",
+    "name": "Wetheral"
+  },
+  {
+    "crs": "WRM",
+    "name": "Wareham"
+  },
+  {
+    "crs": "WRN",
+    "name": "West Runton"
+  },
+  {
+    "crs": "WRP",
+    "name": "Warwick Parkway"
+  },
+  {
+    "crs": "WRS",
+    "name": "Wressle"
+  },
+  {
+    "crs": "WRT",
+    "name": "Worstead"
+  },
+  {
+    "crs": "WRU",
+    "name": "West Ruislip"
+  },
+  {
+    "crs": "WRW",
+    "name": "Warwick"
+  },
+  {
+    "crs": "WRX",
+    "name": "Wrexham General"
+  },
+  {
+    "crs": "WRY",
+    "name": "Wraysbury"
+  },
+  {
+    "crs": "WSA",
+    "name": "West Allerton"
+  },
+  {
+    "crs": "WSB",
+    "name": "Westbury"
+  },
+  {
+    "crs": "WSE",
+    "name": "Winchelsea"
+  },
+  {
+    "crs": "WSF",
+    "name": "Winsford"
+  },
+  {
+    "crs": "WSH",
+    "name": "Wishaw"
+  },
+  {
+    "crs": "WSL",
+    "name": "Walsall"
+  },
+  {
+    "crs": "WSM",
+    "name": "Weston-Super-Mare"
+  },
+  {
+    "crs": "WSR",
+    "name": "Woodsmoor"
+  },
+  {
+    "crs": "WST",
+    "name": "Wood Street"
+  },
+  {
+    "crs": "WSU",
+    "name": "West Sutton"
+  },
+  {
+    "crs": "WSW",
+    "name": "Wandsworth Common"
+  },
+  {
+    "crs": "WTA",
+    "name": "Wester Hailes"
+  },
+  {
+    "crs": "WTB",
+    "name": "Whitby"
+  },
+  {
+    "crs": "WTC",
+    "name": "Whitchurch (Shropshire)"
+  },
+  {
+    "crs": "WTE",
+    "name": "Whitlocks End"
+  },
+  {
+    "crs": "WTG",
+    "name": "Watlington"
+  },
+  {
+    "crs": "WTH",
+    "name": "Whitehaven"
+  },
+  {
+    "crs": "WTI",
+    "name": "Winnersh Triangle"
+  },
+  {
+    "crs": "WTL",
+    "name": "Whitland"
+  },
+  {
+    "crs": "WTM",
+    "name": "Witham"
+  },
+  {
+    "crs": "WTN",
+    "name": "Whitton"
+  },
+  {
+    "crs": "WTO",
+    "name": "Water Orton"
+  },
+  {
+    "crs": "WTR",
+    "name": "Wateringbury"
+  },
+  {
+    "crs": "WTS",
+    "name": "Whatstandwell"
+  },
+  {
+    "crs": "WTT",
+    "name": "Witton"
+  },
+  {
+    "crs": "WTY",
+    "name": "Witley"
+  },
+  {
+    "crs": "WVF",
+    "name": "Wivelsfield"
+  },
+  {
+    "crs": "WVH",
+    "name": "Wolverhampton"
+  },
+  {
+    "crs": "WWA",
+    "name": "Woolwich Arsenal"
+  },
+  {
+    "crs": "WWC",
+    "name": "Woolwich"
+  },
+  {
+    "crs": "WWD",
+    "name": "Woolwich Dockyard"
+  },
+  {
+    "crs": "WWI",
+    "name": "West Wickham"
+  },
+  {
+    "crs": "WWL",
+    "name": "Whitwell"
+  },
+  {
+    "crs": "WWO",
+    "name": "West Worthing"
+  },
+  {
+    "crs": "WWR",
+    "name": "Wandsworth Road"
+  },
+  {
+    "crs": "WWW",
+    "name": "Wootton Wawen"
+  },
+  {
+    "crs": "WXC",
+    "name": "Wrexham Central"
+  },
+  {
+    "crs": "WYB",
+    "name": "Weybridge"
+  },
+  {
+    "crs": "WYE",
+    "name": "Wye"
+  },
+  {
+    "crs": "WYL",
+    "name": "Wylde Green"
+  },
+  {
+    "crs": "WYM",
+    "name": "Wylam"
+  },
+  {
+    "crs": "WYT",
+    "name": "Wythall"
+  },
+  {
+    "crs": "YAE",
+    "name": "Yate"
+  },
+  {
+    "crs": "YAL",
+    "name": "Yalding"
+  },
+  {
+    "crs": "YAT",
+    "name": "Yatton"
+  },
+  {
+    "crs": "YEO",
+    "name": "Yeoford"
+  },
+  {
+    "crs": "YET",
+    "name": "Yetminster"
+  },
+  {
+    "crs": "YNW",
+    "name": "Ynyswen"
+  },
+  {
+    "crs": "YOK",
+    "name": "Yoker"
+  },
+  {
+    "crs": "YRD",
+    "name": "Yardley Wood"
+  },
+  {
+    "crs": "YRK",
+    "name": "York"
+  },
+  {
+    "crs": "YRM",
+    "name": "Yarm"
+  },
+  {
+    "crs": "YRT",
+    "name": "Yorton"
+  },
+  {
+    "crs": "YSM",
+    "name": "Ystrad Mynach"
+  },
+  {
+    "crs": "YSR",
+    "name": "Ystrad Rhondda"
+  },
+  {
+    "crs": "YVJ",
+    "name": "Yeovil Junction"
+  },
+  {
+    "crs": "YVP",
+    "name": "Yeovil Pen Mill"
+  },
+  {
+    "crs": "ZCW",
+    "name": "Canada Water"
+  },
+  {
+    "crs": "ZFD",
+    "name": "Farringdon"
+  },
+  {
+    "crs": "ZLW",
+    "name": "Whitechapel"
+  }
+]
