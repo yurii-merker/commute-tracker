@@ -237,6 +237,26 @@ func TestGetServiceDetails(t *testing.T) {
 			wantDelay:    0,
 			wantCancel:   false,
 		},
+		{
+			name:       "response omits serviceID (real Darwin schema)",
+			statusCode: http.StatusOK,
+			response: `<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <GetServiceDetailsResponse xmlns="http://thalesgroup.com/RTTI/2017-02-02/ldb/">
+      <GetServiceDetailsResult>
+        <std>07:45</std>
+        <etd>Cancelled</etd>
+        <platform>1</platform>
+        <isCancelled>true</isCancelled>
+      </GetServiceDetailsResult>
+    </GetServiceDetailsResponse>
+  </soap:Body>
+</soap:Envelope>`,
+			wantPlatform: "1",
+			wantDelay:    0,
+			wantCancel:   true,
+		},
 	}
 
 	for _, tt := range tests {
@@ -272,6 +292,9 @@ func TestGetServiceDetails(t *testing.T) {
 			}
 			if result.IsCancelled != tt.wantCancel {
 				t.Errorf("cancelled = %v, want %v", result.IsCancelled, tt.wantCancel)
+			}
+			if result.ServiceID != "svc123" {
+				t.Errorf("serviceID = %q, want %q", result.ServiceID, "svc123")
 			}
 		})
 	}

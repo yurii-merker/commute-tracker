@@ -65,7 +65,12 @@ func (c *Client) GetServiceDetails(ctx context.Context, serviceID string) (*doma
 		return nil, fmt.Errorf("service details request: %w", err)
 	}
 
-	return parseServiceDetailsResponse(respBody)
+	status, err := parseServiceDetailsResponse(respBody)
+	if err != nil {
+		return nil, err
+	}
+	status.ServiceID = serviceID
+	return status, nil
 }
 
 func (c *Client) doSOAPRequest(ctx context.Context, soapAction string, body []byte) ([]byte, error) {
