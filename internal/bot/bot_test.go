@@ -15,6 +15,7 @@ import (
 
 	"github.com/yurii-merker/commute-tracker/internal/db"
 	"github.com/yurii-merker/commute-tracker/internal/domain"
+	"github.com/yurii-merker/commute-tracker/internal/timezone"
 )
 
 type testContext struct {
@@ -1675,7 +1676,7 @@ func TestHandleConfirmDeleteInvalidChoice(t *testing.T) {
 }
 
 func TestIsWithinDarwinRange(t *testing.T) {
-	now := time.Now()
+	now := timezone.Now()
 	nowMins := now.Hour()*60 + now.Minute()
 
 	tests := []struct {
