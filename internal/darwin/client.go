@@ -95,6 +95,9 @@ func (c *Client) doSOAPRequest(ctx context.Context, soapAction string, body []by
 	}
 
 	if resp.StatusCode >= 500 {
+		if isSOAPClientFault(respBody) {
+			return nil, &PermanentError{Cause: fmt.Errorf("soap client fault: %s", respBody)}
+		}
 		return nil, &TransientError{Cause: fmt.Errorf("server error: %d, body: %s", resp.StatusCode, respBody)}
 	}
 	if resp.StatusCode >= 400 {
@@ -106,6 +109,10 @@ func (c *Client) doSOAPRequest(ctx context.Context, soapAction string, body []by
 
 func escapeXML(s string) string {
 	return html.EscapeString(s)
+}
+
+func isSOAPClientFault(body []byte) bool {
+	return bytes.Contains(body, []byte("<faultcode>soap:Client</faultcode>"))
 }
 
 func buildDepBoardRequest(token, fromCRS, toCRS string, timeOffsetMins, timeWindowMins int) []byte {

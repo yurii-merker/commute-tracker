@@ -320,6 +320,33 @@ func TestErrorClassification(t *testing.T) {
 	}
 }
 
+func TestErrorClassificationSOAPClientFault(t *testing.T) {
+	body := `<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><soap:Fault><faultcode>soap:Client</faultcode><faultstring>No serviceID supplied</faultstring><detail /></soap:Fault></soap:Body></soap:Envelope>`
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusInternalServerError)
+		_, _ = w.Write([]byte(body))
+	}))
+	defer server.Close()
+
+	client := NewClient("test-token")
+	client.httpClient = server.Client()
+	client.endpoint = server.URL
+
+	_, err := client.GetServiceDetails(context.Background(), "")
+	if err == nil {
+		t.Fatal("expected error")
+	}
+
+	if IsTransient(err) {
+		t.Errorf("SOAP Client fault must not be transient, got %T", err)
+	}
+
+	var permanent *PermanentError
+	if !errors.As(err, &permanent) {
+		t.Errorf("expected PermanentError, got %T", err)
+	}
+}
+
 func TestErrorClassificationPermanent(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusUnauthorized)
