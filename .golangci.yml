@@ -14,15 +14,20 @@ linters:
     - prealloc
     - unconvert
     - unparam
-
-linters-settings:
-  errcheck:
-    check-type-assertions: true
-  govet:
-    enable-all: true
-  gosec:
-    excludes:
-      - G104
+  settings:
+    errcheck:
+      check-type-assertions: true
+    govet:
+      enable-all: true
+      disable:
+        - fieldalignment
+        - shadow
+    gosec:
+      excludes:
+        - G104
+  exclusions:
+    paths:
+      - internal/db
 
 formatters:
   enable:
@@ -30,8 +35,5 @@ formatters:
     - goimports
   settings:
     goimports:
-      local-prefixes: github.com/yurii-merker/commute-tracker
-
-issues:
-  exclude-dirs:
-    - internal/db
+      local-prefixes:
+        - github.com/yurii-merker/commute-tracker

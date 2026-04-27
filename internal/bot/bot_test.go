@@ -29,7 +29,8 @@ type testContext struct {
 func (tc *testContext) Chat() *telebot.Chat { return tc.chatVal }
 func (tc *testContext) Text() string        { return tc.textVal }
 func (tc *testContext) Send(msg interface{}, _ ...interface{}) error {
-	tc.lastSent = msg.(string)
+	s, _ := msg.(string)
+	tc.lastSent = s
 	tc.allSent = append(tc.allSent, tc.lastSent)
 	return nil
 }
