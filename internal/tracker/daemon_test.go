@@ -393,7 +393,7 @@ func TestFormatDepartureReminder(t *testing.T) {
 		Platform:           "3",
 	}
 
-	msg := formatDepartureReminder(route, status, 60)
+	msg := formatDepartureReminder(route, status)
 	if !strings.Contains(msg, "Departure in 60 min") && !strings.Contains(msg, "Departure in 59 min") {
 		t.Errorf("expected ~60 min departure reminder, got: %s", msg)
 	}
@@ -423,7 +423,7 @@ func TestFormatDepartureReminderDelayed(t *testing.T) {
 		DelayMins:          7,
 	}
 
-	msg := formatDepartureReminder(route, status, 60)
+	msg := formatDepartureReminder(route, status)
 	if !strings.Contains(msg, "Departure in 67 min") && !strings.Contains(msg, "Departure in 66 min") {
 		t.Errorf("expected ~67 min departure reminder, got: %s", msg)
 	}

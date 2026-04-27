@@ -126,7 +126,7 @@ func (d *Daemon) tick(ctx context.Context) {
 
 			for _, offset := range route.AlertOffsets {
 				if isWithinAlertWindow(route, now, offset) && !d.alertSent(ctx, route.ID, offset) {
-					d.sendDepartureReminder(ctx, route, cached, offset)
+					d.sendDepartureReminder(ctx, route, cached)
 					d.markAlertSent(ctx, route.ID, offset)
 				}
 			}
@@ -576,7 +576,7 @@ func (d *Daemon) markAlertSent(ctx context.Context, routeID pgtype.UUID, offset 
 	}
 }
 
-func (d *Daemon) sendDepartureReminder(ctx context.Context, route db.GetActiveRoutesWithChatIDRow, cached *domain.TrainStatus, offset int32) {
+func (d *Daemon) sendDepartureReminder(ctx context.Context, route db.GetActiveRoutesWithChatIDRow, cached *domain.TrainStatus) {
 	fresh, err := d.getCachedService(ctx, route.ID)
 	if err != nil || fresh == nil {
 		fresh = cached
@@ -587,7 +587,7 @@ func (d *Daemon) sendDepartureReminder(ctx context.Context, route db.GetActiveRo
 		fresh = last
 	}
 
-	msg := formatDepartureReminder(route, fresh, offset)
+	msg := formatDepartureReminder(route, fresh)
 	if err := d.notifier.Send(ctx, route.TelegramChatID, msg); err != nil {
 		slog.Error("daemon failed to send departure reminder",
 			"chat_id", route.TelegramChatID,
@@ -597,7 +597,7 @@ func (d *Daemon) sendDepartureReminder(ctx context.Context, route db.GetActiveRo
 	}
 }
 
-func formatDepartureReminder(route db.GetActiveRoutesWithChatIDRow, status *domain.TrainStatus, offset int32) string {
+func formatDepartureReminder(route db.GetActiveRoutesWithChatIDRow, status *domain.TrainStatus) string {
 	depTime := status.ScheduledDeparture.Format("15:04")
 	trainName := depTime
 	if status.Destination != "" {
