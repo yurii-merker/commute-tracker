@@ -63,4 +63,4 @@ docker-logs:
 	docker compose logs -f
 
 recreate:
-	docker compose build --no-cache && docker compose up -d --remove-orphans
+	docker compose build && docker compose up -d --remove-orphans
