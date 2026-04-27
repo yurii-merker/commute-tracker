@@ -708,7 +708,7 @@ func TestSendDepartureReminder(t *testing.T) {
 		Destination:        "London Blackfriars",
 	}
 
-	daemon.sendDepartureReminder(ctx, route, cached, 30)
+	daemon.sendDepartureReminder(ctx, route, cached)
 
 	notifier.mu.Lock()
 	defer notifier.mu.Unlock()

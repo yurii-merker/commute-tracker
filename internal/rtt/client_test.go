@@ -3,7 +3,6 @@ package rtt
 import (
 	"context"
 	"errors"
-	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"os"
@@ -21,7 +20,7 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
-const tokenResponseJSON = `{"token":"test-access-token","validUntil":"2099-12-31T23:59:59+00:00"}`
+const tokenResponseJSON = `{"token":"test-access-token","validUntil":"2099-12-31T23:59:59+00:00"}` //nolint:gosec // test fixture, not a real credential
 
 const validResponse = `{
 	"services": [
@@ -368,7 +367,7 @@ func TestGetScheduledDeparturesMalformedJSON(t *testing.T) {
 }
 
 func TestServiceFiltering(t *testing.T) {
-	data := []byte(fmt.Sprintf(`{
+	data := []byte(`{
 		"services": [
 			{
 				"scheduleMetadata": {"identity": "P1", "inPassengerService": true},
@@ -401,7 +400,7 @@ func TestServiceFiltering(t *testing.T) {
 				"destination": [{"location": {"description": "D"}}]
 			}
 		]
-	}`))
+	}`)
 
 	results, err := parseSearchResponse(data)
 	if err != nil {

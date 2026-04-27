@@ -51,7 +51,7 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - uses: golangci/golangci-lint-action@v6
+      - uses: golangci/golangci-lint-action@v7
         with:
           version: latest
 
@@ -67,7 +67,7 @@ jobs:
 
       - uses: sqlc-dev/setup-sqlc@v4
         with:
-          sqlc-version: latest
+          sqlc-version: '1.30.0'
 
       - name: Verify generated code is up to date
         run: sqlc diff
