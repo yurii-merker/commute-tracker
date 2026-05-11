@@ -284,6 +284,31 @@ func TestFormatAlertNowOnTime(t *testing.T) {
 	}
 }
 
+func TestFormatAlertReinstated(t *testing.T) {
+	route := makeRouteRow(7, 45, 60)
+	route.Label = "Morning"
+	route.FromStationCrs = "SMH"
+	route.ToStationCrs = "CTK"
+
+	prev := &domain.TrainStatus{
+		IsCancelled:        true,
+		Platform:           "3",
+		ScheduledDeparture: makeTime(7, 45),
+		EstimatedDeparture: makeTime(7, 45),
+	}
+	curr := &domain.TrainStatus{
+		IsCancelled:        false,
+		Platform:           "3",
+		ScheduledDeparture: makeTime(7, 45),
+		EstimatedDeparture: makeTime(7, 45),
+	}
+
+	msg := formatAlert(route, curr, prev)
+	if !strings.Contains(msg, "Reinstated") {
+		t.Errorf("expected reinstatement notice, got: %s", msg)
+	}
+}
+
 func TestOrTBC(t *testing.T) {
 	if got := orTBC(""); got != "TBC" {
 		t.Errorf("orTBC(\"\") = %q, want \"TBC\"", got)
