@@ -1120,3 +1120,186 @@ func TestFormatTransitionNotification(t *testing.T) {
 		t.Errorf("expected status text, got: %s", msg)
 	}
 }
+
+func TestCheckRouteCancelledToCancelledSuppressed(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+
+	old := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		IsCancelled:        true,
+		ScheduledDeparture: time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC),
+		EstimatedDeparture: time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC),
+	}
+	oldData, _ := json.Marshal(old)
+	rdb.Set(ctx, serviceCacheKey(routeID), oldData, time.Hour)
+	rdb.Set(ctx, lastStatePrefix+formatUUID(routeID), oldData, time.Hour)
+
+	fresh := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "7",
+		IsCancelled:        true,
+		ScheduledDeparture: time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC),
+		EstimatedDeparture: time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC),
+	}
+	notifier := &mockNotifier{}
+	trainClient := &mockTrainClient{serviceDetails: fresh}
+	cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+
+	daemon := &Daemon{rdb: rdb, trainClient: trainClient, notifier: notifier, circuitBreaker: cb}
+
+	route := makeTestRouteRow(routeID)
+	daemon.checkRoute(ctx, route, old)
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+	if len(notifier.sent) != 0 {
+		t.Fatalf("expected no notification when both states are cancelled, got %d: %v", len(notifier.sent), notifier.sent)
+	}
+
+	last, err := daemon.getLastState(ctx, routeID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if last == nil || last.Platform != "7" {
+		t.Fatalf("expected last state updated to fresh platform '7', got %+v", last)
+	}
+}
+
+func TestTickSuppressesReminderWhenCancelled(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+	uid := formatUUID(routeID)
+	now := ukNow()
+
+	depHour := now.Hour()
+	depMin := now.Minute() + 30
+	if depMin >= 60 {
+		depMin -= 60
+		depHour = (depHour + 1) % 24
+	}
+
+	cached := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		IsCancelled:        true,
+		ScheduledDeparture: time.Date(now.Year(), now.Month(), now.Day(), depHour, depMin, 0, 0, time.UTC),
+		EstimatedDeparture: time.Date(now.Year(), now.Month(), now.Day(), depHour, depMin, 0, 0, time.UTC),
+		Platform:           "3",
+	}
+	data, _ := json.Marshal(cached)
+	rdb.Set(ctx, serviceCacheKey(routeID), data, time.Hour)
+	rdb.Set(ctx, lastStatePrefix+uid, data, time.Hour)
+
+	routes := []db.GetActiveRoutesWithChatIDRow{{
+		ID:             routeID,
+		Label:          "Test",
+		FromStationCrs: "SMY",
+		ToStationCrs:   "CTK",
+		TelegramChatID: 100,
+		DepartureTime:  pgtype.Time{Microseconds: int64(depHour)*3600000000 + int64(depMin)*60000000, Valid: true},
+		AlertOffsets:   []int32{60},
+		IsActive:       true,
+	}}
+
+	notifier := &mockNotifier{}
+	trainClient := &mockTrainClient{serviceDetails: cached}
+	cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+
+	daemon := NewDaemon(&mockDaemonRepo{routes: routes}, trainClient, notifier, rdb, cb, nil, 0)
+	daemon.tick(ctx)
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+	for _, sent := range notifier.sent {
+		if strings.Contains(sent.message, "Departure in") {
+			t.Fatalf("expected no departure reminder when cancelled, got: %s", sent.message)
+		}
+	}
+
+	if rdb.Exists(ctx, alertSentKey(routeID, 60)).Val() != 0 {
+		t.Error("expected alert_sent key NOT to be set when reminder was suppressed")
+	}
+}
+
+func TestTickReminderFiresAfterReinstatement(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+	uid := formatUUID(routeID)
+	now := ukNow()
+
+	depHour := now.Hour()
+	depMin := now.Minute() + 30
+	if depMin >= 60 {
+		depMin -= 60
+		depHour = (depHour + 1) % 24
+	}
+	scheduled := time.Date(now.Year(), now.Month(), now.Day(), depHour, depMin, 0, 0, time.UTC)
+
+	cancelled := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		IsCancelled:        true,
+		ScheduledDeparture: scheduled,
+		EstimatedDeparture: scheduled,
+		Platform:           "3",
+		Destination:        "London Blackfriars",
+	}
+	cancelledData, _ := json.Marshal(cancelled)
+	rdb.Set(ctx, serviceCacheKey(routeID), cancelledData, time.Hour)
+	rdb.Set(ctx, lastStatePrefix+uid, cancelledData, time.Hour)
+
+	routes := []db.GetActiveRoutesWithChatIDRow{{
+		ID:             routeID,
+		Label:          "Test",
+		FromStationCrs: "SMY",
+		ToStationCrs:   "CTK",
+		TelegramChatID: 100,
+		DepartureTime:  pgtype.Time{Microseconds: int64(depHour)*3600000000 + int64(depMin)*60000000, Valid: true},
+		AlertOffsets:   []int32{60},
+		IsActive:       true,
+	}}
+
+	notifier := &mockNotifier{}
+	trainClient := &mockTrainClient{serviceDetails: cancelled}
+	cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+	daemon := NewDaemon(&mockDaemonRepo{routes: routes}, trainClient, notifier, rdb, cb, nil, 0)
+
+	daemon.tick(ctx)
+
+	reinstated := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		IsCancelled:        false,
+		ScheduledDeparture: scheduled,
+		EstimatedDeparture: scheduled,
+		Platform:           "3",
+		Destination:        "London Blackfriars",
+	}
+	reinstatedData, _ := json.Marshal(reinstated)
+	rdb.Set(ctx, serviceCacheKey(routeID), reinstatedData, time.Hour)
+	rdb.Set(ctx, lastStatePrefix+uid, reinstatedData, time.Hour)
+	trainClient.serviceDetails = reinstated
+
+	daemon.tick(ctx)
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+	reminderFound := false
+	for _, sent := range notifier.sent {
+		if strings.Contains(sent.message, "Departure in") {
+			reminderFound = true
+			break
+		}
+	}
+	if !reminderFound {
+		t.Fatalf("expected departure reminder after reinstatement, sent: %v", notifier.sent)
+	}
+}

@@ -125,10 +125,14 @@ func (d *Daemon) tick(ctx context.Context) {
 			checked++
 
 			for _, offset := range route.AlertOffsets {
-				if isWithinAlertWindow(route, now, offset) && !d.alertSent(ctx, route.ID, offset) {
-					d.sendDepartureReminder(ctx, route, cached)
-					d.markAlertSent(ctx, route.ID, offset)
+				if !isWithinAlertWindow(route, now, offset) || d.alertSent(ctx, route.ID, offset) {
+					continue
 				}
+				if cached.IsCancelled {
+					continue
+				}
+				d.sendDepartureReminder(ctx, route, cached)
+				d.markAlertSent(ctx, route.ID, offset)
 			}
 			continue
 		}
@@ -173,7 +177,9 @@ func (d *Daemon) checkRoute(ctx context.Context, route db.GetActiveRoutesWithCha
 	}
 
 	if statusChanged(last, fresh) {
-		d.sendAlert(ctx, route, fresh, last)
+		if !last.IsCancelled || !fresh.IsCancelled {
+			d.sendAlert(ctx, route, fresh, last)
+		}
 		d.saveLastState(ctx, route.ID, fresh)
 		d.updateServiceCache(ctx, route.ID, fresh)
 	}
@@ -732,6 +738,10 @@ func formatAlert(route db.GetActiveRoutesWithChatIDRow, current *domain.TrainSta
 	}
 
 	var changes []string
+
+	if previous.IsCancelled && !current.IsCancelled {
+		changes = append(changes, "✅ Reinstated")
+	}
 
 	if previous.IsCancelled != current.IsCancelled && current.IsCancelled {
 		changes = append(changes, "🔴 CANCELLED")
