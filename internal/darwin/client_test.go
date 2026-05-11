@@ -237,6 +237,26 @@ func TestGetServiceDetails(t *testing.T) {
 			wantDelay:    0,
 			wantCancel:   false,
 		},
+		{
+			name:       "response omits serviceID (real Darwin schema)",
+			statusCode: http.StatusOK,
+			response: `<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <GetServiceDetailsResponse xmlns="http://thalesgroup.com/RTTI/2017-02-02/ldb/">
+      <GetServiceDetailsResult>
+        <std>07:45</std>
+        <etd>Cancelled</etd>
+        <platform>1</platform>
+        <isCancelled>true</isCancelled>
+      </GetServiceDetailsResult>
+    </GetServiceDetailsResponse>
+  </soap:Body>
+</soap:Envelope>`,
+			wantPlatform: "1",
+			wantDelay:    0,
+			wantCancel:   true,
+		},
 	}
 
 	for _, tt := range tests {
@@ -273,6 +293,9 @@ func TestGetServiceDetails(t *testing.T) {
 			if result.IsCancelled != tt.wantCancel {
 				t.Errorf("cancelled = %v, want %v", result.IsCancelled, tt.wantCancel)
 			}
+			if result.ServiceID != "svc123" {
+				t.Errorf("serviceID = %q, want %q", result.ServiceID, "svc123")
+			}
 		})
 	}
 }
@@ -294,6 +317,33 @@ func TestErrorClassification(t *testing.T) {
 
 	if !IsTransient(err) {
 		t.Errorf("IsTransient should return true for 500 errors, got %T", err)
+	}
+}
+
+func TestErrorClassificationSOAPClientFault(t *testing.T) {
+	body := `<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><soap:Fault><faultcode>soap:Client</faultcode><faultstring>No serviceID supplied</faultstring><detail /></soap:Fault></soap:Body></soap:Envelope>`
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusInternalServerError)
+		_, _ = w.Write([]byte(body))
+	}))
+	defer server.Close()
+
+	client := NewClient("test-token")
+	client.httpClient = server.Client()
+	client.endpoint = server.URL
+
+	_, err := client.GetServiceDetails(context.Background(), "")
+	if err == nil {
+		t.Fatal("expected error")
+	}
+
+	if IsTransient(err) {
+		t.Errorf("SOAP Client fault must not be transient, got %T", err)
+	}
+
+	var permanent *PermanentError
+	if !errors.As(err, &permanent) {
+		t.Errorf("expected PermanentError, got %T", err)
 	}
 }
 

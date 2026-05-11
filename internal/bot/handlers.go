@@ -561,7 +561,7 @@ func (b *Bot) handleBetterKeepCallback(c telebot.Context) error {
 }
 
 func removeInlineButtons(c telebot.Context) {
-	defer func() { recover() }()
+	defer func() { _ = recover() }()
 	if msg := c.Message(); msg != nil {
 		_, _ = c.Bot().Edit(msg, msg.Text)
 	}

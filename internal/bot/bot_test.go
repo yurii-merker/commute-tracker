@@ -15,6 +15,7 @@ import (
 
 	"github.com/yurii-merker/commute-tracker/internal/db"
 	"github.com/yurii-merker/commute-tracker/internal/domain"
+	"github.com/yurii-merker/commute-tracker/internal/timezone"
 )
 
 type testContext struct {
@@ -28,7 +29,8 @@ type testContext struct {
 func (tc *testContext) Chat() *telebot.Chat { return tc.chatVal }
 func (tc *testContext) Text() string        { return tc.textVal }
 func (tc *testContext) Send(msg interface{}, _ ...interface{}) error {
-	tc.lastSent = msg.(string)
+	s, _ := msg.(string)
+	tc.lastSent = s
 	tc.allSent = append(tc.allSent, tc.lastSent)
 	return nil
 }
@@ -1675,7 +1677,7 @@ func TestHandleConfirmDeleteInvalidChoice(t *testing.T) {
 }
 
 func TestIsWithinDarwinRange(t *testing.T) {
-	now := time.Now()
+	now := timezone.Now()
 	nowMins := now.Hour()*60 + now.Minute()
 
 	tests := []struct {
