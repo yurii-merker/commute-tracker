@@ -59,6 +59,21 @@ func TestIsValidState(t *testing.T) {
 	}
 }
 
+func TestIsValidState_EditStates(t *testing.T) {
+	cases := []string{
+		"awaiting_edit_route",
+		"awaiting_edit_field",
+		"awaiting_edit_alerts",
+	}
+	for _, s := range cases {
+		t.Run(s, func(t *testing.T) {
+			if !IsValidState(s) {
+				t.Errorf("IsValidState(%q) = false, want true", s)
+			}
+		})
+	}
+}
+
 func TestSingleOption(t *testing.T) {
 	train := &TrainStatus{
 		ServiceID:          "svc1",

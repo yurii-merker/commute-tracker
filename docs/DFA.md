@@ -107,10 +107,11 @@ sequenceDiagram
    - RTT: `GET /gb-nr/location` with Bearer token auth (REST/JSON). Rate limited: 30/min, 750/hour, 9000/day.
 
 4. **Presentation Module (Telegram):**
-   - Implement Bot State Machine (`/start`, `/add`, `/status`, `/stop`, `/resume`, `/delete`, `/help`) using telebot v4.
+   - Implement Bot State Machine (`/start`, `/add`, `/edit`, `/status`, `/stop`, `/resume`, `/delete`, `/help`) using telebot v4.
    - Implement input validation (station codes via fuzzy search, time formats).
-   - Inline button UI for train selection and route deletion.
+   - Inline button UI for train selection, route deletion, and route editing.
    - Days-of-week selection (weekdays, weekends, specific days).
+   - `/edit` flow: lists routes (skipped when only one), shows a field-picker menu (currently `⏰ Edit reminders`), then prompts for new `alert_offsets`. States: `StateAwaitingEditRoute` → `StateAwaitingEditField` → `StateAwaitingEditAlerts` → `StateReady`. Callbacks: `\feditroute`, `\feditfield`, `\feditcancel`. On save, today's `alert_sent:<route_id>:<offset>` Redis keys are reconciled: removed offsets are deleted (cleanup); newly added offsets whose window already passed are pre-marked sent to prevent stale fires. Ownership is verified at every callback boundary.
 
 5. **CI Pipeline:**
    - GitHub Actions workflow (`.github/workflows/pr-check.yml`) runs on every pull request to `main`.
@@ -167,3 +168,4 @@ N/A — Application interacts exclusively via Telegram Bot UI; no public REST AP
 - Circuit Breaker logic state changes (`API_UP` <-> `API_DOWN`) must be fully tested.
 - Better train detection: all edge cases covered — tolerance checks, flag expiry, API failures, duplicate offer prevention, integration with status change alerts.
 - Scheduled train preview: RTT client parsing/filtering, planner FindScheduledTrains/PlanRouteFromSchedule, handler RTT fallback, daemon timetable pre-fetch/transition, /status timetable display, backoff on failure.
+- `/edit` flow: 0/1/N route entry behavior, route-picker callback, field-picker callback (alerts branch only), cancel callback, alerts text validation, ownership checks, expired-draft handling, and `reconcileAlertOffsets` table cases (DEL on removal, SET on past-window addition, no-op on future-window addition or already-departed train).

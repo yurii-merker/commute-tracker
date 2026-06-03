@@ -16,6 +16,7 @@ type Repository interface {
 	GetRoutesByUserID(ctx context.Context, userID pgtype.UUID) ([]db.Route, error)
 	CreateRoute(ctx context.Context, arg db.CreateRouteParams) (db.Route, error)
 	UpdateRouteActive(ctx context.Context, arg db.UpdateRouteActiveParams) error
+	UpdateRouteAlertOffsets(ctx context.Context, arg db.UpdateRouteAlertOffsetsParams) error
 	DeleteRoute(ctx context.Context, id pgtype.UUID) error
 	GetRouteByID(ctx context.Context, id pgtype.UUID) (db.Route, error)
 	ToggleSystemAlerts(ctx context.Context, telegramChatID int64) (bool, error)
