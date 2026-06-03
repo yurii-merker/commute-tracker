@@ -561,12 +561,12 @@ func (d *Daemon) autoSwitchTrain(ctx context.Context, route db.GetActiveRoutesWi
 	}
 }
 
-func alertSentKey(routeID pgtype.UUID, offset int32) string {
+func AlertSentKey(routeID pgtype.UUID, offset int32) string {
 	return fmt.Sprintf("%s%s:%d", alertSentPrefix, formatUUID(routeID), offset)
 }
 
 func (d *Daemon) alertSent(ctx context.Context, routeID pgtype.UUID, offset int32) bool {
-	key := alertSentKey(routeID, offset)
+	key := AlertSentKey(routeID, offset)
 	exists, err := d.rdb.Exists(ctx, key).Result()
 	if err != nil {
 		slog.Error("failed to check alert sent", "route_id", formatUUID(routeID), "offset", offset, "error", err)
@@ -576,7 +576,7 @@ func (d *Daemon) alertSent(ctx context.Context, routeID pgtype.UUID, offset int3
 }
 
 func (d *Daemon) markAlertSent(ctx context.Context, routeID pgtype.UUID, offset int32) {
-	key := alertSentKey(routeID, offset)
+	key := AlertSentKey(routeID, offset)
 	if err := d.rdb.Set(ctx, key, "1", timeUntilEndOfDay()).Err(); err != nil {
 		slog.Error("failed to mark alert sent", "route_id", formatUUID(routeID), "offset", offset, "error", err)
 	}

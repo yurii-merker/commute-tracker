@@ -1223,7 +1223,7 @@ func TestTickSuppressesReminderWhenCancelled(t *testing.T) {
 		}
 	}
 
-	if rdb.Exists(ctx, alertSentKey(routeID, 60)).Val() != 0 {
+	if rdb.Exists(ctx, AlertSentKey(routeID, 60)).Val() != 0 {
 		t.Error("expected alert_sent key NOT to be set when reminder was suppressed")
 	}
 }

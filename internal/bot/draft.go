@@ -19,6 +19,7 @@ type routeDraft struct {
 	Alerts       string
 	TrainOption1 string
 	TrainOption2 string
+	EditRouteID  string
 }
 
 func draftKey(chatID int64) string {
@@ -42,6 +43,7 @@ func (b *Bot) getDraft(ctx context.Context, chatID int64) (*routeDraft, error) {
 		Alerts:       result["alerts"],
 		TrainOption1: result["train_option_1"],
 		TrainOption2: result["train_option_2"],
+		EditRouteID:  result["edit_route_id"],
 	}, nil
 }
 
