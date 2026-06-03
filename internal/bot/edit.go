@@ -31,15 +31,6 @@ func reconcileAlertOffsets(
 	oldSet := offsetSet(oldOffsets)
 	newSet := offsetSet(newOffsets)
 
-	for o := range oldSet {
-		if !newSet[o] {
-			key := tracker.AlertSentKey(routeID, o)
-			if err := rdb.Del(ctx, key).Err(); err != nil {
-				slog.Error("reconcile DEL failed", "key", key, "error", err)
-			}
-		}
-	}
-
 	if cached == nil {
 		return
 	}

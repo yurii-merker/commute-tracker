@@ -111,7 +111,7 @@ sequenceDiagram
    - Implement input validation (station codes via fuzzy search, time formats).
    - Inline button UI for train selection, route deletion, and route editing.
    - Days-of-week selection (weekdays, weekends, specific days).
-   - `/edit` flow: lists routes (skipped when only one), shows a field-picker menu (currently `⏰ Edit reminders`), then prompts for new `alert_offsets`. States: `StateAwaitingEditRoute` → `StateAwaitingEditField` → `StateAwaitingEditAlerts` → `StateReady`. Callbacks: `\feditroute`, `\feditfield`, `\feditcancel`. On save, today's `alert_sent:<route_id>:<offset>` Redis keys are reconciled: removed offsets are deleted (cleanup); newly added offsets whose window already passed are pre-marked sent to prevent stale fires. Ownership is verified at every callback boundary.
+   - `/edit` flow: lists routes (skipped when only one), shows a field-picker menu (currently `⏰ Edit reminders`), then prompts for new `alert_offsets`. States: `StateAwaitingEditRoute` → `StateAwaitingEditField` → `StateAwaitingEditAlerts` → `StateReady`. Callbacks: `\feditroute`, `\feditfield`, `\feditcancel`. On save, newly added offsets whose alert window already passed are pre-marked `alert_sent:<route_id>:<offset>` in Redis to prevent the daemon from firing stale reminders. Removed offsets stop firing automatically once the daemon next reads the updated `AlertOffsets` from the DB; their `alert_sent:` keys are left to expire at end of day. Ownership is verified at every callback boundary.
 
 5. **CI Pipeline:**
    - GitHub Actions workflow (`.github/workflows/pr-check.yml`) runs on every pull request to `main`.

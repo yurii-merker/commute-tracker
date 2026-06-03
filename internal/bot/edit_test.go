@@ -38,13 +38,13 @@ func TestReconcileAlertOffsets(t *testing.T) {
 		wantDel []int32
 	}{
 		{
-			name:    "removed offset is DEL'd",
+			name:    "removed offset key is preserved",
 			oldOffs: []int32{60, 30},
 			newOffs: []int32{60},
 			now:     now,
 			cached:  cached,
-			wantSet: nil,
-			wantDel: []int32{30},
+			wantSet: []int32{30},
+			wantDel: nil,
 		},
 		{
 			name:    "added offset in past window is SET",
