@@ -14,7 +14,7 @@ Build a Telegram bot where users can configure up to two daily train routes (e.g
 
 - **Upstream Unreliability:** The National Rail API (Darwin OpenLDBWS) can be unstable or return 500 errors during peak times.
 - **Polling Limits:** As the user base grows, polling every 1–2 minutes per active route could hit rate limits (3 million/month free tier).
-- **State Synchronization:** Accurately maintaining the LastKnownState is critical to prevent spamming the user with duplicate or redundant notifications.
+- **State Synchronization:** Accurately maintaining the LastKnownState is critical to prevent spamming the user with duplicate or redundant notifications. Delay updates use a **deadband**: an alert fires only when the delay moves by at least `delayNotifyThresholdMins` (2 min) versus the last *alerted* state, while cancellations, reinstatements, and platform changes always alert immediately. Sub-threshold drift refreshes the service cache but leaves LastKnownState unchanged, so small changes accumulate against the last alerted value.
 
 ## 2. Non-Functional Requirements
 
@@ -57,9 +57,11 @@ sequenceDiagram
     loop Every 2 mins until departure
         Daemon->>API: Poll GetServiceDetails(ServiceID)
         API-->>Daemon: New TrainStatus
-        alt Status != LastKnownState
+        alt Significant change vs LastKnownState (cancellation, platform, or delay ≥ 2 min)
             Daemon->>User: Send Push Alert (e.g., Delayed!)
             Daemon->>DB: Update LastKnownState
+        else Sub-threshold change (e.g., delay drifts by 1 min)
+            Daemon->>DB: Refresh service cache only (no alert, LastKnownState unchanged)
         end
         alt Cached train outside ±5 min tolerance & not yet offered/declined today
             Daemon->>API: GetDepartureBoard (check for better match)

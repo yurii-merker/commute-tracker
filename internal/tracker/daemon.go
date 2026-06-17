@@ -18,17 +18,18 @@ import (
 )
 
 const (
-	lastStatePrefix      = "last_state:"
-	alertSentPrefix      = "alert_sent:"
-	betterDeclinedPrefix = "better_declined:"
-	betterOfferedPrefix  = "better_offered:"
-	firstMissPrefix      = "first_miss:"
-	timetableBackoff     = "timetable_backoff:"
-	defaultTickInterval  = 2 * time.Minute
-	maxAPIRangeMins      = 240
-	planGracePeriod      = 30 * time.Minute
-	maxChoiceRangeMins   = 90
-	timetableRetryDelay  = time.Hour
+	lastStatePrefix          = "last_state:"
+	alertSentPrefix          = "alert_sent:"
+	betterDeclinedPrefix     = "better_declined:"
+	betterOfferedPrefix      = "better_offered:"
+	firstMissPrefix          = "first_miss:"
+	timetableBackoff         = "timetable_backoff:"
+	defaultTickInterval      = 2 * time.Minute
+	delayNotifyThresholdMins = 2
+	maxAPIRangeMins          = 240
+	planGracePeriod          = 30 * time.Minute
+	maxChoiceRangeMins       = 90
+	timetableRetryDelay      = time.Hour
 )
 
 type Daemon struct {
@@ -176,13 +177,13 @@ func (d *Daemon) checkRoute(ctx context.Context, route db.GetActiveRoutesWithCha
 		return
 	}
 
-	if statusChanged(last, fresh) {
+	if shouldNotify(last, fresh) {
 		if !last.IsCancelled || !fresh.IsCancelled {
 			d.sendAlert(ctx, route, fresh, last)
 		}
 		d.saveLastState(ctx, route.ID, fresh)
-		d.updateServiceCache(ctx, route.ID, fresh)
 	}
+	d.updateServiceCache(ctx, route.ID, fresh)
 }
 
 func (d *Daemon) sendAlert(ctx context.Context, route db.GetActiveRoutesWithChatIDRow, current *domain.TrainStatus, previous *domain.TrainStatus) {
@@ -588,11 +589,6 @@ func (d *Daemon) sendDepartureReminder(ctx context.Context, route db.GetActiveRo
 		fresh = cached
 	}
 
-	last, _ := d.getLastState(ctx, route.ID)
-	if last != nil {
-		fresh = last
-	}
-
 	msg := formatDepartureReminder(route, fresh)
 	if err := d.notifier.Send(ctx, route.TelegramChatID, msg); err != nil {
 		slog.Error("daemon failed to send departure reminder",
@@ -689,20 +685,14 @@ func isDeparted(route db.GetActiveRoutesWithChatIDRow, now time.Time) bool {
 	return nowMins > depMins
 }
 
-func statusChanged(previous, current *domain.TrainStatus) bool {
+func shouldNotify(previous, current *domain.TrainStatus) bool {
 	if previous.Platform != current.Platform {
 		return true
 	}
 	if previous.IsCancelled != current.IsCancelled {
 		return true
 	}
-	if previous.DelayMins != current.DelayMins {
-		return true
-	}
-	if !previous.EstimatedDeparture.Equal(current.EstimatedDeparture) {
-		return true
-	}
-	return false
+	return absDiff(previous.DelayMins, current.DelayMins) >= delayNotifyThresholdMins
 }
 
 func formatAlert(route db.GetActiveRoutesWithChatIDRow, current *domain.TrainStatus, previous *domain.TrainStatus) string {
