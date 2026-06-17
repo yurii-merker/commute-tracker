@@ -1407,3 +1407,52 @@ func TestSendDepartureReminderUsesFreshCache(t *testing.T) {
 		t.Errorf("reminder must not show the stale last-alerted delay (5), got: %s", notifier.sent[0].message)
 	}
 }
+
+func TestCheckRouteFirstPollRefreshesCache(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+
+	sched := time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC)
+	pinned := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          0,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched,
+	}
+	pinnedData, _ := json.Marshal(pinned)
+	rdb.Set(ctx, serviceCacheKey(routeID), pinnedData, time.Hour)
+
+	fresh := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          4,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched.Add(4 * time.Minute),
+	}
+	notifier := &mockNotifier{}
+	trainClient := &mockTrainClient{serviceDetails: fresh}
+	cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+	daemon := &Daemon{rdb: rdb, trainClient: trainClient, notifier: notifier, circuitBreaker: cb}
+
+	route := makeTestRouteRow(routeID)
+	daemon.checkRoute(ctx, route, pinned)
+
+	notifier.mu.Lock()
+	sent := len(notifier.sent)
+	notifier.mu.Unlock()
+	if sent != 0 {
+		t.Fatalf("expected first poll to be silent, got %d", sent)
+	}
+
+	cachedAfter, err := daemon.getCachedService(ctx, routeID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if cachedAfter == nil || cachedAfter.DelayMins != 4 {
+		t.Fatalf("expected service cache refreshed to fresh delay 4 on first poll, got %+v", cachedAfter)
+	}
+}

@@ -172,12 +172,10 @@ func (d *Daemon) checkRoute(ctx context.Context, route db.GetActiveRoutesWithCha
 		return
 	}
 
-	if last == nil {
+	switch {
+	case last == nil:
 		d.saveLastState(ctx, route.ID, fresh)
-		return
-	}
-
-	if shouldNotify(last, fresh) {
+	case shouldNotify(last, fresh):
 		if !last.IsCancelled || !fresh.IsCancelled {
 			d.sendAlert(ctx, route, fresh, last)
 		}
@@ -690,6 +688,9 @@ func shouldNotify(previous, current *domain.TrainStatus) bool {
 		return true
 	}
 	if previous.IsCancelled != current.IsCancelled {
+		return true
+	}
+	if current.DelayMins == 0 && previous.DelayMins != 0 {
 		return true
 	}
 	return absDiff(previous.DelayMins, current.DelayMins) >= delayNotifyThresholdMins

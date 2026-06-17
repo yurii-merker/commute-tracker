@@ -24,6 +24,7 @@ func TestShouldNotify(t *testing.T) {
 		{"threshold worse (+2)", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 7}, true},
 		{"threshold better (-2)", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 3}, true},
 		{"recovered to on time", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 0}, true},
+		{"recovered to on time from sub-threshold", &domain.TrainStatus{Platform: "3", DelayMins: 1}, &domain.TrainStatus{Platform: "3", DelayMins: 0}, true},
 		{"platform changed", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "7", DelayMins: 5}, true},
 		{"cancelled", &domain.TrainStatus{Platform: "3", DelayMins: 0}, &domain.TrainStatus{Platform: "3", DelayMins: 0, IsCancelled: true}, true},
 		{"reinstated", &domain.TrainStatus{Platform: "3", IsCancelled: true}, &domain.TrainStatus{Platform: "3", IsCancelled: false}, true},
