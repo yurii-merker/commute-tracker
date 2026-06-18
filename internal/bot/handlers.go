@@ -32,6 +32,7 @@ func (b *Bot) handleHelp(c telebot.Context) error {
 		"🚆 *Commute Tracker — Help*\n\n"+
 			"*Commands:*\n"+
 			"/add — Set up a new route (max 2)\n"+
+			"/edit — Change reminders for an existing route\n"+
 			"/status — View your routes and live train info\n"+
 			"/stop — Pause all route monitoring\n"+
 			"/resume — Resume paused monitoring\n"+
@@ -385,6 +386,8 @@ func (b *Bot) handleText(c telebot.Context) error {
 		return b.handleAwaitingLabel(c, ctx, chatID, text, user.ID)
 	case domain.StateAwaitingDelete:
 		return b.handleAwaitingDelete(c, ctx, chatID, text, user.ID)
+	case domain.StateAwaitingEditAlerts:
+		return b.handleAwaitingEditAlerts(c, ctx, chatID, text)
 	default:
 		return c.Send("🤔 I didn't understand that. Use /help to see available commands.")
 	}

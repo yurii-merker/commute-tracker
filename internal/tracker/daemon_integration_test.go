@@ -1223,7 +1223,7 @@ func TestTickSuppressesReminderWhenCancelled(t *testing.T) {
 		}
 	}
 
-	if rdb.Exists(ctx, alertSentKey(routeID, 60)).Val() != 0 {
+	if rdb.Exists(ctx, AlertSentKey(routeID, 60)).Val() != 0 {
 		t.Error("expected alert_sent key NOT to be set when reminder was suppressed")
 	}
 }
@@ -1301,5 +1301,158 @@ func TestTickReminderFiresAfterReinstatement(t *testing.T) {
 	}
 	if !reminderFound {
 		t.Fatalf("expected departure reminder after reinstatement, sent: %v", notifier.sent)
+	}
+}
+
+func TestCheckRouteDelayDeadband(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+
+	sched := time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC)
+	baseline := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          0,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched,
+	}
+	data, _ := json.Marshal(baseline)
+	rdb.Set(ctx, serviceCacheKey(routeID), data, time.Hour)
+	rdb.Set(ctx, lastStatePrefix+formatUUID(routeID), data, time.Hour)
+
+	notifier := &mockNotifier{}
+	trainClient := &mockTrainClient{}
+	cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+	daemon := &Daemon{rdb: rdb, trainClient: trainClient, notifier: notifier, circuitBreaker: cb}
+	route := makeTestRouteRow(routeID)
+
+	for _, d := range []int{3, 2, 3, 5, 6, 5, 7, 9} {
+		trainClient.serviceDetails = &domain.TrainStatus{
+			ServiceID:          "svc1",
+			Platform:           "3",
+			DelayMins:          d,
+			ScheduledDeparture: sched,
+			EstimatedDeparture: sched.Add(time.Duration(d) * time.Minute),
+		}
+		daemon.checkRoute(ctx, route, baseline)
+	}
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+
+	if len(notifier.sent) != 4 {
+		t.Fatalf("expected 4 notifications with 2-min deadband, got %d: %v", len(notifier.sent), notifier.sent)
+	}
+	for i, want := range []string{"Delayed 3 min", "Delayed 5 min", "Delayed 7 min", "Delayed 9 min"} {
+		if !strings.Contains(notifier.sent[i].message, want) {
+			t.Errorf("message %d = %q, want it to contain %q", i, notifier.sent[i].message, want)
+		}
+	}
+
+	last, err := daemon.getLastState(ctx, routeID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if last == nil || last.DelayMins != 9 {
+		t.Fatalf("expected last_state to advance only on alerts (final delay 9), got %+v", last)
+	}
+}
+
+func TestSendDepartureReminderUsesFreshCache(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+	notifier := &mockNotifier{}
+	daemon := &Daemon{rdb: rdb, notifier: notifier}
+	route := makeTestRouteRow(routeID)
+
+	sched := makeTime(7, 45)
+
+	freshCache := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          6,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched.Add(6 * time.Minute),
+	}
+	cacheData, _ := json.Marshal(freshCache)
+	rdb.Set(ctx, serviceCacheKey(routeID), cacheData, time.Hour)
+
+	staleLast := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          5,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched.Add(5 * time.Minute),
+	}
+	lastData, _ := json.Marshal(staleLast)
+	rdb.Set(ctx, lastStatePrefix+formatUUID(routeID), lastData, time.Hour)
+
+	daemon.sendDepartureReminder(ctx, route, freshCache)
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+	if len(notifier.sent) != 1 {
+		t.Fatalf("expected 1 reminder, got %d", len(notifier.sent))
+	}
+	if !strings.Contains(notifier.sent[0].message, "Delayed 6 min") {
+		t.Errorf("expected reminder to show the fresh cached delay (6), got: %s", notifier.sent[0].message)
+	}
+	if strings.Contains(notifier.sent[0].message, "Delayed 5 min") {
+		t.Errorf("reminder must not show the stale last-alerted delay (5), got: %s", notifier.sent[0].message)
+	}
+}
+
+func TestCheckRouteFirstPollRefreshesCache(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+
+	sched := time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC)
+	pinned := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          0,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched,
+	}
+	pinnedData, _ := json.Marshal(pinned)
+	rdb.Set(ctx, serviceCacheKey(routeID), pinnedData, time.Hour)
+
+	fresh := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          4,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched.Add(4 * time.Minute),
+	}
+	notifier := &mockNotifier{}
+	trainClient := &mockTrainClient{serviceDetails: fresh}
+	cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+	daemon := &Daemon{rdb: rdb, trainClient: trainClient, notifier: notifier, circuitBreaker: cb}
+
+	route := makeTestRouteRow(routeID)
+	daemon.checkRoute(ctx, route, pinned)
+
+	notifier.mu.Lock()
+	sent := len(notifier.sent)
+	notifier.mu.Unlock()
+	if sent != 0 {
+		t.Fatalf("expected first poll to be silent, got %d", sent)
+	}
+
+	cachedAfter, err := daemon.getCachedService(ctx, routeID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if cachedAfter == nil || cachedAfter.DelayMins != 4 {
+		t.Fatalf("expected service cache refreshed to fresh delay 4 on first poll, got %+v", cachedAfter)
 	}
 }

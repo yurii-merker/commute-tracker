@@ -235,6 +235,21 @@ func (q *Queries) UpdateRouteActive(ctx context.Context, arg UpdateRouteActivePa
 	return err
 }
 
+const updateRouteAlertOffsets = `-- name: UpdateRouteAlertOffsets :exec
+UPDATE routes SET alert_offsets = $2
+WHERE id = $1
+`
+
+type UpdateRouteAlertOffsetsParams struct {
+	ID           pgtype.UUID `json:"id"`
+	AlertOffsets []int32     `json:"alert_offsets"`
+}
+
+func (q *Queries) UpdateRouteAlertOffsets(ctx context.Context, arg UpdateRouteAlertOffsetsParams) error {
+	_, err := q.db.Exec(ctx, updateRouteAlertOffsets, arg.ID, arg.AlertOffsets)
+	return err
+}
+
 const updateRouteDepartureTime = `-- name: UpdateRouteDepartureTime :exec
 UPDATE routes SET departure_time = $2
 WHERE id = $1

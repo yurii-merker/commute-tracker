@@ -39,3 +39,7 @@ WHERE id = $1;
 -- name: GetRouteByID :one
 SELECT * FROM routes
 WHERE id = $1;
+
+-- name: UpdateRouteAlertOffsets :exec
+UPDATE routes SET alert_offsets = $2
+WHERE id = $1;

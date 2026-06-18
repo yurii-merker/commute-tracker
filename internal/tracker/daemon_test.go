@@ -11,50 +11,29 @@ import (
 	"github.com/yurii-merker/commute-tracker/internal/domain"
 )
 
-func TestStatusChanged(t *testing.T) {
-	base := &domain.TrainStatus{
-		Platform:           "3",
-		IsCancelled:        false,
-		DelayMins:          0,
-		EstimatedDeparture: makeTime(7, 45),
-	}
-
+func TestShouldNotify(t *testing.T) {
 	tests := []struct {
-		name      string
-		newStatus *domain.TrainStatus
-		want      bool
+		name string
+		prev *domain.TrainStatus
+		curr *domain.TrainStatus
+		want bool
 	}{
-		{
-			"no change",
-			&domain.TrainStatus{Platform: "3", IsCancelled: false, DelayMins: 0, EstimatedDeparture: makeTime(7, 45)},
-			false,
-		},
-		{
-			"platform changed",
-			&domain.TrainStatus{Platform: "7", IsCancelled: false, DelayMins: 0, EstimatedDeparture: makeTime(7, 45)},
-			true,
-		},
-		{
-			"cancelled",
-			&domain.TrainStatus{Platform: "3", IsCancelled: true, DelayMins: 0, EstimatedDeparture: makeTime(7, 45)},
-			true,
-		},
-		{
-			"delayed",
-			&domain.TrainStatus{Platform: "3", IsCancelled: false, DelayMins: 5, EstimatedDeparture: makeTime(7, 50)},
-			true,
-		},
-		{
-			"estimated time changed",
-			&domain.TrainStatus{Platform: "3", IsCancelled: false, DelayMins: 0, EstimatedDeparture: makeTime(7, 48)},
-			true,
-		},
+		{"no change", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 5}, false},
+		{"sub-threshold worse (+1)", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 6}, false},
+		{"sub-threshold better (-1)", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 4}, false},
+		{"threshold worse (+2)", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 7}, true},
+		{"threshold better (-2)", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 3}, true},
+		{"recovered to on time", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "3", DelayMins: 0}, true},
+		{"recovered to on time from sub-threshold", &domain.TrainStatus{Platform: "3", DelayMins: 1}, &domain.TrainStatus{Platform: "3", DelayMins: 0}, true},
+		{"platform changed", &domain.TrainStatus{Platform: "3", DelayMins: 5}, &domain.TrainStatus{Platform: "7", DelayMins: 5}, true},
+		{"cancelled", &domain.TrainStatus{Platform: "3", DelayMins: 0}, &domain.TrainStatus{Platform: "3", DelayMins: 0, IsCancelled: true}, true},
+		{"reinstated", &domain.TrainStatus{Platform: "3", IsCancelled: true}, &domain.TrainStatus{Platform: "3", IsCancelled: false}, true},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := statusChanged(base, tt.newStatus); got != tt.want {
-				t.Errorf("statusChanged() = %v, want %v", got, tt.want)
+			if got := shouldNotify(tt.prev, tt.curr); got != tt.want {
+				t.Errorf("shouldNotify() = %v, want %v", got, tt.want)
 			}
 		})
 	}
