@@ -153,7 +153,7 @@ Table routes {
 }
 ```
 
-> `user_id` in `routes` is intentionally NOT unique to allow up to 2 routes per user.
+> `user_id` in `routes` is intentionally NOT unique to allow up to 4 routes per user (`maxRoutesPerUser` in `internal/bot/handlers.go`).
 
 ## 7. API Documentation
 

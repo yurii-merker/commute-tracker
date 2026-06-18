@@ -86,7 +86,7 @@ Step-by-step plan to implement the Commute Tracker bot from the current skeleton
 - [x] `/status` — show user's active routes with station names, times, days, status
 - [x] `/stop` — deactivate all active routes, confirm count, hint `/resume`
 - [x] `/resume` — reactivate all paused routes, confirm count
-- [x] `/add` — begin route creation flow (enforces max 2 routes, clears draft, sets `StateAwaitingFrom`)
+- [x] `/add` — begin route creation flow (enforces max 4 routes, clears draft, sets `StateAwaitingFrom`)
 - [x] `/delete` — single route: delete immediately; multiple: prompt for choice via inline buttons and `StateAwaitingDelete`
 - [x] `/help` — show available commands, how the bot works, and usage tips
 
@@ -98,8 +98,8 @@ Step-by-step plan to implement the Commute Tracker bot from the current skeleton
 - [x] `StateAwaitingDays` — parse day names (Mon-Sun), groups (`weekdays`, `weekends`, `all`), save bitmask, transition to `StateAwaitingAlerts`
 - [x] `StateAwaitingAlerts` — parse comma-separated minutes (1-180 range, max 3), validate, dedup+sort desc, save to draft, transition to `StateAwaitingLabel`
 - [x] `StateAwaitingLabel` — validate 1-50 chars, create route in DB with user-configured alert offsets, clear draft, set `StateReady`, immediately plan route and show train status
-- [x] `StateAwaitingDelete` — parse 1/2 choice via inline buttons or text, delete selected route, set `StateReady`
-- [x] Enforce max 2 routes per user
+- [x] `StateAwaitingDelete` — parse route choice (1..N) via inline buttons or text, delete selected route, set `StateReady`
+- [x] Enforce max 4 routes per user
 - [x] Invalid input at each state re-prompts with helpful message
 - [x] Route drafts stored in Redis hash with 30-min TTL (`internal/bot/draft.go`) — fields: from, to, time, days, alerts, train_option_1, train_option_2
 
