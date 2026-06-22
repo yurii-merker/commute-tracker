@@ -1003,11 +1003,8 @@ func TestTryTransitionToLive(t *testing.T) {
 
 	notifier.mu.Lock()
 	defer notifier.mu.Unlock()
-	if len(notifier.sent) != 1 {
-		t.Fatalf("expected 1 transition notification, got %d", len(notifier.sent))
-	}
-	if !strings.Contains(notifier.sent[0].message, "Live data now available") {
-		t.Errorf("expected transition notification, got: %s", notifier.sent[0].message)
+	if len(notifier.sent) != 0 {
+		t.Errorf("expected no notification on transition to live, got %d: %v", len(notifier.sent), notifier.sent)
 	}
 }
 
@@ -1097,27 +1094,6 @@ func TestDaemonNoAlertsForTimetable(t *testing.T) {
 	defer notifier.mu.Unlock()
 	if len(notifier.sent) != 0 {
 		t.Errorf("expected no alerts for timetable-only data, got %d: %v", len(notifier.sent), notifier.sent)
-	}
-}
-
-func TestFormatTransitionNotification(t *testing.T) {
-	route := makeTestRouteRow(testRouteID())
-	status := &domain.TrainStatus{
-		ScheduledDeparture: makeTime(7, 43),
-		EstimatedDeparture: makeTime(7, 43),
-		Destination:        "London",
-		Platform:           "3",
-	}
-
-	msg := formatTransitionNotification(route, status)
-	if !strings.Contains(msg, "Live data now available") {
-		t.Errorf("expected 'Live data now available', got: %s", msg)
-	}
-	if !strings.Contains(msg, "Morning") {
-		t.Errorf("expected route label 'Morning', got: %s", msg)
-	}
-	if !strings.Contains(msg, "On time") {
-		t.Errorf("expected status text, got: %s", msg)
 	}
 }
 
