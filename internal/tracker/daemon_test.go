@@ -205,6 +205,92 @@ func TestFormatAlertPlatformChange(t *testing.T) {
 	}
 }
 
+func TestStatusChangedPlatformAssignment(t *testing.T) {
+	et := makeTime(7, 45)
+
+	tests := []struct {
+		name     string
+		previous *domain.TrainStatus
+		current  *domain.TrainStatus
+		want     bool
+	}{
+		{
+			"first confirmation (unknown to known) is not a change",
+			&domain.TrainStatus{Platform: "", EstimatedDeparture: et},
+			&domain.TrainStatus{Platform: "1", EstimatedDeparture: et},
+			false,
+		},
+		{
+			"genuine reassignment is a change",
+			&domain.TrainStatus{Platform: "1", EstimatedDeparture: et},
+			&domain.TrainStatus{Platform: "3", EstimatedDeparture: et},
+			true,
+		},
+		{
+			"platform un-confirmed (known to unknown) is a change",
+			&domain.TrainStatus{Platform: "1", EstimatedDeparture: et},
+			&domain.TrainStatus{Platform: "", EstimatedDeparture: et},
+			true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := statusChanged(tt.previous, tt.current); got != tt.want {
+				t.Errorf("statusChanged() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFormatAlertPlatformFirstAssignmentSuppressed(t *testing.T) {
+	route := makeRouteRow(7, 45, 60)
+	route.Label = "Morning"
+	route.FromStationCrs = "SMH"
+	route.ToStationCrs = "CTK"
+
+	prev := &domain.TrainStatus{Platform: "", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 45)}
+	curr := &domain.TrainStatus{Platform: "1", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 45)}
+
+	msg := formatAlert(route, curr, prev)
+	if strings.Contains(msg, "Platform changed") {
+		t.Errorf("expected no platform-change line on first assignment, got: %s", msg)
+	}
+}
+
+func TestFormatAlertPlatformFirstAssignmentWithDelay(t *testing.T) {
+	route := makeRouteRow(7, 45, 60)
+	route.Label = "Morning"
+	route.FromStationCrs = "SMH"
+	route.ToStationCrs = "CTK"
+
+	prev := &domain.TrainStatus{Platform: "", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 45), DelayMins: 0}
+	curr := &domain.TrainStatus{Platform: "1", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 50), DelayMins: 5}
+
+	msg := formatAlert(route, curr, prev)
+	if strings.Contains(msg, "Platform changed") {
+		t.Errorf("expected no platform-change line when platform is first assigned, got: %s", msg)
+	}
+	if !strings.Contains(msg, "Delayed 5 min") {
+		t.Errorf("expected delay info alongside first platform assignment, got: %s", msg)
+	}
+}
+
+func TestFormatAlertPlatformUnconfirmed(t *testing.T) {
+	route := makeRouteRow(7, 45, 60)
+	route.Label = "Morning"
+	route.FromStationCrs = "SMH"
+	route.ToStationCrs = "CTK"
+
+	prev := &domain.TrainStatus{Platform: "1", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 45)}
+	curr := &domain.TrainStatus{Platform: "", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 45)}
+
+	msg := formatAlert(route, curr, prev)
+	if !strings.Contains(msg, "Platform changed: 1 → TBC") {
+		t.Errorf("expected platform un-confirmed notice, got: %s", msg)
+	}
+}
+
 func TestFormatAlertNoPlatform(t *testing.T) {
 	route := makeRouteRow(7, 45, 60)
 	route.Label = "Morning"

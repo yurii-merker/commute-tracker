@@ -325,23 +325,10 @@ func (d *Daemon) tryTransitionToLive(ctx context.Context, route db.GetActiveRout
 
 	d.saveLastState(ctx, route.ID, status)
 
-	msg := formatTransitionNotification(route, status)
-	if err := d.notifier.Send(ctx, route.TelegramChatID, msg); err != nil {
-		slog.Error("daemon failed to send transition notification",
-			"chat_id", route.TelegramChatID,
-			"route_id", formatUUID(route.ID),
-			"error", err,
-		)
-	}
-
 	slog.Info("daemon transitioned route to live data",
 		"route_id", formatUUID(route.ID),
 		"service_id", status.ServiceID,
 	)
-}
-
-func formatTransitionNotification(route db.GetActiveRoutesWithChatIDRow, status *domain.TrainStatus) string {
-	return fmt.Sprintf("🔔 Live data now available for %s\n\n%s", route.Label, formatAutoSelectStatus(status))
 }
 
 func (d *Daemon) tryPlanRoute(ctx context.Context, route db.GetActiveRoutesWithChatIDRow) {
@@ -690,7 +677,7 @@ func isDeparted(route db.GetActiveRoutesWithChatIDRow, now time.Time) bool {
 }
 
 func statusChanged(previous, current *domain.TrainStatus) bool {
-	if previous.Platform != current.Platform {
+	if previous.Platform != "" && previous.Platform != current.Platform {
 		return true
 	}
 	if previous.IsCancelled != current.IsCancelled {
@@ -747,8 +734,8 @@ func formatAlert(route db.GetActiveRoutesWithChatIDRow, current *domain.TrainSta
 		changes = append(changes, "🔴 CANCELLED")
 	}
 
-	if previous.Platform != current.Platform && current.Platform != "" {
-		changes = append(changes, fmt.Sprintf("🔀 Platform changed: %s → %s", orTBC(previous.Platform), current.Platform))
+	if previous.Platform != "" && previous.Platform != current.Platform {
+		changes = append(changes, fmt.Sprintf("🔀 Platform changed: %s → %s", previous.Platform, orTBC(current.Platform)))
 	}
 
 	if previous.DelayMins != current.DelayMins {
