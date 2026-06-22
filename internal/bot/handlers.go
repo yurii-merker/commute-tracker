@@ -23,7 +23,7 @@ import (
 )
 
 const (
-	maxRoutesPerUser = 2
+	maxRoutesPerUser = 4
 	handlerTimeout   = 10 * time.Second
 )
 
@@ -32,6 +32,7 @@ func (b *Bot) handleHelp(c telebot.Context) error {
 		"🚆 *Commute Tracker — Help*\n\n"+
 			"*Commands:*\n"+
 			"/add — Set up a new route (max 2)\n"+
+			"/edit — Change reminders for an existing route\n"+
 			"/status — View your routes and live train info\n"+
 			"/stop — Pause all route monitoring\n"+
 			"/resume — Resume paused monitoring\n"+
@@ -385,6 +386,8 @@ func (b *Bot) handleText(c telebot.Context) error {
 		return b.handleAwaitingLabel(c, ctx, chatID, text, user.ID)
 	case domain.StateAwaitingDelete:
 		return b.handleAwaitingDelete(c, ctx, chatID, text, user.ID)
+	case domain.StateAwaitingEditAlerts:
+		return b.handleAwaitingEditAlerts(c, ctx, chatID, text)
 	default:
 		return c.Send("🤔 I didn't understand that. Use /help to see available commands.")
 	}
@@ -1086,6 +1089,14 @@ func formatScheduledTrainFound(status *domain.TrainStatus) string {
 	return fmt.Sprintf("📅 Scheduled train: %s (live updates start ~4h before departure)", trainName)
 }
 
+func parseRouteChoice(s string, count int) (int, bool) {
+	n, err := strconv.Atoi(strings.TrimSpace(s))
+	if err != nil || n < 1 || n > count {
+		return 0, false
+	}
+	return n - 1, true
+}
+
 func (b *Bot) handleAwaitingDelete(c telebot.Context, ctx context.Context, chatID int64, text string, userID pgtype.UUID) error {
 	routes, err := b.queries.GetRoutesByUserID(ctx, userID)
 	if err != nil {
@@ -1097,16 +1108,12 @@ func (b *Bot) handleAwaitingDelete(c telebot.Context, ctx context.Context, chatI
 		return c.Send("No routes found. They may have been already deleted.")
 	}
 
-	choice := 0
-	if text == "1" {
-		choice = 0
-	} else if text == "2" && len(routes) > 1 {
-		choice = 1
-	} else {
-		return c.Send("Please reply with 1 or 2:")
+	idx, ok := parseRouteChoice(text, len(routes))
+	if !ok {
+		return c.Send(fmt.Sprintf("Please reply with a number between 1 and %d:", len(routes)))
 	}
 
-	return b.sendDeleteConfirmation(c, ctx, chatID, routes[choice], text)
+	return b.sendDeleteConfirmation(c, ctx, chatID, routes[idx], strconv.Itoa(idx+1))
 }
 
 func (b *Bot) sendDeleteConfirmation(c telebot.Context, ctx context.Context, chatID int64, route db.Route, choice string) error {
@@ -1163,18 +1170,14 @@ func (b *Bot) handleConfirmDelete(c telebot.Context, ctx context.Context, chatID
 		return c.Send("No routes found. They may have been already deleted.")
 	}
 
-	choice := 0
-	if data == "1" {
-		choice = 0
-	} else if data == "2" && len(routes) > 1 {
-		choice = 1
-	} else {
+	idx, ok := parseRouteChoice(data, len(routes))
+	if !ok {
 		return c.Send("⚠️ Something went wrong. Please try again.")
 	}
 
-	err = b.queries.DeleteRoute(ctx, routes[choice].ID)
+	err = b.queries.DeleteRoute(ctx, routes[idx].ID)
 	if err != nil {
-		slog.Error("failed to delete route", "route_id", routes[choice].ID, "error", err)
+		slog.Error("failed to delete route", "route_id", routes[idx].ID, "error", err)
 		return c.Send("⚠️ Something went wrong. Please try again.")
 	}
 
@@ -1186,7 +1189,7 @@ func (b *Bot) handleConfirmDelete(c telebot.Context, ctx context.Context, chatID
 		slog.Error("failed to update state", "chat_id", chatID, "error", err)
 	}
 
-	return c.Send(fmt.Sprintf("✅ Deleted route: %s", routes[choice].Label))
+	return c.Send(fmt.Sprintf("✅ Deleted route: %s", routes[idx].Label))
 }
 
 func (b *Bot) handleCancelDeleteCallback(c telebot.Context) error {

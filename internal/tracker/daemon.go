@@ -18,17 +18,18 @@ import (
 )
 
 const (
-	lastStatePrefix      = "last_state:"
-	alertSentPrefix      = "alert_sent:"
-	betterDeclinedPrefix = "better_declined:"
-	betterOfferedPrefix  = "better_offered:"
-	firstMissPrefix      = "first_miss:"
-	timetableBackoff     = "timetable_backoff:"
-	defaultTickInterval  = 2 * time.Minute
-	maxAPIRangeMins      = 240
-	planGracePeriod      = 30 * time.Minute
-	maxChoiceRangeMins   = 90
-	timetableRetryDelay  = time.Hour
+	lastStatePrefix          = "last_state:"
+	alertSentPrefix          = "alert_sent:"
+	betterDeclinedPrefix     = "better_declined:"
+	betterOfferedPrefix      = "better_offered:"
+	firstMissPrefix          = "first_miss:"
+	timetableBackoff         = "timetable_backoff:"
+	defaultTickInterval      = 2 * time.Minute
+	delayNotifyThresholdMins = 2
+	maxAPIRangeMins          = 240
+	planGracePeriod          = 30 * time.Minute
+	maxChoiceRangeMins       = 90
+	timetableRetryDelay      = time.Hour
 )
 
 type Daemon struct {
@@ -171,18 +172,16 @@ func (d *Daemon) checkRoute(ctx context.Context, route db.GetActiveRoutesWithCha
 		return
 	}
 
-	if last == nil {
+	switch {
+	case last == nil:
 		d.saveLastState(ctx, route.ID, fresh)
-		return
-	}
-
-	if statusChanged(last, fresh) {
+	case shouldNotify(last, fresh):
 		if !last.IsCancelled || !fresh.IsCancelled {
 			d.sendAlert(ctx, route, fresh, last)
 		}
 		d.saveLastState(ctx, route.ID, fresh)
-		d.updateServiceCache(ctx, route.ID, fresh)
 	}
+	d.updateServiceCache(ctx, route.ID, fresh)
 }
 
 func (d *Daemon) sendAlert(ctx context.Context, route db.GetActiveRoutesWithChatIDRow, current *domain.TrainStatus, previous *domain.TrainStatus) {
@@ -548,12 +547,12 @@ func (d *Daemon) autoSwitchTrain(ctx context.Context, route db.GetActiveRoutesWi
 	}
 }
 
-func alertSentKey(routeID pgtype.UUID, offset int32) string {
+func AlertSentKey(routeID pgtype.UUID, offset int32) string {
 	return fmt.Sprintf("%s%s:%d", alertSentPrefix, formatUUID(routeID), offset)
 }
 
 func (d *Daemon) alertSent(ctx context.Context, routeID pgtype.UUID, offset int32) bool {
-	key := alertSentKey(routeID, offset)
+	key := AlertSentKey(routeID, offset)
 	exists, err := d.rdb.Exists(ctx, key).Result()
 	if err != nil {
 		slog.Error("failed to check alert sent", "route_id", formatUUID(routeID), "offset", offset, "error", err)
@@ -563,7 +562,7 @@ func (d *Daemon) alertSent(ctx context.Context, routeID pgtype.UUID, offset int3
 }
 
 func (d *Daemon) markAlertSent(ctx context.Context, routeID pgtype.UUID, offset int32) {
-	key := alertSentKey(routeID, offset)
+	key := AlertSentKey(routeID, offset)
 	if err := d.rdb.Set(ctx, key, "1", timeUntilEndOfDay()).Err(); err != nil {
 		slog.Error("failed to mark alert sent", "route_id", formatUUID(routeID), "offset", offset, "error", err)
 	}
@@ -573,11 +572,6 @@ func (d *Daemon) sendDepartureReminder(ctx context.Context, route db.GetActiveRo
 	fresh, err := d.getCachedService(ctx, route.ID)
 	if err != nil || fresh == nil {
 		fresh = cached
-	}
-
-	last, _ := d.getLastState(ctx, route.ID)
-	if last != nil {
-		fresh = last
 	}
 
 	msg := formatDepartureReminder(route, fresh)
@@ -676,20 +670,17 @@ func isDeparted(route db.GetActiveRoutesWithChatIDRow, now time.Time) bool {
 	return nowMins > depMins
 }
 
-func statusChanged(previous, current *domain.TrainStatus) bool {
+func shouldNotify(previous, current *domain.TrainStatus) bool {
 	if previous.Platform != "" && previous.Platform != current.Platform {
 		return true
 	}
 	if previous.IsCancelled != current.IsCancelled {
 		return true
 	}
-	if previous.DelayMins != current.DelayMins {
+	if current.DelayMins == 0 && previous.DelayMins != 0 {
 		return true
 	}
-	if !previous.EstimatedDeparture.Equal(current.EstimatedDeparture) {
-		return true
-	}
-	return false
+	return absDiff(previous.DelayMins, current.DelayMins) >= delayNotifyThresholdMins
 }
 
 func formatAlert(route db.GetActiveRoutesWithChatIDRow, current *domain.TrainStatus, previous *domain.TrainStatus) string {

@@ -41,7 +41,7 @@ A Telegram bot that monitors UK train routes and sends real-time push notificati
 ## Limitations and Edge Cases
 
 - **UK trains only** — The bot uses the National Rail Darwin OpenLDBWS API, which covers mainline rail services in Great Britain. London Underground, trams, and bus services are not supported.
-- **Max 2 routes per user** — Enforced to stay within Darwin API rate limits (3M requests/month free tier).
+- **Max 4 routes per user** — Enforced to stay within Darwin API rate limits (3M requests/month free tier).
 - **All times are UK time** — Departure times, planning, and alert windows use `Europe/London` (handles GMT/BST automatically).
 - **Two data sources** — Live data comes from Darwin (available ~4h before departure). Timetable data comes from Realtime Trains (available for any future date). The bot automatically uses whichever is available.
 - **5-minute match tolerance** — The daily planner auto-matches your configured departure time to the closest real service within ±5 minutes. If no exact match is found, the bot offers the nearest earlier and later trains via inline buttons so you can pick one. If you don't pick, no alert is sent for that day.

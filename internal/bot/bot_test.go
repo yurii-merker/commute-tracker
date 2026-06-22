@@ -161,7 +161,7 @@ func TestHandleAddMaxRoutes(t *testing.T) {
 	userID := pgtype.UUID{Bytes: [16]byte{1}, Valid: true}
 	repo.users[100] = db.User{ID: userID, TelegramChatID: 100}
 	repo.state[100] = "ready"
-	repo.routes[uuidKey(userID)] = []db.Route{{}, {}}
+	repo.routes[uuidKey(userID)] = []db.Route{{}, {}, {}, {}}
 
 	b, mr := newTestBot(t, repo)
 	defer mr.Close()
@@ -173,6 +173,29 @@ func TestHandleAddMaxRoutes(t *testing.T) {
 
 	if !strings.Contains(tc.lastSent, "max") {
 		t.Errorf("expected max routes message, got: %s", tc.lastSent)
+	}
+}
+
+func TestHandleAddAllowsFourthRoute(t *testing.T) {
+	repo := newMockRepository()
+	userID := pgtype.UUID{Bytes: [16]byte{1}, Valid: true}
+	repo.users[100] = db.User{ID: userID, TelegramChatID: 100}
+	repo.state[100] = "ready"
+	repo.routes[uuidKey(userID)] = []db.Route{{}, {}, {}}
+
+	b, mr := newTestBot(t, repo)
+	defer mr.Close()
+
+	tc := newTC(100)
+	if err := b.handleAdd(tc); err != nil {
+		t.Fatal(err)
+	}
+
+	if !strings.Contains(tc.lastSent, "departure station") {
+		t.Errorf("expected station prompt for 4th route, got: %s", tc.lastSent)
+	}
+	if repo.state[100] != domain.StateAwaitingFrom.String() {
+		t.Errorf("expected awaiting_from, got: %s", repo.state[100])
 	}
 }
 
@@ -571,6 +594,33 @@ func TestHandleAwaitingDeleteChoice(t *testing.T) {
 	}
 }
 
+func TestHandleAwaitingDeleteChoiceBeyondTwo(t *testing.T) {
+	repo := newMockRepository()
+	userID := pgtype.UUID{Bytes: [16]byte{1}, Valid: true}
+	repo.users[100] = db.User{ID: userID, TelegramChatID: 100}
+	repo.routes[uuidKey(userID)] = []db.Route{
+		{ID: pgtype.UUID{Bytes: [16]byte{2}, Valid: true}, Label: "Morning"},
+		{ID: pgtype.UUID{Bytes: [16]byte{3}, Valid: true}, Label: "Evening"},
+		{ID: pgtype.UUID{Bytes: [16]byte{4}, Valid: true}, Label: "Night"},
+	}
+
+	b, mr := newTestBot(t, repo)
+	defer mr.Close()
+
+	tc := newTC(100)
+	_ = b.handleAwaitingDelete(tc, context.Background(), 100, "3", userID)
+
+	if !strings.Contains(tc.lastSent, "Are you sure") {
+		t.Errorf("expected confirmation, got: %s", tc.lastSent)
+	}
+	if !strings.Contains(tc.lastSent, "Night") {
+		t.Errorf("expected third route name in confirmation, got: %s", tc.lastSent)
+	}
+	if repo.state[100] != "awaiting_delete_confirm" {
+		t.Errorf("expected awaiting_delete_confirm, got: %s", repo.state[100])
+	}
+}
+
 func TestHandleAwaitingDeleteEmptyRoutes(t *testing.T) {
 	repo := newMockRepository()
 	userID := pgtype.UUID{Bytes: [16]byte{1}, Valid: true}
@@ -602,6 +652,31 @@ func TestHandleConfirmDelete(t *testing.T) {
 
 	if !strings.Contains(tc.lastSent, "Deleted route: Morning") {
 		t.Errorf("expected deleted, got: %s", tc.lastSent)
+	}
+	if repo.state[100] != "ready" {
+		t.Errorf("expected ready, got: %s", repo.state[100])
+	}
+}
+
+func TestHandleConfirmDeleteChoiceBeyondTwo(t *testing.T) {
+	repo := newMockRepository()
+	userID := pgtype.UUID{Bytes: [16]byte{1}, Valid: true}
+	repo.users[100] = db.User{ID: userID, TelegramChatID: 100}
+	repo.state[100] = "awaiting_delete_confirm"
+	repo.routes[uuidKey(userID)] = []db.Route{
+		{ID: pgtype.UUID{Bytes: [16]byte{2}, Valid: true}, Label: "Morning"},
+		{ID: pgtype.UUID{Bytes: [16]byte{3}, Valid: true}, Label: "Evening"},
+		{ID: pgtype.UUID{Bytes: [16]byte{4}, Valid: true}, Label: "Night"},
+	}
+
+	b, mr := newTestBot(t, repo)
+	defer mr.Close()
+
+	tc := newTC(100)
+	_ = b.handleConfirmDelete(tc, context.Background(), 100, "3", userID)
+
+	if !strings.Contains(tc.lastSent, "Deleted route: Night") {
+		t.Errorf("expected third route deleted, got: %s", tc.lastSent)
 	}
 	if repo.state[100] != "ready" {
 		t.Errorf("expected ready, got: %s", repo.state[100])
@@ -826,7 +901,9 @@ func TestHandleDeleteUnregistered(t *testing.T) {
 func TestHandleAwaitingDeleteInvalidChoice(t *testing.T) {
 	repo := newMockRepository()
 	userID := pgtype.UUID{Bytes: [16]byte{1}, Valid: true}
-	repo.routes[uuidKey(userID)] = []db.Route{{Label: "Only"}}
+	repo.routes[uuidKey(userID)] = []db.Route{
+		{Label: "One"}, {Label: "Two"}, {Label: "Three"},
+	}
 
 	b, mr := newTestBot(t, repo)
 	defer mr.Close()
@@ -834,8 +911,8 @@ func TestHandleAwaitingDeleteInvalidChoice(t *testing.T) {
 	tc := newTC(100)
 	_ = b.handleAwaitingDelete(tc, context.Background(), 100, "5", userID)
 
-	if !strings.Contains(tc.lastSent, "1 or 2") {
-		t.Errorf("expected prompt, got: %s", tc.lastSent)
+	if !strings.Contains(tc.lastSent, "between 1 and 3") {
+		t.Errorf("expected range prompt, got: %s", tc.lastSent)
 	}
 }
 

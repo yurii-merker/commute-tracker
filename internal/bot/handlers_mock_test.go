@@ -91,6 +91,18 @@ func (m *mockRepository) UpdateRouteActive(_ context.Context, arg db.UpdateRoute
 	return nil
 }
 
+func (m *mockRepository) UpdateRouteAlertOffsets(_ context.Context, arg db.UpdateRouteAlertOffsetsParams) error {
+	for key, routes := range m.routes {
+		for i, r := range routes {
+			if r.ID == arg.ID {
+				m.routes[key][i].AlertOffsets = arg.AlertOffsets
+				return nil
+			}
+		}
+	}
+	return nil
+}
+
 func (m *mockRepository) DeleteRoute(_ context.Context, id pgtype.UUID) error {
 	for key, routes := range m.routes {
 		for i, r := range routes {

@@ -5,7 +5,7 @@
 *.so
 *.dylib
 bin/
-bot
+/bot
 
 # Dependency directories
 vendor/
@@ -27,4 +27,5 @@ coverage.html
 # OS generated files
 .DS_Store
 
+# Local-only
 docs/
