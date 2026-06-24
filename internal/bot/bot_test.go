@@ -1560,7 +1560,7 @@ func TestPlanRouteNowFailNotInRange(t *testing.T) {
 	tc := newTC(100)
 	route := db.Route{
 		ID:            pgtype.UUID{Bytes: [16]byte{1}, Valid: true},
-		DepartureTime: pgtype.Time{Microseconds: 23 * 3600000000, Valid: true},
+		DepartureTime: pgtype.Time{Microseconds: outOfDarwinRangeMicros(), Valid: true},
 	}
 	_ = b.planRouteNow(tc, context.Background(), route)
 
@@ -1817,10 +1817,22 @@ func TestHandleAwaitingTimeRTTExactMatch(t *testing.T) {
 	}
 }
 
+func outOfDarwinRangeMins() int {
+	now := timezone.Now()
+	nowMins := now.Hour()*60 + now.Minute()
+	return (nowMins + 12*60) % (24 * 60)
+}
+
+func outOfDarwinRangeMicros() int64 {
+	return int64(outOfDarwinRangeMins()) * 60000000
+}
+
 func TestHandleAwaitingTimeRTTBeforeAfter(t *testing.T) {
 	repo := newMockRepository()
 	repo.users[100] = db.User{ID: pgtype.UUID{Bytes: [16]byte{1}, Valid: true}, TelegramChatID: 100}
 
+	mins := outOfDarwinRangeMins()
+	depTime := fmt.Sprintf("%02d:%02d", mins/60, mins%60)
 	planner := &mockPlanner{
 		nearestErr: errTestBot,
 		scheduledResult: &domain.NearestTrains{
@@ -1846,7 +1858,7 @@ func TestHandleAwaitingTimeRTTBeforeAfter(t *testing.T) {
 	b.rdb.HSet(ctx, draftKey(100), "from", "WAT", "to", "WOK")
 
 	tc := newTC(100)
-	_ = b.handleAwaitingTime(tc, ctx, 100, "23:45")
+	_ = b.handleAwaitingTime(tc, ctx, 100, depTime)
 
 	if repo.state[100] != "awaiting_train_choice" {
 		t.Errorf("expected awaiting_train_choice for RTT options, got: %s", repo.state[100])
@@ -1920,7 +1932,7 @@ func TestPlanRouteNowRTTFallback(t *testing.T) {
 	tc := newTC(100)
 	route := db.Route{
 		ID:            pgtype.UUID{Bytes: [16]byte{1}, Valid: true},
-		DepartureTime: pgtype.Time{Microseconds: 23 * 3600000000, Valid: true},
+		DepartureTime: pgtype.Time{Microseconds: outOfDarwinRangeMicros(), Valid: true},
 	}
 	_ = b.planRouteNow(tc, context.Background(), route)
 
