@@ -729,7 +729,7 @@ func formatAlert(route db.GetActiveRoutesWithChatIDRow, current *domain.TrainSta
 		changes = append(changes, fmt.Sprintf("🔀 Platform changed: %s → %s", previous.Platform, orTBC(current.Platform)))
 	}
 
-	if previous.DelayMins != current.DelayMins {
+	if !current.IsCancelled && previous.DelayMins != current.DelayMins {
 		if current.DelayMins == 0 {
 			changes = append(changes, "🟢 Now on time")
 		} else {
