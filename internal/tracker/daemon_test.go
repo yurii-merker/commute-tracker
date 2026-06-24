@@ -169,6 +169,36 @@ func TestFormatAlertCancelled(t *testing.T) {
 	}
 }
 
+func TestFormatAlertCancelledAfterDelay(t *testing.T) {
+	route := makeRouteRow(18, 12, 60)
+	route.Label = "Evening commute"
+	route.FromStationCrs = "ZFD"
+	route.ToStationCrs = "SMY"
+
+	prev := &domain.TrainStatus{
+		IsCancelled:        false,
+		Platform:           "3",
+		DelayMins:          2,
+		ScheduledDeparture: makeTime(18, 12),
+		EstimatedDeparture: makeTime(18, 14),
+	}
+	curr := &domain.TrainStatus{
+		IsCancelled:        true,
+		Platform:           "",
+		DelayMins:          0,
+		ScheduledDeparture: makeTime(18, 12),
+		EstimatedDeparture: makeTime(18, 12),
+	}
+
+	msg := formatAlert(route, curr, prev)
+	if !strings.Contains(msg, "CANCELLED") {
+		t.Errorf("expected CANCELLED, got: %s", msg)
+	}
+	if strings.Contains(msg, "on time") {
+		t.Errorf("cancelled train must not report on time, got: %s", msg)
+	}
+}
+
 func TestFormatAlertPlatformChange(t *testing.T) {
 	route := makeRouteRow(7, 45, 60)
 	route.Label = "Morning"

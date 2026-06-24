@@ -1337,6 +1337,70 @@ func TestCheckRouteDelayDeadband(t *testing.T) {
 	}
 }
 
+func TestCheckRouteDelayedThenCancelled(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+
+	sched := time.Date(2026, 1, 1, 18, 12, 0, 0, time.UTC)
+	onTime := &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          0,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched,
+	}
+	data, _ := json.Marshal(onTime)
+	rdb.Set(ctx, serviceCacheKey(routeID), data, time.Hour)
+
+	notifier := &mockNotifier{}
+	trainClient := &mockTrainClient{}
+	cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+	daemon := &Daemon{rdb: rdb, trainClient: trainClient, notifier: notifier, circuitBreaker: cb}
+	route := makeTestRouteRow(routeID)
+
+	trainClient.serviceDetails = onTime
+	daemon.checkRoute(ctx, route, onTime)
+
+	trainClient.serviceDetails = &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "3",
+		DelayMins:          2,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched.Add(2 * time.Minute),
+	}
+	daemon.checkRoute(ctx, route, onTime)
+
+	trainClient.serviceDetails = &domain.TrainStatus{
+		ServiceID:          "svc1",
+		Platform:           "",
+		DelayMins:          0,
+		IsCancelled:        true,
+		ScheduledDeparture: sched,
+		EstimatedDeparture: sched,
+	}
+	daemon.checkRoute(ctx, route, onTime)
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+
+	if len(notifier.sent) != 2 {
+		t.Fatalf("expected 2 alerts (delayed, then cancelled), got %d: %v", len(notifier.sent), notifier.sent)
+	}
+	if !strings.Contains(notifier.sent[0].message, "Delayed 2 min") {
+		t.Errorf("first alert should report the delay, got: %s", notifier.sent[0].message)
+	}
+	cancelMsg := notifier.sent[1].message
+	if !strings.Contains(cancelMsg, "CANCELLED") {
+		t.Errorf("cancellation alert should report CANCELLED, got: %s", cancelMsg)
+	}
+	if strings.Contains(cancelMsg, "on time") {
+		t.Errorf("cancellation alert must not claim the train is on time, got: %s", cancelMsg)
+	}
+}
+
 func TestSendDepartureReminderUsesFreshCache(t *testing.T) {
 	rdb, mr := setupRedis(t)
 	defer mr.Close()
