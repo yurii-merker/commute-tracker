@@ -1448,6 +1448,155 @@ func TestSendDepartureReminderUsesFreshCache(t *testing.T) {
 	}
 }
 
+func TestTryTransitionToLiveCancelledNotifies(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	now := time.Now()
+	liveServices := []domain.TrainStatus{
+		{ServiceID: "L1", ScheduledDeparture: time.Date(now.Year(), now.Month(), now.Day(), 7, 45, 0, 0, time.UTC), IsCancelled: true},
+	}
+
+	boardClient := &mockBoardClient{services: liveServices}
+	notifier := &mockNotifier{}
+	cb := NewCircuitBreaker(boardClient, notifier, noChatIDs)
+	planner := &Planner{trainClient: boardClient, rdb: rdb}
+
+	daemon := &Daemon{rdb: rdb, trainClient: boardClient, notifier: notifier, circuitBreaker: cb, planner: planner}
+
+	route := makeTestRouteRow(testRouteID())
+	daemon.tryTransitionToLive(ctx, route)
+
+	notifier.mu.Lock()
+	if len(notifier.sent) != 1 {
+		notifier.mu.Unlock()
+		t.Fatalf("expected 1 cancellation alert on transition to live, got %d", len(notifier.sent))
+	}
+	if !strings.Contains(notifier.sent[0].message, "CANCELLED") {
+		notifier.mu.Unlock()
+		t.Fatalf("expected CANCELLED in alert, got: %s", notifier.sent[0].message)
+	}
+	notifier.mu.Unlock()
+
+	last, err := daemon.getLastState(ctx, route.ID)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if last == nil || !last.IsCancelled {
+		t.Fatalf("expected cancelled last state saved, got %+v", last)
+	}
+
+	trainClient := &mockTrainClient{serviceDetails: &liveServices[0]}
+	daemon.trainClient = trainClient
+	daemon.checkRoute(ctx, route, &liveServices[0])
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+	if len(notifier.sent) != 1 {
+		t.Fatalf("expected no duplicate alert on next poll, got %d: %v", len(notifier.sent), notifier.sent)
+	}
+}
+
+func TestCheckRouteFirstPollCancelledNotifies(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+
+	sched := time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC)
+	pinned := &domain.TrainStatus{ServiceID: "svc1", ScheduledDeparture: sched, IsCancelled: true}
+	data, _ := json.Marshal(pinned)
+	rdb.Set(ctx, serviceCacheKey(routeID), data, time.Hour)
+
+	fresh := &domain.TrainStatus{ServiceID: "svc1", ScheduledDeparture: sched, IsCancelled: true}
+	notifier := &mockNotifier{}
+	trainClient := &mockTrainClient{serviceDetails: fresh}
+	cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+
+	daemon := &Daemon{rdb: rdb, trainClient: trainClient, notifier: notifier, circuitBreaker: cb}
+
+	route := makeTestRouteRow(routeID)
+	daemon.checkRoute(ctx, route, pinned)
+
+	notifier.mu.Lock()
+	if len(notifier.sent) != 1 {
+		notifier.mu.Unlock()
+		t.Fatalf("expected 1 cancellation alert on first poll, got %d", len(notifier.sent))
+	}
+	if !strings.Contains(notifier.sent[0].message, "CANCELLED") {
+		notifier.mu.Unlock()
+		t.Fatalf("expected CANCELLED in alert, got: %s", notifier.sent[0].message)
+	}
+	notifier.mu.Unlock()
+
+	daemon.checkRoute(ctx, route, fresh)
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+	if len(notifier.sent) != 1 {
+		t.Fatalf("expected no duplicate alert on second poll, got %d: %v", len(notifier.sent), notifier.sent)
+	}
+}
+
+func TestTickCancelledAtTransitionNotifies(t *testing.T) {
+	rdb, mr := setupRedis(t)
+	defer mr.Close()
+
+	ctx := context.Background()
+	routeID := testRouteID()
+	now := ukNow()
+
+	depHour := now.Hour()
+	depMin := now.Minute() + 30
+	if depMin >= 60 {
+		depMin -= 60
+		depHour = (depHour + 1) % 24
+	}
+	scheduled := time.Date(now.Year(), now.Month(), now.Day(), depHour, depMin, 0, 0, now.Location())
+
+	timetable := &domain.TrainStatus{ServiceID: "S1", ScheduledDeparture: scheduled, IsScheduleOnly: true}
+	data, _ := json.Marshal(timetable)
+	rdb.Set(ctx, serviceCacheKey(routeID), data, time.Hour)
+
+	cancelled := domain.TrainStatus{ServiceID: "L1", ScheduledDeparture: scheduled, IsCancelled: true}
+
+	routes := []db.GetActiveRoutesWithChatIDRow{{
+		ID:             routeID,
+		Label:          "Morning commute",
+		FromStationCrs: "SMY",
+		ToStationCrs:   "CTK",
+		TelegramChatID: 100,
+		DepartureTime:  pgtype.Time{Microseconds: int64(depHour)*3600000000 + int64(depMin)*60000000, Valid: true},
+		AlertOffsets:   []int32{20},
+		IsActive:       true,
+	}}
+
+	notifier := &mockNotifier{}
+	boardClient := &mockBoardClient{services: []domain.TrainStatus{cancelled}}
+	cb := NewCircuitBreaker(boardClient, notifier, noChatIDs)
+	planner := &Planner{trainClient: boardClient, rdb: rdb}
+
+	daemon := NewDaemon(&mockDaemonRepo{routes: routes}, boardClient, notifier, rdb, cb, planner, 0)
+	daemon.tick(ctx)
+
+	notifier.mu.Lock()
+	defer notifier.mu.Unlock()
+	cancelAlertFound := false
+	for _, sent := range notifier.sent {
+		if strings.Contains(sent.message, "Departure in") {
+			t.Fatalf("expected no departure reminder for cancelled train, got: %s", sent.message)
+		}
+		if strings.Contains(sent.message, "CANCELLED") {
+			cancelAlertFound = true
+		}
+	}
+	if !cancelAlertFound {
+		t.Fatalf("expected cancellation alert when train is already cancelled at transition to live, sent: %v", notifier.sent)
+	}
+}
+
 func TestCheckRouteFirstPollRefreshesCache(t *testing.T) {
 	rdb, mr := setupRedis(t)
 	defer mr.Close()
