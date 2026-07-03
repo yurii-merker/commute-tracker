@@ -174,6 +174,9 @@ func (d *Daemon) checkRoute(ctx context.Context, route db.GetActiveRoutesWithCha
 
 	switch {
 	case last == nil:
+		if fresh.IsCancelled {
+			d.sendAlert(ctx, route, fresh, nil)
+		}
 		d.saveLastState(ctx, route.ID, fresh)
 	case shouldNotify(last, fresh):
 		if !last.IsCancelled || !fresh.IsCancelled {
@@ -324,6 +327,10 @@ func (d *Daemon) tryTransitionToLive(ctx context.Context, route db.GetActiveRout
 
 	d.saveLastState(ctx, route.ID, status)
 
+	if status.IsCancelled {
+		d.sendAlert(ctx, route, status, nil)
+	}
+
 	slog.Info("daemon transitioned route to live data",
 		"route_id", formatUUID(route.ID),
 		"service_id", status.ServiceID,
@@ -402,6 +409,8 @@ func (d *Daemon) autoSelectTrain(ctx context.Context, route db.GetActiveRoutesWi
 		slog.Error("daemon failed to cache auto-selected train", "route_id", formatUUID(route.ID), "error", err)
 		return
 	}
+
+	d.saveLastState(ctx, route.ID, train)
 
 	msg := fmt.Sprintf("🔄 No exact train found — adjusted to %s\n\n%s", chosenTime, formatAutoSelectStatus(train))
 	if err := d.notifier.Send(ctx, route.TelegramChatID, msg); err != nil {
