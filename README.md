@@ -34,7 +34,7 @@ A Telegram bot that monitors UK train routes and sends real-time push notificati
 
 3. **Timetable → live transition** — When Darwin live data becomes available (~4h before departure), the daemon automatically transitions from timetable to live data and sends a "🔔 Live data now available" notification with the current train status.
 
-4. **Real-time monitoring (every 2 min)** — The tracker daemon polls each cached live service. It compares the latest status against the last known state in Redis and only notifies you when something changes (delay, platform change, cancellation, or recovery to on-time). Departure reminders only fire with live data.
+4. **Real-time monitoring (every 2 min)** — The tracker daemon polls each cached live service. It compares the latest status against the last known state in Redis and only notifies you when something changes (delay, platform change, cancellation, or recovery to on-time). Platform changes are only reported between two confirmed platforms — a platform temporarily shown as TBC is not treated as a change. Departure reminders only fire with live data.
 
 5. **Circuit breaker** — After 3 consecutive Darwin API failures, the bot enters `API_DOWN` mode and broadcasts a warning to opted-in users. A background health check pings the API every 5 minutes and automatically recovers when the API stabilizes.
 
