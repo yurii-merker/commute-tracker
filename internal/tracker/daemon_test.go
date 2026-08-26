@@ -236,10 +236,16 @@ func TestShouldNotifyPlatformAssignment(t *testing.T) {
 			true,
 		},
 		{
-			"platform un-confirmed (known to unknown) is a change",
+			"platform withdrawn (known to unknown) is not a change",
 			&domain.TrainStatus{Platform: "1", EstimatedDeparture: et},
 			&domain.TrainStatus{Platform: "", EstimatedDeparture: et},
-			true,
+			false,
+		},
+		{
+			"still unconfirmed (unknown to unknown) is not a change",
+			&domain.TrainStatus{Platform: "", EstimatedDeparture: et},
+			&domain.TrainStatus{Platform: "", EstimatedDeparture: et},
+			false,
 		},
 	}
 
@@ -285,18 +291,57 @@ func TestFormatAlertPlatformFirstAssignmentWithDelay(t *testing.T) {
 	}
 }
 
-func TestFormatAlertPlatformUnconfirmed(t *testing.T) {
+func TestFormatAlertPlatformWithdrawnSuppressed(t *testing.T) {
 	route := makeRouteRow(7, 45, 60)
 	route.Label = "Morning"
 	route.FromStationCrs = "SMH"
 	route.ToStationCrs = "CTK"
 
-	prev := &domain.TrainStatus{Platform: "1", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 45)}
-	curr := &domain.TrainStatus{Platform: "", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 45)}
+	prev := &domain.TrainStatus{Platform: "1", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 45), DelayMins: 0}
+	curr := &domain.TrainStatus{Platform: "", ScheduledDeparture: makeTime(7, 45), EstimatedDeparture: makeTime(7, 50), DelayMins: 5}
 
 	msg := formatAlert(route, curr, prev)
-	if !strings.Contains(msg, "Platform changed: 1 → TBC") {
-		t.Errorf("expected platform un-confirmed notice, got: %s", msg)
+	if strings.Contains(msg, "Platform changed") {
+		t.Errorf("expected no platform-change line when platform is withdrawn, got: %s", msg)
+	}
+	if strings.Contains(msg, "TBC") {
+		t.Errorf("expected no TBC in a change alert, got: %s", msg)
+	}
+	if !strings.Contains(msg, "Delayed 5 min") {
+		t.Errorf("expected delay info when platform is withdrawn, got: %s", msg)
+	}
+}
+
+func TestWithKnownPlatform(t *testing.T) {
+	tests := []struct {
+		name     string
+		base     string
+		fallback string
+		want     string
+	}{
+		{"empty base takes fallback", "", "1", "1"},
+		{"known base wins", "1", "3", "1"},
+		{"known base with empty fallback", "3", "", "3"},
+		{"both empty stays empty", "", "", ""},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			base := &domain.TrainStatus{Platform: tt.base, DelayMins: 5}
+			fallback := &domain.TrainStatus{Platform: tt.fallback, DelayMins: 9}
+
+			got := withKnownPlatform(base, fallback)
+
+			if got.Platform != tt.want {
+				t.Errorf("withKnownPlatform().Platform = %q, want %q", got.Platform, tt.want)
+			}
+			if got.DelayMins != base.DelayMins {
+				t.Errorf("withKnownPlatform().DelayMins = %d, want %d from base", got.DelayMins, base.DelayMins)
+			}
+			if base.Platform != tt.base {
+				t.Errorf("withKnownPlatform() mutated base.Platform to %q", base.Platform)
+			}
+		})
 	}
 }
 

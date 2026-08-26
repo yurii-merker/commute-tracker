@@ -182,7 +182,9 @@ func (d *Daemon) checkRoute(ctx context.Context, route db.GetActiveRoutesWithCha
 		if !last.IsCancelled || !fresh.IsCancelled {
 			d.sendAlert(ctx, route, fresh, last)
 		}
-		d.saveLastState(ctx, route.ID, fresh)
+		d.saveLastState(ctx, route.ID, withKnownPlatform(fresh, last))
+	case platformConfirmed(last, fresh):
+		d.saveLastState(ctx, route.ID, withKnownPlatform(last, fresh))
 	}
 	d.updateServiceCache(ctx, route.ID, fresh)
 }
@@ -428,12 +430,8 @@ func formatAutoSelectStatus(s *domain.TrainStatus) string {
 		icon = "🟠"
 		text = fmt.Sprintf("Delayed %d min", s.DelayMins)
 	}
-	platform := "TBC"
-	if s.Platform != "" {
-		platform = s.Platform
-	}
 	return fmt.Sprintf("%s %s | Platform %s | %s → %s",
-		icon, text, platform,
+		icon, text, orTBC(s.Platform),
 		s.ScheduledDeparture.Format("15:04"), s.Destination)
 }
 
@@ -613,11 +611,6 @@ func formatDepartureReminder(route db.GetActiveRoutesWithChatIDRow, status *doma
 		statusText = fmt.Sprintf("Delayed %d min (exp. %s)", status.DelayMins, status.EstimatedDeparture.Format("15:04"))
 	}
 
-	platform := "TBC"
-	if status.Platform != "" {
-		platform = status.Platform
-	}
-
 	dep := status.ScheduledDeparture
 	if status.DelayMins > 0 {
 		dep = status.EstimatedDeparture
@@ -631,7 +624,7 @@ func formatDepartureReminder(route db.GetActiveRoutesWithChatIDRow, status *doma
 		"⏰ Departure in %d min!\n🚆 %s\n🚉 %s (%s) → %s (%s)\n🚃 %s\n🔢 Platform: %s\n%s %s",
 		minsUntil, route.Label,
 		fromName, route.FromStationCrs, toName, route.ToStationCrs,
-		trainName, platform, statusIcon, statusText,
+		trainName, orTBC(status.Platform), statusIcon, statusText,
 	)
 }
 
@@ -680,7 +673,7 @@ func isDeparted(route db.GetActiveRoutesWithChatIDRow, now time.Time) bool {
 }
 
 func shouldNotify(previous, current *domain.TrainStatus) bool {
-	if previous.Platform != "" && previous.Platform != current.Platform {
+	if platformReassigned(previous, current) {
 		return true
 	}
 	if previous.IsCancelled != current.IsCancelled {
@@ -690,6 +683,22 @@ func shouldNotify(previous, current *domain.TrainStatus) bool {
 		return true
 	}
 	return absDiff(previous.DelayMins, current.DelayMins) >= delayNotifyThresholdMins
+}
+
+func platformReassigned(previous, current *domain.TrainStatus) bool {
+	return previous.Platform != "" && current.Platform != "" && previous.Platform != current.Platform
+}
+
+func platformConfirmed(previous, current *domain.TrainStatus) bool {
+	return previous.Platform == "" && current.Platform != ""
+}
+
+func withKnownPlatform(base, fallback *domain.TrainStatus) *domain.TrainStatus {
+	result := *base
+	if result.Platform == "" {
+		result.Platform = fallback.Platform
+	}
+	return &result
 }
 
 func formatAlert(route db.GetActiveRoutesWithChatIDRow, current *domain.TrainStatus, previous *domain.TrainStatus) string {
@@ -712,15 +721,10 @@ func formatAlert(route db.GetActiveRoutesWithChatIDRow, current *domain.TrainSta
 			statusText = fmt.Sprintf("Delayed %d min (exp. %s)", current.DelayMins, current.EstimatedDeparture.Format("15:04"))
 		}
 
-		platform := "TBC"
-		if current.Platform != "" {
-			platform = current.Platform
-		}
-
 		return fmt.Sprintf(
 			"🚆 %s\n🚉 %s (%s) → %s (%s)\n🚃 %s\n🔢 Platform: %s\n%s %s",
 			route.Label, fromName, route.FromStationCrs, toName, route.ToStationCrs,
-			trainName, platform, statusIcon, statusText,
+			trainName, orTBC(current.Platform), statusIcon, statusText,
 		)
 	}
 
@@ -734,8 +738,8 @@ func formatAlert(route db.GetActiveRoutesWithChatIDRow, current *domain.TrainSta
 		changes = append(changes, "🔴 CANCELLED")
 	}
 
-	if previous.Platform != "" && previous.Platform != current.Platform {
-		changes = append(changes, fmt.Sprintf("🔀 Platform changed: %s → %s", previous.Platform, orTBC(current.Platform)))
+	if platformReassigned(previous, current) {
+		changes = append(changes, fmt.Sprintf("🔀 Platform changed: %s → %s", previous.Platform, current.Platform))
 	}
 
 	if !current.IsCancelled && previous.DelayMins != current.DelayMins {

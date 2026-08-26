@@ -1645,3 +1645,140 @@ func TestCheckRouteFirstPollRefreshesCache(t *testing.T) {
 		t.Fatalf("expected service cache refreshed to fresh delay 4 on first poll, got %+v", cachedAfter)
 	}
 }
+
+func TestCheckRoutePlatformSequences(t *testing.T) {
+	type poll struct {
+		platform  string
+		delayMins int
+	}
+
+	tests := []struct {
+		name                 string
+		initialPlatform      string
+		polls                []poll
+		wantAlerts           []string
+		wantBaselinePlatform string
+	}{
+		{
+			"withdrawn then restored stays silent",
+			"1",
+			[]poll{{"", 0}, {"1", 0}},
+			nil,
+			"1",
+		},
+		{
+			"withdrawn then reassigned reports confirmed to confirmed",
+			"1",
+			[]poll{{"", 0}, {"3", 0}},
+			[]string{"Platform changed: 1 → 3"},
+			"3",
+		},
+		{
+			"delay alert during gap keeps baseline when restored",
+			"1",
+			[]poll{{"", 5}, {"1", 5}},
+			[]string{"Delayed 5 min"},
+			"1",
+		},
+		{
+			"delay alert during gap keeps baseline when reassigned",
+			"1",
+			[]poll{{"", 5}, {"3", 5}},
+			[]string{"Delayed 5 min", "Platform changed: 1 → 3"},
+			"3",
+		},
+		{
+			"first confirmation stays silent but is learned",
+			"",
+			[]poll{{"", 0}, {"1", 0}},
+			nil,
+			"1",
+		},
+		{
+			"first confirmation then reassigned",
+			"",
+			[]poll{{"1", 0}, {"3", 0}},
+			[]string{"Platform changed: 1 → 3"},
+			"3",
+		},
+		{
+			"first confirmation does not absorb sub-threshold delay",
+			"",
+			[]poll{{"1", 1}, {"1", 2}},
+			[]string{"Delayed 2 min"},
+			"1",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			rdb, mr := setupRedis(t)
+			defer mr.Close()
+
+			ctx := context.Background()
+			routeID := testRouteID()
+			scheduled := time.Date(2026, 1, 1, 7, 45, 0, 0, time.UTC)
+
+			initial := &domain.TrainStatus{ServiceID: "svc1", Platform: tt.initialPlatform, ScheduledDeparture: scheduled, EstimatedDeparture: scheduled}
+			initialData, _ := json.Marshal(initial)
+			rdb.Set(ctx, serviceCacheKey(routeID), initialData, time.Hour)
+			rdb.Set(ctx, lastStatePrefix+formatUUID(routeID), initialData, time.Hour)
+
+			notifier := &mockNotifier{}
+			trainClient := &mockTrainClient{}
+			cb := NewCircuitBreaker(trainClient, notifier, noChatIDs)
+			daemon := &Daemon{rdb: rdb, trainClient: trainClient, notifier: notifier, circuitBreaker: cb}
+			route := makeTestRouteRow(routeID)
+
+			for _, p := range tt.polls {
+				trainClient.serviceDetails = &domain.TrainStatus{
+					ServiceID:          "svc1",
+					Platform:           p.platform,
+					ScheduledDeparture: scheduled,
+					EstimatedDeparture: scheduled.Add(time.Duration(p.delayMins) * time.Minute),
+					DelayMins:          p.delayMins,
+				}
+				daemon.checkRoute(ctx, route, initial)
+
+				cached, err := daemon.getCachedService(ctx, routeID)
+				if err != nil {
+					t.Fatal(err)
+				}
+				if cached.Platform != p.platform {
+					t.Errorf("service cache platform = %q, want live value %q", cached.Platform, p.platform)
+				}
+			}
+
+			last, err := daemon.getLastState(ctx, routeID)
+			if err != nil {
+				t.Fatal(err)
+			}
+			if last.Platform != tt.wantBaselinePlatform {
+				t.Errorf("baseline platform = %q, want %q", last.Platform, tt.wantBaselinePlatform)
+			}
+
+			notifier.mu.Lock()
+			defer notifier.mu.Unlock()
+			if len(notifier.sent) != len(tt.wantAlerts) {
+				t.Fatalf("got %d alerts, want %d: %v", len(notifier.sent), len(tt.wantAlerts), sentMessages(notifier.sent))
+			}
+			for i, want := range tt.wantAlerts {
+				got := notifier.sent[i].message
+				if !strings.Contains(got, want) {
+					t.Errorf("alert %d = %q, want it to contain %q", i, got, want)
+				}
+				if strings.Contains(got, "TBC") {
+					t.Errorf("alert %d mentions TBC: %q", i, got)
+				}
+			}
+		})
+	}
+}
+
+func sentMessages(sent []sentMessage) []string {
+	out := make([]string, 0, len(sent))
+	for _, s := range sent {
+		out = append(out, s.message)
+	}
+	return out
+}
